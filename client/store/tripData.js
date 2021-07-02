@@ -2,8 +2,8 @@ import axios from 'axios'
 
 
 //ACTION TYPES
-const SET_FLIGHT_DATA
-const SET_HOTEL_DATA
+const SET_FLIGHT_DATA = 'SET_FLIGHT_DATA'
+const SET_HOTEL_DATA = 'SET_HOTEL_DATA'
 
 //ACTION CREATORS
 const setFlightData = flightData => ({
