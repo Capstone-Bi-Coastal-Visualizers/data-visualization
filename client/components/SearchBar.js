@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { fetchFlightData } from "../store/tripData";
+import { fetchFlightSession } from "../store/tripData";
 
 export default function SearchBar() {
   // const [origin, setOrigin] = useState('');
@@ -12,16 +12,27 @@ export default function SearchBar() {
   const dispatch = useDispatch();
 
   const [state, setState] = useState({
-    origin: "JFK",
-    destination: "ORD",
-    departureDate: "2021-08-10",
-    returnDate: "2021-08-15",
+    origin: "",
+    destination: "",
+    departureDate: "",
+    returnDate: "",
     budget: "100",
   });
   const handleclick = () => {
-    console.log("click triggered");
-    console.log("API KEY", Env_Vars["API_KEY"]);
-    dispatch(fetchFlightData(state));
+    const firstFlight = {
+      origin: state.origin,
+      destination: state.destination,
+      flightDate: state.departureDate,
+      returningFlight: false,
+    };
+    dispatch(fetchFlightSession(firstFlight));
+    const returnFlight = {
+      origin: state.destination,
+      destination: state.origin,
+      flightDate: state.returnDate,
+      returningFlight: true,
+    };
+    dispatch(fetchFlightSession(returnFlight));
   };
 
   return (
