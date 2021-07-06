@@ -23,72 +23,21 @@ const setHotelData = (hotelData) => ({
 
 //Thunk Creators
 export const fetchFlightSession = (searchInput) => async (dispatch) => {
-  //Test 7/12 JFK to LAX and consistent 0
-  //Create session and retreive SID
   try {
     const { origin, destination, flightDate, returningFlight } = searchInput;
     const sessionConfig = {
       headers: {
         "x-rapidapi-key": Env_Vars["API_KEY"],
-        "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
-      },
-      params: {
-        o1: origin,
-        d1: destination,
-        dd1: flightDate,
-        currency: "USD",
-        ta: "1",
-        c: "0",
+        "x-rapidapi-host":
+          "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
       },
     };
     const { data: flightSession } = await axios.get(
-      "https://travel-advisor.p.rapidapi.com/flights/create-session",
+      `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/${origin}/${destination}/${flightDate}`,
       sessionConfig
     );
-    const pollSID = flightSession.search_params.sid;
-    dispatch(fetchFlightData(pollSID, returningFlight));
-  } catch (error) {
-    console.error(error);
-  }
-};
+    const bestFlight = [flightSession.Carriers[0], flightSession.Quotes[0]];
 
-export const fetchFlightData = (sid, returningFlight) => async (dispatch) => {
-  try {
-    console.log(sid);
-    const pollConfig = {
-      params: {
-        sid: sid,
-        so: "PRICE",
-        currency: "USD",
-        n: "15",
-        ns: "NON_STOP,ONE_STOP",
-        o: "0",
-      },
-      headers: {
-        "x-rapidapi-key": Env_Vars["API_KEY"],
-        "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
-      },
-    };
-
-    const { data: flightData } = await axios.get(
-      "https://travel-advisor.p.rapidapi.com/flights/poll",
-      pollConfig
-    );
-    const flightItineraries = flightData.itineraries;
-    console.log(flightData);
-    console.log(flightItineraries);
-    let bestFlight = {};
-    let minPrice = 9999;
-
-    for (let i = 0; i < flightItineraries.length; i++) {
-      let currPrice = flightItineraries[i].l[0].pr.p;
-      if (currPrice > 1 && currPrice < minPrice) {
-        minPrice = currPrice;
-        bestFlight = flightItineraries[i];
-      }
-    }
-
-    console.log(bestFlight);
     if (returningFlight === false) {
       dispatch(setFirstFlight(bestFlight));
     } else {
@@ -98,6 +47,7 @@ export const fetchFlightData = (sid, returningFlight) => async (dispatch) => {
     console.error(error);
   }
 };
+
 
 export const fetchHotelData = (airportCoordinates) => async (dispatch) => {
   const { longitude, latitude } = airportCoordinates;
