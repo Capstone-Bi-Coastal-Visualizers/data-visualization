@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
-import { fetchFlightSession } from "../store/tripData";
+import { fetchFlightSession, fetchHotelData } from "../store/tripData";
 
 export default function SearchBar() {
   // const [origin, setOrigin] = useState('');
@@ -20,6 +20,7 @@ export default function SearchBar() {
     budget: "100",
   });
   const handleclick = () => {
+    console.log("Thunks were hit");
     const firstFlight = {
       origin: state.origin,
       destination: state.destination,
@@ -94,8 +95,8 @@ export default function SearchBar() {
           setState({ ...state, budget: event.target.value });
         }}
       />
-      <Link to="/search-result">
-        <button onClick={handleclick}>Submit</button>
+      <Link to="/search-result" onClick={handleclick}>
+        Submit
       </Link>
       {/* <input type="text" placeholder="origin" name="origin" required value={origin} onChange={(event) => {setOrigin(event.target.value)}}/>
             <input type="text" placeholder="destination" name="destination" required value={destination} onChange={(event) => {setDestination(event.target.value)}}/>
