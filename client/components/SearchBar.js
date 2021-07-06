@@ -34,6 +34,12 @@ export default function SearchBar() {
       returningFlight: true,
     };
     dispatch(fetchFlightSession(returnFlight));
+    dispatch(
+      fetchHotelData(
+        { latitude: "12.91285", longitude: "100.87808" },
+        state.departureDate
+      )
+    );
   };
 
   return (
