@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import { fetchFlightSession } from "../store/tripData";
 
 export default function SearchBar() {
@@ -87,7 +88,9 @@ export default function SearchBar() {
           setState({ ...state, budget: event.target.value });
         }}
       />
-      <button onClick={handleclick}>Submit</button>
+      <Link to="/search-result">
+        <button onClick={handleclick}>Submit</button>
+      </Link>
       {/* <input type="text" placeholder="origin" name="origin" required value={origin} onChange={(event) => {setOrigin(event.target.value)}}/>
             <input type="text" placeholder="destination" name="destination" required value={destination} onChange={(event) => {setDestination(event.target.value)}}/>
             <input type="date" placeholder="departure date" name="departureDate" required value={departureDate} onChange={(event) => {setDepartureDate(event.target.value)}}/>

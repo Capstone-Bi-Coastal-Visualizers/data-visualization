@@ -23,19 +23,7 @@ class Routes extends Component {
           <Switch>
             <Route path="/home" component={Home} />
             <Redirect to="/home" />
-            <Route
-              path="/search-result"
-              component={SearchResult}
-              props={{
-                flightOne: 120.51,
-                flightTwo: 140.0,
-                hotelOne: 120.58,
-                hotelTwo: 180,
-                budget: 300,
-                destinationOne: "Los Angeles",
-                destinationTwo: "New York",
-              }}
-            />
+            <Route path="/search-result" component={SearchResult} />
           </Switch>
         ) : (
           <Switch>
@@ -43,23 +31,7 @@ class Routes extends Component {
             <Route exact path="/" component={Login} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
-            <Route
-              exact
-              path="/search-result"
-              render={() => (
-                <SearchResult
-                  data={{
-                    flightOne: 120.51,
-                    flightTwo: 140.0,
-                    hotelOne: 120.58,
-                    hotelTwo: 180,
-                    budget: 300,
-                    destinationOne: "Los Angeles",
-                    destinationTwo: "New York",
-                  }}
-                />
-              )}
-            />
+            <Route exact path="/search-result" component={SearchResult} />
           </Switch>
         )}
       </div>
