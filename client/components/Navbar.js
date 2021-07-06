@@ -4,8 +4,28 @@ import {Link} from 'react-router-dom'
 import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
-  <div>
-    <h1>FS-App-Template</h1>
+  <div className="navBar">
+    <h1>Bon Voyage</h1>
+    <div className="dropdown is-active">
+  <div className="dropdown-trigger">
+    <button className="button" aria-haspopup="true" aria-controls="dropdown-menu">
+      <span>Dropdown button</span>
+      <span className="icon is-small">
+        <i className="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </button>
+  </div>
+  <div className="dropdown-menu" id="dropdown-menu" role="menu">
+    <div className="dropdown-content">
+      <a href="#" className="dropdown-item">
+        Login
+      </a>
+      <a className="dropdown-item">
+        Sign Up
+      </a>
+    </div>
+  </div>
+</div>   
     <nav>
       {isLoggedIn ? (
         <div>
