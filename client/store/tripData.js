@@ -48,7 +48,7 @@ export const fetchFlightSession = (searchInput) => async (dispatch) => {
   }
 };
 
-export const fetchHotelData = (airportCoordinates) => async (dispatch) => {
+export const fetchHotelData = (airportCoordinates, departureDate) => async (dispatch) => {
   const { longitude, latitude } = airportCoordinates;
   try {
     var options = {
@@ -62,7 +62,7 @@ export const fetchHotelData = (airportCoordinates) => async (dispatch) => {
         // amenities: 'beach,bar_lounge,airport_transportation',
         rooms: "1",
         currency: "USD",
-        checkin: "2021-08-08",
+        checkin: departureDate,
         nights: "4",
       },
       headers: {
