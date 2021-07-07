@@ -1,14 +1,10 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { fetchFlightSession } from "../store/tripData";
+import Autocomplete from "./AutoComplete";
+import { fetchFlightSession, fetchHotelData } from "../store/tripData";
+
 
 export default function SearchBar() {
-  // const [origin, setOrigin] = useState('');
-  // const [destination, setDestination] = useState('');
-  // const [departureDate, setDepartureDate] = useState('');
-  // const [returnDate, setReturnDate] = useState('');
-  // const [budget, setBudget] = useState('');
-
   const dispatch = useDispatch();
 
   const [state, setState] = useState({
@@ -17,6 +13,7 @@ export default function SearchBar() {
     departureDate: "",
     returnDate: "",
     budget: "100",
+    predictions: [],
   });
   const handleclick = () => {
     const firstFlight = {
@@ -33,67 +30,83 @@ export default function SearchBar() {
       returningFlight: true,
     };
     dispatch(fetchFlightSession(returnFlight));
+    dispatch(
+      fetchHotelData(
+        { latitude: "12.91285", longitude: "100.87808" },
+        state.departureDate
+      )
+    );
   };
 
   return (
-    <div>
-      <input
-        type="text"
-        placeholder="origin"
-        name="origin"
-        required
-        value={state.origin}
-        onChange={(event) => {
-          setState({ ...state, origin: event.target.value });
-        }}
-      />
-      <input
-        type="text"
-        placeholder="destination"
-        name="destination"
-        required
-        value={state.destination}
-        onChange={(event) => {
-          setState({ ...state, destination: event.target.value });
-        }}
-      />
-      <input
-        type="date"
-        placeholder="departure date"
-        name="departureDate"
-        required
-        value={state.departureDate}
-        onChange={(event) => {
-          setState({ ...state, departureDate: event.target.value });
-        }}
-      />
-      <input
-        type="date"
-        placeholder="return date"
-        name="returnDate"
-        required
-        value={state.returnDate}
-        onChange={(event) => {
-          setState({ ...state, returnDate: event.target.value });
-        }}
-      />
-      <input
-        type="number"
-        placeholder="budget"
-        name="budget"
-        required
-        value={state.budget}
-        onChange={(event) => {
-          setState({ ...state, budget: event.target.value });
-        }}
-      />
-      <button onClick={handleclick}>Submit</button>
-      {/* <input type="text" placeholder="origin" name="origin" required value={origin} onChange={(event) => {setOrigin(event.target.value)}}/>
-            <input type="text" placeholder="destination" name="destination" required value={destination} onChange={(event) => {setDestination(event.target.value)}}/>
-            <input type="date" placeholder="departure date" name="departureDate" required value={departureDate} onChange={(event) => {setDepartureDate(event.target.value)}}/>
-            <input type="date" placeholder="return date" name="returnDate" required value={returnDate} onChange={(event) => {setReturnDate(event.target.value)}}/>
-            <input type="number" placeholder="budget" name="budget" required value={budget} onChange={(event) => {setBudget(event.target.value)}}/>
-            <button onClick={handleclick}>Submit</button> */}
+    <div className="field has-addons">
+      <div className="control">
+        <Autocomplete
+          name="airport"
+          label="airports"
+          placeholder="Begin typing in your airport"
+          onChange={(event) => {
+            setState({ ...state, origin: event.target.value });
+          }}
+        />
+      </div>
+      <div className="control">
+        <input
+          type="text"
+          placeholder="destination"
+          name="destination"
+          className="input"
+          required
+          value={state.destination}
+          onChange={(event) => {
+            setState({ ...state, destination: event.target.value });
+          }}
+        />
+      </div>
+      <div className="control">
+        <input
+          type="date"
+          placeholder="departure date"
+          name="departureDate"
+          className="input"
+          required
+          value={state.departureDate}
+          onChange={(event) => {
+            setState({ ...state, departureDate: event.target.value });
+          }}
+        />
+      </div>
+      <div className="control">
+        <input
+          type="date"
+          placeholder="return date"
+          name="returnDate"
+          className="input"
+          required
+          value={state.returnDate}
+          onChange={(event) => {
+            setState({ ...state, returnDate: event.target.value });
+          }}
+        />
+      </div>
+      <div className="control">
+        <input
+          type="number"
+          placeholder="budget"
+          name="budget"
+          className="input"
+          required
+          value={state.budget}
+          onChange={(event) => {
+            setState({ ...state, budget: event.target.value });
+          }}
+        />
+      </div>
+      <div className="control">
+        <button className="button is-danger" onClick={handleclick}>
+          Submit
+        </button>
+      </div>
     </div>
   );
 }
