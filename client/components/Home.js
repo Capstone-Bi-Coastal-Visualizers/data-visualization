@@ -5,14 +5,12 @@ import SearchBar from "./SearchBar";
 /**
  * COMPONENT
  */
-export const Home = (props) => {
-  // const { username } = props;
+export const Home = props => {
+  const {email} = props
 
   return (
     <div>
-      {/* <h3>Welcome{, {username}}</h3> */}
-      <h2>Welcome</h2>
-      <SearchBar />
+      <h3>Welcome, {email}</h3>
     </div>
   );
 };
@@ -22,8 +20,8 @@ export const Home = (props) => {
  */
 const mapState = (state) => {
   return {
-    username: state.auth.username,
-  };
-};
+    email: state.auth.email
+  }
+}
 
 export default connect(mapState)(Home);

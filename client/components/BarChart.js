@@ -22,13 +22,13 @@ const BarChart = (props) => {
       {
         stack: arbitraryStackKey,
         label: "Flight",
-        backgroundColor: ["rgba(255, 99, 132, 0.2)", "rgba(54, 162, 235, 0.2)"],
+        backgroundColor: ["rgba(255, 99, 132, 0.2)", "rgba(255, 99, 132, 0.2)"],
         data: [flightOne, flightTwo],
       },
       {
         stack: arbitraryStackKey,
         label: "Hotel",
-        backgroundColor: ["rgba(54, 162, 235, 0.2)", "rgba(255, 99, 132, 0.2)"],
+        backgroundColor: ["rgba(54, 162, 235, 0.2)", "rgba(54, 162, 235, 0.2)"],
         data: [hotelOne, hotelTwo],
       },
       {
