@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import Autocomplete from "./AutoComplete";
 import { fetchFlightSession } from "../store/tripData";
 
 export default function SearchBar() {
@@ -17,6 +18,7 @@ export default function SearchBar() {
     departureDate: "",
     returnDate: "",
     budget: "100",
+    predictions: [],
   });
   const handleclick = () => {
     const firstFlight = {
@@ -37,16 +39,27 @@ export default function SearchBar() {
 
   return (
     <div>
-      <input
-        type="text"
-        placeholder="origin"
-        name="origin"
-        required
-        value={state.origin}
-        onChange={(event) => {
-          setState({ ...state, origin: event.target.value });
-        }}
-      />
+      <div>
+        {/* <input
+          type="text"
+          placeholder="origin"
+          name="origin"
+          required
+          value={state.origin}
+          onChange={(event) => {
+            setState({ ...state, origin: event.target.value });
+          }}
+        /> */}
+        <Autocomplete
+          name="airport"
+          label="airports"
+          placeholder="Begin typing in your airport"
+          data={["LAX", "LAX2", "LAX3", "LAX4", "JFK", "DFW", "SFO"]}
+          onChange={(event) => {
+            setState({ ...state, origin: event.target.value });
+          }}
+        />
+      </div>
       <input
         type="text"
         placeholder="destination"

@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Routes from "./Routes";
 import SearchBar from "./components/SearchBar";
 import BarChart from "./components/BarChart";
+import Autocomplete from "./components/AutoComplete";
 
 const App = () => {
   return (
