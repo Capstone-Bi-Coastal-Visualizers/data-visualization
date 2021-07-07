@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import Autocomplete from "./AutoComplete";
-import { fetchFlightSession } from "../store/tripData";
+import { fetchFlightSession, fetchHotelData } from "../store/tripData";
+
 
 export default function SearchBar() {
   const dispatch = useDispatch();
@@ -29,6 +30,12 @@ export default function SearchBar() {
       returningFlight: true,
     };
     dispatch(fetchFlightSession(returnFlight));
+    dispatch(
+      fetchHotelData(
+        { latitude: "12.91285", longitude: "100.87808" },
+        state.departureDate
+      )
+    );
   };
 
   return (
