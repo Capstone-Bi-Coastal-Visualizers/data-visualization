@@ -36,7 +36,11 @@ export const fetchFlightSession = (searchInput) => async (dispatch) => {
       `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/${origin}/${destination}/${flightDate}`,
       sessionConfig
     );
-    const bestFlight = [flightSession.Carriers[0], flightSession.Quotes[0]];
+    const bestFlight = [
+      flightSession.Carriers[0],
+      flightSession.Quotes[0],
+      flightSession.Places,
+    ];
 
     if (returningFlight === false) {
       dispatch(setFirstFlight(bestFlight));
@@ -48,48 +52,49 @@ export const fetchFlightSession = (searchInput) => async (dispatch) => {
   }
 };
 
-export const fetchHotelData = (airportCoordinates, departureDate) => async (dispatch) => {
-  const { longitude, latitude } = airportCoordinates;
-  try {
-    var options = {
-      params: {
-        latitude,
-        longitude,
-        lang: "en_US",
-        hotel_class: "1,2,3",
-        limit: "30",
-        adults: "1",
-        // amenities: 'beach,bar_lounge,airport_transportation',
-        rooms: "1",
-        currency: "USD",
-        checkin: departureDate,
-        nights: "4",
-      },
-      headers: {
-        "x-rapidapi-key": Env_Vars["HOTEL_API_KEY"],
-        "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
-      },
-    };
-    const { data: hotelData } = await axios.get(
-      "https://travel-advisor.p.rapidapi.com/hotels/list-by-latlng",
-      options
-    );
-    let minPrice = 9999;
-    let bestHotel = {};
-    hotelData.data.forEach((hotel) => {
-      if (hotel.price) {
-        let currPrice = Number(hotel.price.split(" ")[0].split("$")[1]);
-        if (currPrice < minPrice) {
-          minPrice = currPrice;
-          bestHotel = hotel;
+export const fetchHotelData =
+  (airportCoordinates, departureDate) => async (dispatch) => {
+    const { longitude, latitude } = airportCoordinates;
+    try {
+      var options = {
+        params: {
+          latitude,
+          longitude,
+          lang: "en_US",
+          hotel_class: "1,2,3",
+          limit: "30",
+          adults: "1",
+          // amenities: 'beach,bar_lounge,airport_transportation',
+          rooms: "1",
+          currency: "USD",
+          checkin: departureDate,
+          nights: "4",
+        },
+        headers: {
+          "x-rapidapi-key": Env_Vars["HOTEL_API_KEY"],
+          "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
+        },
+      };
+      const { data: hotelData } = await axios.get(
+        "https://travel-advisor.p.rapidapi.com/hotels/list-by-latlng",
+        options
+      );
+      let minPrice = 9999;
+      let bestHotel = {};
+      hotelData.data.forEach((hotel) => {
+        if (hotel.price) {
+          let currPrice = Number(hotel.price.split(" ")[0].split("$")[1]);
+          if (currPrice < minPrice) {
+            minPrice = currPrice;
+            bestHotel = hotel;
+          }
         }
-      }
-    });
-    dispatch(setHotelData(bestHotel));
-  } catch (error) {
-    console.error(error);
-  }
-};
+      });
+      dispatch(setHotelData(bestHotel));
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
 //reducer
 const initialState = {};
