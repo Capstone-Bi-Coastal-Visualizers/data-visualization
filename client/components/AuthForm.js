@@ -79,12 +79,12 @@ const mapDispatch = (dispatch) => {
       const formName = evt.target.name;
       const email = evt.target.email.value;
       const password = evt.target.password.value;
-      const firstName = evt.target.firstName.value;
-      const lastName = evt.target.lastName.value;
       if (formName === "login") {
         dispatch(authenticate(email, password, formName));
       }
       else {
+      const firstName = evt.target.firstName.value;
+      const lastName = evt.target.lastName.value;
       dispatch(authenticateSignup(email, password, firstName, lastName, formName));
       }
     },
