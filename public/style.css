@@ -20,7 +20,7 @@ form div {
   display: inline-block;
 }
 
-.navBar {
+.navBar-container {
   height: 60px;
   padding: 10px;
   background-color: #6286a8;

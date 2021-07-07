@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "./components/Navbar";
 import Routes from "./Routes";
 import SearchBar from "./components/SearchBar";
 import BarChart from "./components/BarChart";
