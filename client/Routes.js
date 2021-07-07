@@ -4,6 +4,7 @@ import { withRouter, Route, Switch, Redirect } from "react-router-dom";
 import { Login, Signup } from "./components/AuthForm";
 import Home from "./components/Home";
 import SearchResult from "./components/SearchResult";
+import ConfirmationPage from "./components/ConfirmationPage";
 import { me } from "./store";
 
 /**
@@ -24,6 +25,11 @@ class Routes extends Component {
             <Route path="/home" component={Home} />
             <Redirect to="/home" />
             <Route path="/search-result" component={SearchResult} />
+            <Route
+              exact
+              path="/confirmation-page"
+              component={ConfirmationPage}
+            />
           </Switch>
         ) : (
           <Switch>
@@ -32,6 +38,11 @@ class Routes extends Component {
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/search-result" component={SearchResult} />
+            <Route
+              exact
+              path="/confirmation-page"
+              component={ConfirmationPage}
+            />
           </Switch>
         )}
       </div>
