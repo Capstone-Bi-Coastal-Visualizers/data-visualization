@@ -1,112 +1,233 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 import Autocomplete from "./AutoComplete";
-import { fetchFlightSession, fetchHotelData } from "../store/tripData";
-
+import {
+  fetchFlightSession,
+  fetchHotelData,
+  setBudget,
+  setTripOneStayDuration,
+  setTripTwoStayDuration,
+} from "../store/tripData";
 
 export default function SearchBar() {
   const dispatch = useDispatch();
 
-  const [state, setState] = useState({
-    origin: "",
-    destination: "",
-    departureDate: "",
-    returnDate: "",
+  const [firstTripState, setFirstTripState] = useState({
+    origin: "JFK",
+    destination: "ORD",
+    departureDate: "2021-07-10",
+    returnDate: "2021-07-15",
     budget: "100",
     predictions: [],
   });
+  const [secondTripState, setSecondTripState] = useState({
+    origin: "IAH",
+    destination: "LAX",
+    departureDate: "2021-07-10",
+    returnDate: "2021-07-15",
+  });
+
+  const calcStayDuration = (startDate, endDate) => {
+    const date1 = new Date(startDate);
+    const date2 = new Date(endDate);
+    const differenceInTime = date2.getTime() - date1.getTime();
+    return differenceInTime / (1000 * 3600 * 24);
+  };
+
   const handleclick = () => {
-    const firstFlight = {
-      origin: state.origin,
-      destination: state.destination,
-      flightDate: state.departureDate,
+    console.log("Thunks were hit");
+    const tripOneFirstFlight = {
+      origin: firstTripState.origin,
+      destination: firstTripState.destination,
+      flightDate: firstTripState.departureDate,
       returningFlight: false,
+      tripNumber: 1,
     };
-    dispatch(fetchFlightSession(firstFlight));
-    const returnFlight = {
-      origin: state.destination,
-      destination: state.origin,
-      flightDate: state.returnDate,
+    const tripTwoFirstFlight = {
+      origin: secondTripState.origin,
+      destination: secondTripState.destination,
+      flightDate: secondTripState.departureDate,
+      returningFlight: false,
+      tripNumber: 2,
+    };
+    dispatch(fetchFlightSession(tripOneFirstFlight));
+    dispatch(fetchFlightSession(tripTwoFirstFlight));
+    const tripOneReturnFlight = {
+      origin: firstTripState.destination,
+      destination: firstTripState.origin,
+      flightDate: firstTripState.returnDate,
       returningFlight: true,
+      tripNumber: 1,
     };
-    dispatch(fetchFlightSession(returnFlight));
+    const tripTwoReturnFlight = {
+      origin: secondTripState.destination,
+      destination: secondTripState.origin,
+      flightDate: secondTripState.returnDate,
+      returningFlight: true,
+      tripNumber: 2,
+    };
+    dispatch(fetchFlightSession(tripOneReturnFlight));
+    dispatch(fetchFlightSession(tripTwoReturnFlight));
     dispatch(
       fetchHotelData(
         { latitude: "12.91285", longitude: "100.87808" },
-        state.departureDate
+        firstTripState.departureDate,
+        1
+      )
+    );
+    dispatch(
+      fetchHotelData(
+        { latitude: "12.91285", longitude: "100.87808" },
+        secondTripState.departureDate,
+        2
+      )
+    );
+    dispatch(setBudget(firstTripState.budget));
+    dispatch(
+      setTripOneStayDuration(
+        calcStayDuration(
+          firstTripState.departureDate,
+          firstTripState.returnDate
+        )
+      )
+    );
+    dispatch(
+      setTripTwoStayDuration(
+        calcStayDuration(
+          secondTripState.departureDate,
+          secondTripState.returnDate
+        )
       )
     );
   };
 
   return (
-    <div className="field has-addons">
-      <div className="control">
-        <Autocomplete
-          name="airport"
-          label="airports"
-          placeholder="Begin typing in your airport"
+    <div>
+      <Autocomplete
+        name="airport"
+        label="airports"
+        placeholder="Begin typing in your airport"
+        onChange={(event) => {
+          setState({ ...state, origin: event.target.value });
+        }}
+      />
+      <input
+        type="text"
+        placeholder="origin"
+        name="origin"
+        required
+        value={firstTripState.origin}
+        onChange={(event) => {
+          setFirstTripState({ ...firstTripState, origin: event.target.value });
+        }}
+      />
+      <input
+        type="text"
+        placeholder="destination"
+        name="destination"
+        required
+        value={firstTripState.destination}
+        onChange={(event) => {
+          setFirstTripState({
+            ...firstTripState,
+            destination: event.target.value,
+          });
+        }}
+      />
+      <input
+        type="date"
+        placeholder="departure date"
+        name="departureDate"
+        required
+        value={firstTripState.departureDate}
+        onChange={(event) => {
+          setFirstTripState({
+            ...firstTripState,
+            departureDate: event.target.value,
+          });
+        }}
+      />
+      <input
+        type="date"
+        placeholder="return date"
+        name="returnDate"
+        required
+        value={firstTripState.returnDate}
+        onChange={(event) => {
+          setFirstTripState({
+            ...firstTripState,
+            returnDate: event.target.value,
+          });
+        }}
+      />
+      <div>
+        <input
+          type="text"
+          placeholder="origin"
+          name="origin"
+          required
+          value={secondTripState.origin}
           onChange={(event) => {
-            setState({ ...state, origin: event.target.value });
+            setSecondTripState({
+              ...secondTripState,
+              origin: event.target.value,
+            });
           }}
         />
-      </div>
-      <div className="control">
         <input
           type="text"
           placeholder="destination"
           name="destination"
-          className="input"
           required
-          value={state.destination}
+          value={secondTripState.destination}
           onChange={(event) => {
-            setState({ ...state, destination: event.target.value });
+            setSecondTripState({
+              ...secondTripState,
+              destination: event.target.value,
+            });
           }}
         />
-      </div>
-      <div className="control">
         <input
           type="date"
           placeholder="departure date"
           name="departureDate"
-          className="input"
           required
-          value={state.departureDate}
+          value={secondTripState.departureDate}
           onChange={(event) => {
-            setState({ ...state, departureDate: event.target.value });
+            setSecondTripState({
+              ...secondTripState,
+              departureDate: event.target.value,
+            });
           }}
         />
-      </div>
-      <div className="control">
         <input
           type="date"
           placeholder="return date"
           name="returnDate"
-          className="input"
           required
-          value={state.returnDate}
+          value={secondTripState.returnDate}
           onChange={(event) => {
-            setState({ ...state, returnDate: event.target.value });
+            setSecondTripState({
+              ...secondTripState,
+              returnDate: event.target.value,
+            });
           }}
         />
       </div>
-      <div className="control">
-        <input
-          type="number"
-          placeholder="budget"
-          name="budget"
-          className="input"
-          required
-          value={state.budget}
-          onChange={(event) => {
-            setState({ ...state, budget: event.target.value });
-          }}
-        />
-      </div>
-      <div className="control">
-        <button className="button is-danger" onClick={handleclick}>
-          Submit
-        </button>
-      </div>
+      <input
+        type="number"
+        placeholder="budget"
+        name="budget"
+        required
+        value={firstTripState.budget}
+        onChange={(event) => {
+          setFirstTripState({ ...firstTripState, budget: event.target.value });
+        }}
+      />
+      <Link to="/search-result" onClick={handleclick}>
+        Submit
+      </Link>
     </div>
   );
 }

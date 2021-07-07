@@ -4,6 +4,7 @@ import { withRouter, Route, Switch, Redirect } from "react-router-dom";
 import { Login, Signup } from "./components/AuthForm";
 import Home from "./components/Home";
 import SearchResult from "./components/SearchResult";
+import ConfirmationPage from "./components/ConfirmationPage";
 import { me } from "./store";
 
 /**
@@ -23,18 +24,11 @@ class Routes extends Component {
           <Switch>
             <Route path="/home" component={Home} />
             <Redirect to="/home" />
+            <Route path="/search-result" component={SearchResult} />
             <Route
-              path="/search-result"
-              component={SearchResult}
-              props={{
-                flightOne: 120.51,
-                flightTwo: 140.0,
-                hotelOne: 120.58,
-                hotelTwo: 180,
-                budget: 300,
-                destinationOne: "Los Angeles",
-                destinationTwo: "New York",
-              }}
+              exact
+              path="/confirmation-page"
+              component={ConfirmationPage}
             />
           </Switch>
         ) : (
@@ -43,22 +37,11 @@ class Routes extends Component {
             <Route exact path="/" component={Login} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
+            <Route exact path="/search-result" component={SearchResult} />
             <Route
               exact
-              path="/search-result"
-              render={() => (
-                <SearchResult
-                  data={{
-                    flightOne: 120.51,
-                    flightTwo: 140.0,
-                    hotelOne: 120.58,
-                    hotelTwo: 180,
-                    budget: 300,
-                    destinationOne: "Los Angeles",
-                    destinationTwo: "New York",
-                  }}
-                />
-              )}
+              path="/confirmation-page"
+              component={ConfirmationPage}
             />
           </Switch>
         )}
