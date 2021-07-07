@@ -5,32 +5,7 @@ import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
 
-  
-  
-  <div className="navBar">
-    <Link to="/home">
-      <h1>Bon Voyage</h1>
-    </Link>
-    <div className="dropdown is-active">
-      <div className="dropdown-trigger">
-        <button className="button" aria-haspopup="true" aria-controls="dropdown-menu">
-          <span>Dropdown button</span>
-            <span className="icon is-small">
-              <i className="fas fa-angle-down" aria-hidden="false"></i>
-            </span>
-        </button>
-    </div>
-    <div className="dropdown-menu" id="dropdown-menu" role="menu">
-      <div className="dropdown-content">
-      <Link to="/login">Login</Link>
-      <a className="dropdown-item">
-      </a>
-      <Link to="/signup">Sign Up</Link>
-      <a className="dropdown-item">
-      </a>
-    </div>
-  </div>
-</div>   
+  <div>   
     <nav>
       {isLoggedIn ? (
         <div>
