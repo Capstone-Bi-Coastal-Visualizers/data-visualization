@@ -10,6 +10,7 @@ class Autocomplete extends React.Component {
       activeIndex: 0,
       matches: [],
       query: "",
+      airportObj: {},
       selected: false,
     };
 
@@ -25,7 +26,7 @@ class Autocomplete extends React.Component {
       shouldSort: true,
       // includeMatches: false,
       // findAllMatches: false,
-      // minMatchCharLength: 3,
+      minMatchCharLength: 3,
       location: 0,
       threshold: 0.1,
       // distance: 100,
@@ -36,8 +37,8 @@ class Autocomplete extends React.Component {
     };
 
     const fuse = new Fuse(airport, options);
-    console.log(query);
-    console.log(fuse.search(query));
+    const matches = fuse.search(query);
+    this.setState({ matches });
   }
 
   handleSelection(event, selection) {
@@ -45,34 +46,16 @@ class Autocomplete extends React.Component {
 
     this.setState({
       activeIndex: 0,
-      query: selection,
+      query: selection.item.city,
       matches: [],
+      airportObj: selection,
       selected: true,
     });
   }
 
   updateQuery(e) {
-    const { data } = this.props;
     const query = e.target.value;
-    if (!this.state.selected) {
-      this.setState({
-        matches:
-          query.length >= 2
-            ? data.filter(
-                (item) => item.toUpperCase().indexOf(query.toUpperCase()) >= 0
-              )
-            : [],
-        query,
-      });
-    } else {
-      if (e.nativeEvent.inputType === "deleteContentBackward") {
-        this.setState({
-          matches: [],
-          query: "",
-          selected: false,
-        });
-      }
-    }
+    this.setState({ query });
     this.fuzzyMatch(query);
   }
 
@@ -82,7 +65,6 @@ class Autocomplete extends React.Component {
 
     return (
       <div className="field">
-        {label && <label className="label">{label}</label>}
         <div className="control">
           <div className={`dropdown ${matches.length > 0 ? "is-active" : ""}`}>
             <div className="dropdown-trigger">
@@ -100,14 +82,14 @@ class Autocomplete extends React.Component {
                 <div className="dropdown-content">
                   {matches.map((match, index) => (
                     <a
-                      className={`dropdown-item ${
+                      className={`dropdown-item has-text-black ${
                         index === activeIndex ? "is-active" : ""
                       }`}
                       href="/"
-                      key={match}
+                      key={index}
                       onClick={(event) => this.handleSelection(event, match)}
                     >
-                      {match}
+                      {match.item.city}
                     </a>
                   ))}
                 </div>
