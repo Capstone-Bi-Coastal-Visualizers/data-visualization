@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import Autocomplete from "./AutoComplete";
 import {
   fetchFlightSession,
   fetchHotelData,
@@ -10,12 +11,6 @@ import {
 } from "../store/tripData";
 
 export default function SearchBar() {
-  // const [origin, setOrigin] = useState('');
-  // const [destination, setDestination] = useState('');
-  // const [departureDate, setDepartureDate] = useState('');
-  // const [returnDate, setReturnDate] = useState('');
-  // const [budget, setBudget] = useState('');
-
   const dispatch = useDispatch();
 
   const [firstTripState, setFirstTripState] = useState({
@@ -24,6 +19,7 @@ export default function SearchBar() {
     departureDate: "2021-07-10",
     returnDate: "2021-07-15",
     budget: "100",
+    predictions: [],
   });
   const [secondTripState, setSecondTripState] = useState({
     origin: "IAH",
@@ -108,6 +104,14 @@ export default function SearchBar() {
 
   return (
     <div>
+      <Autocomplete
+        name="airport"
+        label="airports"
+        placeholder="Begin typing in your airport"
+        onChange={(event) => {
+          setState({ ...state, origin: event.target.value });
+        }}
+      />
       <input
         type="text"
         placeholder="origin"
@@ -224,12 +228,6 @@ export default function SearchBar() {
       <Link to="/search-result" onClick={handleclick}>
         Submit
       </Link>
-      {/* <input type="text" placeholder="origin" name="origin" required value={origin} onChange={(event) => {setOrigin(event.target.value)}}/>
-            <input type="text" placeholder="destination" name="destination" required value={destination} onChange={(event) => {setDestination(event.target.value)}}/>
-            <input type="date" placeholder="departure date" name="departureDate" required value={departureDate} onChange={(event) => {setDepartureDate(event.target.value)}}/>
-            <input type="date" placeholder="return date" name="returnDate" required value={returnDate} onChange={(event) => {setReturnDate(event.target.value)}}/>
-            <input type="number" placeholder="budget" name="budget" required value={budget} onChange={(event) => {setBudget(event.target.value)}}/>
-            <button onClick={handleclick}>Submit</button> */}
     </div>
   );
 }
