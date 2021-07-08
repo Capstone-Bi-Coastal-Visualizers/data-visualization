@@ -13,6 +13,8 @@ const SET_TRIP_TWO_STAY_DURATION = "SET_TRIP_TWO_STAY_DURATION";
 
 const SET_BUDGET = "SET_BUDGET";
 
+const SET_USER_TRIPS_HISTORY = "SET_USER_TRIPS_HISTORY";
+
 //ACTION CREATORS
 const setTripOneFirstFlight = (flightData) => ({
   type: SET_TRIP_ONE_FIRST_FLIGHT,
@@ -57,6 +59,11 @@ export const setTripOneStayDuration = (stayDuration) => ({
 export const setTripTwoStayDuration = (stayDuration) => ({
   type: SET_TRIP_TWO_STAY_DURATION,
   stayDuration,
+});
+
+export const setUserTripsHistory = (userTripHistory) => ({
+  type: SET_USER_TRIPS_HISTORY,
+  userTripHistory
 });
 
 //Thunk Creators
@@ -147,6 +154,19 @@ export const fetchHotelData =
     }
   };
 
+export const fetchUserTripHistory = (token) => async (dispatch) => {
+  try {
+    const { data: userTripHistory } = await axios.get("/auth/me", {
+      headers: {
+        authorization: token
+      }
+    });
+    dispatch(setUserTripsHistory(userTripHistory))
+  } catch (error) {
+    console.log(error)
+  }
+} 
+
 //reducer
 const initialState = {};
 
@@ -170,6 +190,8 @@ const tripDataReducer = (state = initialState, action) => {
       return { ...state, tripOneStayDuration: action.stayDuration };
     case SET_TRIP_TWO_STAY_DURATION:
       return { ...state, tripTwoStayDuration: action.stayDuration };
+    case SET_USER_TRIPS_HISTORY:
+      return { ...state, userTripHistory: action.userTripHistory }
     default:
       return state;
   }

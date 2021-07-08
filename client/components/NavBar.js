@@ -38,8 +38,10 @@ export default function NavBarTwo() {
           {isLoggedIn ? (
             <div className="navbar-start">
               {/* The navbar will show these links after you log in */}
-              <Link to="/trips">Trips</Link>
-              <a href="#" onClick={handleClick}>
+              <Link to="/trips">
+                <div className="navbar-item">Trips</div>
+              </Link>
+              <a className="navbar-item" href="#" onClick={handleClick}>
                 Logout
               </a>
             </div>
