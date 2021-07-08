@@ -28,6 +28,25 @@ const ConfirmationPage = () => {
   const destinationOne = tripOneHotelData.location_string;
   const destinationTwo = tripTwoHotelData.location_string;
 
+  const tripFirstFlight =
+    selectedTrip === 1 ? tripOneFirstFlight : tripTwoFirstFlight;
+  const tripReturningFlight =
+    selectedTrip === 1 ? tripOneReturningFlight : tripTwoReturningFlight;
+  const tripHotel = selectedTrip === 1 ? tripOneHotelData : tripTwoHotelData;
+
+  const departureAirport = tripFirstFlight[2].filter((airportId) => {
+    return airportId.PlaceId === tripFirstFlight[1].OutboundLeg.OriginId;
+  })[0].SkyscannerCode;
+
+  const destinationAirport = tripReturningFlight[2].filter((airportId) => {
+    return airportId.PlaceId === tripReturningFlight[1].OutboundLeg.OriginId;
+  })[0].SkyscannerCode;
+
+  const departureDate = tripFirstFlight[1].OutboundLeg.DepartureDate;
+  const returnDate = tripReturningFlight[1].OutboundLeg.DepartureDate;
+  const nights = selectedTrip === 1 ? tripOneStayDuration : tripTwoStayDuration;
+  // const departureAirport = selectedTrip === 1 ?
+
   const arbitraryStackKey = "stack1";
 
   const selectedFlights = selectedTrip === 1 ? tripOneFlights : tripTwoFlights;
@@ -90,7 +109,16 @@ const ConfirmationPage = () => {
     });
     await axios.post("/api/users/email", {
       email: userData.email,
-      destination,
+      departureAirport,
+      departureDate,
+      destinationAirport,
+      returnDate,
+      hotel: tripHotel.name,
+      nights,
+      airfare: selectedFlights,
+      hotelPrice: selectedHotel,
+      total: selectedFlights + selectedHotel,
+      budget,
     });
   };
 
