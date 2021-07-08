@@ -21,7 +21,7 @@ router.get("/", async (req, res, next) => {
 
 router.post("/email", async (req, res, next) => {
   try {
-    const { email } = req.body;
+    const { email, destination } = req.body;
 
     let transporter = nodemailer.createTransport({
       service: "gmail",
@@ -45,8 +45,8 @@ router.post("/email", async (req, res, next) => {
     const msg = {
       from: "bicoastalvisualizers@gmail.com", // sender address
       to: `${email}`, // list of receivers
-      subject: "Capstone Test Email", // Subject line
-      text: "What happens in Vegas", // plain text body
+      subject: `Details on your trip to ${destination}`, // Subject line
+      html: `<h1 style="color: red">${destination}</h1>`, // plain text body
     };
 
     const info = await transporter.sendMail(msg, function (err, data) {

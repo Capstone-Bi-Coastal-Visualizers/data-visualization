@@ -1,6 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Bar } from "react-chartjs-2";
+import axios from "axios";
 
 const ConfirmationPage = () => {
   const tripData = useSelector((state) => state.tripDataReducer);
@@ -78,10 +79,25 @@ const ConfirmationPage = () => {
       ],
     },
   };
+
+  const handleClick = async () => {
+    const token = window.localStorage.getItem("token");
+    console.log(token);
+    const { data: userData } = await axios.get("/auth/me", {
+      headers: {
+        authorization: token,
+      },
+    });
+    await axios.post("/api/users/email", {
+      email: userData.email,
+      destination,
+    });
+  };
+
   return (
     <div>
       <Bar data={data} options={options} />
-      <button>Email</button>
+      <button onClick={handleClick}>Email</button>
     </div>
   );
 };
