@@ -6,11 +6,12 @@ import SearchBar from "./SearchBar";
  * COMPONENT
  */
 export const Home = (props) => {
-  const { email } = props;
+  const { firstName, lastName } = props;
+  console.log('here are props', props)
 
   return (
     <div>
-      <h3>Welcome, {email}</h3>
+      <h3>Welcome {firstName} {lastName}</h3>
       <SearchBar />
     </div>
   );
@@ -22,6 +23,8 @@ export const Home = (props) => {
 const mapState = (state) => {
   return {
     email: state.auth.email,
+    firstName: state.auth.firstName,
+    lastName: state.auth.lastName
   };
 };
 
