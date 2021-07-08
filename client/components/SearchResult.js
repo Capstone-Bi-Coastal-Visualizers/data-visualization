@@ -1,11 +1,12 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Bar } from "react-chartjs-2";
 import { Link } from "react-router-dom";
+import { setTrip } from "../store/tripData";
 
 const SearchResult = () => {
   const tripData = useSelector((state) => state.tripDataReducer);
-  console.log(tripData, "-------------------");
+  const dispatch = useDispatch();
   const {
     tripOneFirstFlight,
     tripOneReturningFlight,
@@ -18,11 +19,7 @@ const SearchResult = () => {
     tripTwoHotelData,
     tripTwoStayDuration,
   } = tripData;
-  console.log("first flight data", tripOneFirstFlight);
-  console.log("trip data length", Object.keys(tripData).length);
-
-  if (Object.keys(tripData).length === 9) {
-    console.log(tripOneFirstFlight[1].MinPrice);
+  if (Object.keys(tripData).length >= 9) {
     const tripOneFlights =
       tripOneFirstFlight[1].MinPrice + tripOneReturningFlight[1].MinPrice;
     const tripTwoFlights =
@@ -92,8 +89,14 @@ const SearchResult = () => {
     return (
       <div>
         <Bar data={data} options={options} />
-        <Link to="/confirmation-page"> Select Trip One </Link>
-        <Link to="/confirmation-page"> Select Trip Two </Link>
+        <Link to="/confirmation-page" onClick={() => dispatch(setTrip(1))}>
+          {" "}
+          Select Trip One{" "}
+        </Link>
+        <Link to="/confirmation-page" onClick={() => dispatch(setTrip(2))}>
+          {" "}
+          Select Trip Two{" "}
+        </Link>
 
         <h2>{destinationOne}</h2>
         <h3>

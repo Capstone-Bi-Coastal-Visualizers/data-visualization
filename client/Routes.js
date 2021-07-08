@@ -23,8 +23,12 @@ class Routes extends Component {
       <div>
         {isLoggedIn ? (
           <Switch>
+<<<<<<< HEAD
             <Route exact path="/trips" component={Trips} />
             <Route path="/home" component={Home} />
+=======
+            <Route exact path="/" component={Home} />
+>>>>>>> main
             <Route path="/search-result" component={SearchResult} />
             <Route
               exact
@@ -34,8 +38,7 @@ class Routes extends Component {
           </Switch>
         ) : (
           <Switch>
-            <Route path="/home" component={Home} />
-            <Route exact path="/" component={Login} />
+            <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/search-result" component={SearchResult} />
