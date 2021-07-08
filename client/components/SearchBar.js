@@ -36,7 +36,6 @@ export default function SearchBar() {
   };
 
   const handleclick = () => {
-    console.log("Thunks were hit");
     const tripOneFirstFlight = {
       origin: firstTripState.origin,
       destination: firstTripState.destination,

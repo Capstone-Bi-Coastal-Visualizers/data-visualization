@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import {Link} from 'react-router-dom';
-import {logout} from '../store'
+import { Link } from "react-router-dom";
+import { logout } from "../store";
 
 export default function NavBarTwo() {
-    // const [state, setState] = useState({
-    //     menuToggle: false
-    // })
+  // const [state, setState] = useState({
+  //     menuToggle: false
+  // })
 
-    const dispatch = useDispatch()
-    const [isActive, setisActive] = useState(false);
-    const isLoggedIn = useSelector(state => !!state.auth.id)
-    const handleClick = () => dispatch(logout())
+  const dispatch = useDispatch();
+  const [isActive, setisActive] = useState(false);
+  const isLoggedIn = useSelector((state) => !!state.auth.id);
+  const handleClick = () => dispatch(logout());
 
   return (
     <div className="navBar-container">
-    <h1>Bon Voyage</h1>
-    <nav className="navbar" role="navigation" aria-label="main navigation">
+      <h1>Bon Voyage</h1>
+      <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <a
             onClick={() => {
@@ -37,26 +37,26 @@ export default function NavBarTwo() {
           id="navbarBasicExample"
           className={`navbar-menu ${isActive ? "is-active" : ""}`}
         >
- {isLoggedIn ? (
-        <div className="navbar-start">
-          {/* The navbar will show these links after you log in */}
-          <Link to="/home">Home</Link>
-          <a href="#" onClick={handleClick}>
-            Logout
-          </a>
+          {isLoggedIn ? (
+            <div className="navbar-start">
+              {/* The navbar will show these links after you log in */}
+              <Link to="/">Home</Link>
+              <a href="#" onClick={handleClick}>
+                Logout
+              </a>
+            </div>
+          ) : (
+            <div className="navbar-start">
+              <Link to="/login">
+                <div className="navbar-item">Login</div>
+              </Link>
+              <Link to="/signup">
+                <div className="navbar-item">Sign Up</div>
+              </Link>
+            </div>
+          )}
         </div>
-      ) : (
-          <div className="navbar-start">
-          <Link to="/login">
-            <div className="navbar-item">Login</div>
-          </Link>
-          <Link to="/signup">
-            <div className="navbar-item">Sign Up</div>
-            </Link>
-          </div>
-      )}
-        </div>
-   </nav>
-   </div>
-  )
+      </nav>
+    </div>
+  );
 }
