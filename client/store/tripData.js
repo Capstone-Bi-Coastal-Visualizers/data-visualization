@@ -13,6 +13,8 @@ const SET_TRIP_TWO_STAY_DURATION = "SET_TRIP_TWO_STAY_DURATION";
 
 const SET_BUDGET = "SET_BUDGET";
 
+const SET_TRIP = "SET_TRIP";
+
 //ACTION CREATORS
 const setTripOneFirstFlight = (flightData) => ({
   type: SET_TRIP_ONE_FIRST_FLIGHT,
@@ -57,6 +59,11 @@ export const setTripOneStayDuration = (stayDuration) => ({
 export const setTripTwoStayDuration = (stayDuration) => ({
   type: SET_TRIP_TWO_STAY_DURATION,
   stayDuration,
+});
+
+export const setTrip = (tripNumber) => ({
+  type: SET_TRIP,
+  tripNumber,
 });
 
 //Thunk Creators
@@ -170,6 +177,8 @@ const tripDataReducer = (state = initialState, action) => {
       return { ...state, tripOneStayDuration: action.stayDuration };
     case SET_TRIP_TWO_STAY_DURATION:
       return { ...state, tripTwoStayDuration: action.stayDuration };
+    case SET_TRIP:
+      return { ...state, selectedTrip: action.tripNumber };
     default:
       return state;
   }

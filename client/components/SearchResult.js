@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 const SearchResult = () => {
   const tripData = useSelector((state) => state.tripDataReducer);
-  console.log(tripData, "-------------------");
   const {
     tripOneFirstFlight,
     tripOneReturningFlight,
@@ -18,11 +17,7 @@ const SearchResult = () => {
     tripTwoHotelData,
     tripTwoStayDuration,
   } = tripData;
-  console.log("first flight data", tripOneFirstFlight);
-  console.log("trip data length", Object.keys(tripData).length);
-
   if (Object.keys(tripData).length === 9) {
-    console.log(tripOneFirstFlight[1].MinPrice);
     const tripOneFlights =
       tripOneFirstFlight[1].MinPrice + tripOneReturningFlight[1].MinPrice;
     const tripTwoFlights =
