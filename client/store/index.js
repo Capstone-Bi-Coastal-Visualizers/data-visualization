@@ -3,11 +3,12 @@ import {createLogger} from 'redux-logger'
 import thunkMiddleware from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import auth from './auth'
-import tripDataReducer from './tripData'
+import { tripDataReducer, userTripReducer  } from './tripData'
 
 const reducer = combineReducers({
    auth,
-   tripDataReducer })
+   tripDataReducer,
+   userTripReducer })
  
 const middleware = composeWithDevTools(
   applyMiddleware(thunkMiddleware, createLogger({collapsed: true}))

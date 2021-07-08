@@ -170,7 +170,7 @@ export const fetchUserTripHistory = (token) => async (dispatch) => {
 //reducer
 const initialState = {};
 
-const tripDataReducer = (state = initialState, action) => {
+export const tripDataReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_TRIP_ONE_FIRST_FLIGHT:
       return { ...state, tripOneFirstFlight: action.flightData };
@@ -190,11 +190,17 @@ const tripDataReducer = (state = initialState, action) => {
       return { ...state, tripOneStayDuration: action.stayDuration };
     case SET_TRIP_TWO_STAY_DURATION:
       return { ...state, tripTwoStayDuration: action.stayDuration };
-    case SET_USER_TRIPS_HISTORY:
-      return { ...state, userTripHistory: action.userTripHistory }
     default:
       return state;
   }
 };
 
-export default tripDataReducer;
+export const userTripReducer = (state = [], action) => {
+  switch (action.type) {
+    case SET_USER_TRIPS_HISTORY:
+      return action.userTripHistory;
+    default:
+      return state;
+  }
+}
+
