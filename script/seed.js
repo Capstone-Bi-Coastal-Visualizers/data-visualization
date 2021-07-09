@@ -37,7 +37,7 @@ async function seed() {
       destinationAirport: "JFK",
       departureDate: "2021-08-01",
       returnDate: "2021-08-07",
-      airfairCost: 199,
+      airfareCost: 199,
       hotelCost: 200,
       budget: 600,
       destCoordinates: [40.6413, 73.7781],
