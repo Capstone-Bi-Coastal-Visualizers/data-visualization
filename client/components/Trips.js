@@ -7,8 +7,9 @@ import { fetchUserTripHistory } from '../store/userTripData'
 
 const Trips = () => {
     const dispatch = useDispatch();
-
-    dispatch(fetchUserTripHistory())
+    const token = localStorage.getItem('token');
+    dispatch(fetchUserTripHistory(token))
+    // console.log("here are props", props)
 
 return (
     <div className="trips-container">

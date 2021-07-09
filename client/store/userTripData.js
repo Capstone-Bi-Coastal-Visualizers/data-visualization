@@ -10,8 +10,10 @@ export const setUserTripsHistory = (userTripHistory) => ({
 
 //Thunk Creators
 export const fetchUserTripHistory = (token) => async (dispatch) => {
-    // console.log('here is token', token)
-    //window.localstorage.key
+    console.log('here is regular token', token)
+    console.log('here is window token', window.localStorage.token)
+    token = window.localStorage.token
+    console.log('here is reassigned token', token)
     //if token then axios.get request
     try {
       const { data: user } = await axios.get("/trips", {
