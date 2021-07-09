@@ -121,7 +121,6 @@ const ConfirmationPage = () => {
     await axios.post(
       "/api/trips",
       {
-        userId: 1,
         originAirport: departureAirport,
         destinationAirport,
         departureDate,

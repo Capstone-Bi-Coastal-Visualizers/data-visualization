@@ -25,8 +25,8 @@ router.post("/", async (req, res, next) => {
     console.log("within trips route", req.body, req.headers);
     const token = req.headers.authorization;
     const user = await User.findByToken(token);
-
-    const trip = await Trip.create(req.body);
+    const data = { ...req.body, userId: user.id };
+    const trip = await Trip.create(data);
     res.json(trip);
   } catch (error) {
     next(error);
