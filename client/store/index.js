@@ -3,7 +3,8 @@ import {createLogger} from 'redux-logger'
 import thunkMiddleware from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import auth from './auth'
-import { tripDataReducer, userTripReducer  } from './tripData'
+import { tripDataReducer } from './tripData'
+import { userTripReducer  } from './userTripData'
 
 const reducer = combineReducers({
    auth,
