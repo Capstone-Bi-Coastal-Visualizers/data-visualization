@@ -21,8 +21,9 @@ router.get("/", async (req, res, next) => {
 
 router.post("/email", async (req, res, next) => {
   try {
+    const user = await User.findByToken(req.headers.authorization);
+    const email = user.email;
     const {
-      email,
       departureAirport,
       departureDate,
       destinationAirport,

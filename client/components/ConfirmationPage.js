@@ -20,9 +20,9 @@ const ConfirmationPage = () => {
     tripOneFirstFlight[1].MinPrice + tripOneReturningFlight[1].MinPrice;
   const tripTwoFlights =
     tripTwoFirstFlight[1].MinPrice + tripTwoReturningFlight[1].MinPrice;
-  const tripOneHotel =
+  const tripOneHotelCost =
     tripOneHotelData.price.split(" ")[0].split("$")[1] * tripOneStayDuration;
-  const tripTwoHotel =
+  const tripTwoHotelCost =
     tripTwoHotelData.price.split(" ")[0].split("$")[1] * tripTwoStayDuration;
   const budget = tripData.budget;
   const destinationOne = tripOneHotelData.location_string;
@@ -42,18 +42,27 @@ const ConfirmationPage = () => {
     return airportId.PlaceId === tripReturningFlight[1].OutboundLeg.OriginId;
   })[0].SkyscannerCode;
 
-  const departureDate = tripFirstFlight[1].OutboundLeg.DepartureDate;
-  const returnDate = tripReturningFlight[1].OutboundLeg.DepartureDate;
+  const departureDate =
+    tripFirstFlight[1].OutboundLeg.DepartureDate.split("T")[0];
+  const returnDate =
+    tripReturningFlight[1].OutboundLeg.DepartureDate.split("T")[0];
   const nights = selectedTrip === 1 ? tripOneStayDuration : tripTwoStayDuration;
-  // const departureAirport = selectedTrip === 1 ?
 
   const arbitraryStackKey = "stack1";
 
   const selectedFlights = selectedTrip === 1 ? tripOneFlights : tripTwoFlights;
-  const selectedHotel = selectedTrip === 1 ? tripOneHotel : tripTwoHotel;
+  const selectedHotel =
+    selectedTrip === 1 ? tripOneHotelCost : tripTwoHotelCost;
   const difference = budget - selectedFlights - selectedHotel;
   const budgetLabel = difference >= 0 ? "Remaining budget" : "Over budget";
   const destination = selectedTrip === 1 ? destinationOne : destinationTwo;
+
+  const hotelCoordinates =
+    selectedTrip === 1 ? tripOneHotelData : tripTwoHotelData;
+  const destCoordinates = [
+    hotelCoordinates.latitude,
+    hotelCoordinates.longitude,
+  ];
 
   const data = {
     labels: [destination],
@@ -99,27 +108,54 @@ const ConfirmationPage = () => {
     },
   };
 
+  // TODO!!: Display msg that says, "E-mail was sent!" & redirect user to trips page after clicking email button.
+  // TODO!!: If user is not logged in, have a message pop up that has asks them to sign in.
   const handleClick = async () => {
     const token = window.localStorage.getItem("token");
-    console.log(token);
-    const { data: userData } = await axios.get("/auth/me", {
-      headers: {
-        authorization: token,
+    console.log(
+      "hotel coordinates",
+      hotelCoordinates.longitude,
+      hotelCoordinates.latitude
+    );
+
+    await axios.post(
+      "/api/trips",
+      {
+        originAirport: departureAirport,
+        destinationAirport,
+        departureDate,
+        returnDate,
+        airfareCost: selectedFlights,
+        hotelCost: selectedHotel,
+        budget,
+        destCoordinates,
       },
-    });
-    await axios.post("/api/users/email", {
-      email: userData.email,
-      departureAirport,
-      departureDate,
-      destinationAirport,
-      returnDate,
-      hotel: tripHotel.name,
-      nights,
-      airfare: selectedFlights,
-      hotelPrice: selectedHotel,
-      total: selectedFlights + selectedHotel,
-      budget,
-    });
+      {
+        headers: {
+          authorization: token,
+        },
+      }
+    );
+    await axios.post(
+      "/api/users/email",
+      {
+        departureAirport,
+        departureDate,
+        destinationAirport,
+        returnDate,
+        hotel: tripHotel.name,
+        nights,
+        airfare: selectedFlights,
+        hotelPrice: selectedHotel,
+        total: selectedFlights + selectedHotel,
+        budget,
+      },
+      {
+        headers: {
+          authorization: token,
+        },
+      }
+    );
   };
 
   return (
