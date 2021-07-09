@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { logout } from "../store";
 
-export default function NavBarTwo() {
+export default function NavBar() {
   // const [state, setState] = useState({
   //     menuToggle: false
   // })
