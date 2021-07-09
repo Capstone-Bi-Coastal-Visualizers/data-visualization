@@ -18,7 +18,7 @@ const Trip = db.define("trip", {
     type: Sequelize.DATEONLY,
     allowNull: false,
   },
-  airfairCost: {
+  airfareCost: {
     type: Sequelize.INTEGER,
     allowNull: false,
   },
