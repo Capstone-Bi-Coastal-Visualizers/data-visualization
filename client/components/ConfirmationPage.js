@@ -108,7 +108,8 @@ const ConfirmationPage = () => {
     },
   };
 
-  // TODO!!: Display msg that says, "E-mail was sent!" & redirect user to trips page after clicking email button
+  // TODO!!: Display msg that says, "E-mail was sent!" & redirect user to trips page after clicking email button.
+  // TODO!!: If user is not logged in, have a message pop up that has asks them to sign in.
   const handleClick = async () => {
     const token = window.localStorage.getItem("token");
     console.log(
