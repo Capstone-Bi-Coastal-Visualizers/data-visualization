@@ -8,7 +8,7 @@ const Trips = () => {
 
 return (
     <div className="trips-container">
-        <h2>Trips</h2>
+        <h1>Trips</h1>
         
     </div>
 )
