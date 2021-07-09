@@ -24,13 +24,14 @@ class Routes extends Component {
         {isLoggedIn ? (
           <Switch>
             <Route exact path="/trips" component={Trips} />
-            <Route path="/home" component={Home} />
-            <Route path="/search-result" component={SearchResult} />
+            <Route exact path="/" component={Home} />
+            <Route exact path="/search-result" component={SearchResult} />
             <Route
               exact
               path="/confirmation-page"
               component={ConfirmationPage}
             />
+            <Redirect to="/" />
           </Switch>
         ) : (
           <Switch>
