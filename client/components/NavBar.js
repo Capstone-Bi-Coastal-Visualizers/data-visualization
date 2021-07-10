@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { logout } from "../store";
-import Trips from "./Trips";
 
 export default function NavBar() {
 
@@ -41,7 +40,7 @@ export default function NavBar() {
             <div className="navbar-start">
               {/* The navbar will show these links after you log in */}
               <Link to="/trips">
-                <Trips />
+                Trips
                 </Link>
               <a href="#" onClick={handleClick}>
                 Logout

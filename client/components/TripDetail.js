@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { fetchUserTripHistory } from '../store/userTripData'
 
-const Trips = () => {
+const TripDetail = () => {
     //console.log('here is state in Trips', state)
     //useEffect is like component did mount and this needs to happen after the trips link has been pressed
     //check if user has trips, if so populate a div of trip with a link to the actual trip details
@@ -17,8 +17,8 @@ const Trips = () => {
     // console.log('here is trip history', tripHistory)
 
 return (
-    <div className="trips-container">
-        <h1>Trips</h1>
+    <div className="trip-detail-container">
+        <h1>Trip Detail</h1>
         <ul>
           {tripHistory.map(trip => {
             return (
@@ -35,4 +35,4 @@ return (
 )
 }
 
-export default Trips
+export default TripDetail
