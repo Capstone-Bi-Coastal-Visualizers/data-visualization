@@ -11580,18 +11580,6 @@
     "icao": "KFWA"
   },
   {
-    "code": "FWM",
-    "lat": 56.8179,
-    "lon": -5.1039,
-    "name": "Fort William Heliport",
-    "city": "Fort William",
-    "state": "Scotland",
-    "country": "United Kingdom",
-    "woeid": 12523986,
-    "type": "Heliport2",
-    "icao": ""
-  },
-  {
     "code": "FYU",
     "lat": 66.5714,
     "lon": -145.25,
@@ -16188,18 +16176,6 @@
     "icao": ""
   },
   {
-    "code": "JCU",
-    "lat": 35.8879,
-    "lon": -5.31601,
-    "name": "Ceuta Heliport",
-    "city": "Ceuta",
-    "state": "Ciudad Autónoma de Ceuta",
-    "country": "Spain",
-    "woeid": 20089013,
-    "type": "Heliport2",
-    "icao": ""
-  },
-  {
     "code": "JDF",
     "lat": -21.7925,
     "lon": -43.385,
@@ -16341,18 +16317,6 @@
     "country": "India",
     "woeid": 12513607,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "JGC",
-    "lat": 35.9621,
-    "lon": -112.133,
-    "name": "Grand Canyon Heliport",
-    "city": "Williams",
-    "state": "Arizona",
-    "country": "United States",
-    "woeid": 12523301,
-    "type": "Heliport2",
     "icao": ""
   },
   {
@@ -16524,18 +16488,6 @@
     "icao": "ZBDX"
   },
   {
-    "code": "JJU",
-    "lat": 60.7483,
-    "lon": -46.0317,
-    "name": "Julianehab Heliport",
-    "city": "Qaqortoq",
-    "state": "Vestgronland",
-    "country": "Greenland",
-    "woeid": 12523845,
-    "type": "Heliport2",
-    "icao": "BGQE"
-  },
-  {
     "code": "JKG",
     "lat": 57.7522,
     "lon": 14.0692,
@@ -16570,18 +16522,6 @@
     "woeid": 12520407,
     "type": "Airports",
     "icao": "KJKL"
-  },
-  {
-    "code": "JLD",
-    "lat": 55.8848,
-    "lon": 12.8667,
-    "name": "Landskrona Heliport",
-    "city": "Landskrona",
-    "state": "Skane",
-    "country": "Sweden",
-    "woeid": 12523971,
-    "type": "Heliport2",
-    "icao": ""
   },
   {
     "code": "JLN",
@@ -16665,18 +16605,6 @@
     "country": "Greenland",
     "woeid": 12523847,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "JNS",
-    "lat": 61.1427,
-    "lon": -45.4053,
-    "name": "Narsaq Heliport",
-    "city": "Narsaq",
-    "state": "Vestgronland",
-    "country": "Greenland",
-    "woeid": 12523848,
-    "type": "Heliport2",
     "icao": ""
   },
   {
@@ -16800,18 +16728,6 @@
     "icao": ""
   },
   {
-    "code": "JRB",
-    "lat": 40.7039,
-    "lon": -74.0129,
-    "name": "Downtown Manhattan Heliport",
-    "city": "New York",
-    "state": "New York",
-    "country": "United States",
-    "woeid": 12523144,
-    "type": "Heliport2",
-    "icao": "KJRB"
-  },
-  {
     "code": "JRH",
     "lat": 26.7286,
     "lon": 94.1778,
@@ -16896,18 +16812,6 @@
     "icao": "KJST"
   },
   {
-    "code": "JSU",
-    "lat": 65.4177,
-    "lon": -52.9269,
-    "name": "Maniitsoq Heliport",
-    "city": "Maitsoq",
-    "state": "Vestgronland",
-    "country": "Greenland",
-    "woeid": 12523850,
-    "type": "Heliport2",
-    "icao": ""
-  },
-  {
     "code": "JSY",
     "lat": 37.4236,
     "lon": 24.95,
@@ -16990,18 +16894,6 @@
     "woeid": 2269118,
     "type": "Airports",
     "icao": ""
-  },
-  {
-    "code": "JUV",
-    "lat": 72.8,
-    "lon": -56.15,
-    "name": "Upernavik Heliport",
-    "city": "Upernavik",
-    "state": "Vestgronland",
-    "country": "Greenland",
-    "woeid": 12523851,
-    "type": "Heliport2",
-    "icao": "BGUK"
   },
   {
     "code": "JUZ",
@@ -36778,18 +36670,6 @@
     "woeid": 12515586,
     "type": "Airports",
     "icao": "LRTR"
-  },
-  {
-    "code": "TSS",
-    "lat": 40.7474,
-    "lon": -73.9912,
-    "name": "East 34th Street Heliport",
-    "city": "New York",
-    "state": "New York",
-    "country": "United States",
-    "woeid": 12523248,
-    "type": "Heliport2",
-    "icao": ""
   },
   {
     "code": "TST",

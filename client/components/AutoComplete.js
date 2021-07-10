@@ -33,7 +33,7 @@ class Autocomplete extends React.Component {
       // useExtendedSearch: false,
       // ignoreLocation: false,
       // ignoreFieldNorm: false,
-      keys: ["code", "city"],
+      keys: ["code", "city", "state", "country"],
     };
 
     const fuse = new Fuse(airport, options);
@@ -51,6 +51,17 @@ class Autocomplete extends React.Component {
       airportObj: selection,
       selected: true,
     });
+
+    const { code, lon, lat } = selection.item;
+    const { firstFlight, location } = this.props;
+    const trip = {
+      firstFlight,
+      location,
+      code,
+      lon,
+      lat,
+    };
+    this.props.setTripAirportCode(trip);
   }
 
   updateQuery(e) {
@@ -60,7 +71,7 @@ class Autocomplete extends React.Component {
   }
 
   render() {
-    const { label, name, placeholder } = this.props;
+    const { name, placeholder } = this.props;
     const { activeIndex, matches, query } = this.state;
 
     return (
@@ -89,7 +100,8 @@ class Autocomplete extends React.Component {
                       key={index}
                       onClick={(event) => this.handleSelection(event, match)}
                     >
-                      {match.item.city}
+                      {match.item.city}, {match.item.state},{" "}
+                      {match.item.country}, {match.item.code}
                     </a>
                   ))}
                 </div>
