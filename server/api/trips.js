@@ -3,21 +3,22 @@ const {
   models: { Trip, User },
 } = require("../db");
 
+const isUser = require("./isUser")
+
 module.exports = router;
 
-router.get("/", async (req, res, next) => {
-  try {
-    const user = await User.findByToken(req.headers.authorization);
-    console.log("here is user", user);
-    const trips = await Trip.findAll({
-      where: {
-        userId: user.id,
-      },
-    });
-    res.send(trips);
-  } catch (error) {
-    next(error);
-  }
+router.get("/", isUser, async (req, res, next) => {
+    try {
+        const trips = await Trip.findAll({
+            where: { 
+                userId: req.user.id
+            }
+        })
+        console.log('here are trips', trips)
+        res.send(trips)
+    } catch (error) {
+      next(error)  
+    }
 });
 
 router.post("/", async (req, res, next) => {
@@ -32,3 +33,4 @@ router.post("/", async (req, res, next) => {
     next(error);
   }
 });
+
