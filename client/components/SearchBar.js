@@ -16,16 +16,16 @@ export default function SearchBar() {
   const [firstTripState, setFirstTripState] = useState({
     origin: "JFK",
     destination: "ORD",
-    departureDate: "2021-07-10",
-    returnDate: "2021-07-15",
+    departureDate: "2021-07-20",
+    returnDate: "2021-07-27",
     budget: "100",
     predictions: [],
   });
   const [secondTripState, setSecondTripState] = useState({
     origin: "IAH",
     destination: "LAX",
-    departureDate: "2021-07-10",
-    returnDate: "2021-07-15",
+    departureDate: "2021-07-20",
+    returnDate: "2021-07-27",
   });
 
   const calcStayDuration = (startDate, endDate) => {

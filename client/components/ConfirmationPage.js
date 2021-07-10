@@ -1,9 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Bar } from "react-chartjs-2";
 import axios from "axios";
+import Modal from "react-modal";
 
 const ConfirmationPage = () => {
+  const [showModal, setShowModal] = useState(false);
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
+
   const tripData = useSelector((state) => state.tripDataReducer);
   const {
     tripOneFirstFlight,
@@ -112,56 +118,60 @@ const ConfirmationPage = () => {
   // TODO!!: If user is not logged in, have a message pop up that has asks them to sign in.
   const handleClick = async () => {
     const token = window.localStorage.getItem("token");
-    console.log(
-      "hotel coordinates",
-      hotelCoordinates.longitude,
-      hotelCoordinates.latitude
-    );
-
-    await axios.post(
-      "/api/trips",
-      {
-        originAirport: departureAirport,
-        destinationAirport,
-        departureDate,
-        returnDate,
-        airfareCost: selectedFlights,
-        hotelCost: selectedHotel,
-        budget,
-        destCoordinates,
-      },
-      {
-        headers: {
-          authorization: token,
+    if (token) {
+      await axios.post(
+        "/api/trips",
+        {
+          originAirport: departureAirport,
+          destinationAirport,
+          departureDate,
+          returnDate,
+          airfareCost: selectedFlights,
+          hotelCost: selectedHotel,
+          budget,
+          destCoordinates,
         },
-      }
-    );
-    await axios.post(
-      "/api/users/email",
-      {
-        departureAirport,
-        departureDate,
-        destinationAirport,
-        returnDate,
-        hotel: tripHotel.name,
-        nights,
-        airfare: selectedFlights,
-        hotelPrice: selectedHotel,
-        total: selectedFlights + selectedHotel,
-        budget,
-      },
-      {
-        headers: {
-          authorization: token,
+        {
+          headers: {
+            authorization: token,
+          },
+        }
+      );
+      await axios.post(
+        "/api/users/email",
+        {
+          departureAirport,
+          departureDate,
+          destinationAirport,
+          returnDate,
+          hotel: tripHotel.name,
+          nights,
+          airfare: selectedFlights,
+          hotelPrice: selectedHotel,
+          total: selectedFlights + selectedHotel,
+          budget,
         },
-      }
-    );
+        {
+          headers: {
+            authorization: token,
+          },
+        }
+      );
+    } else {
+      toggleModal();
+    }
   };
 
   return (
     <div>
       <Bar data={data} options={options} />
       <button onClick={handleClick}>Email</button>
+      <Modal isOpen={showModal}>
+        <h2>Please Login or Sign-Up To User This Service!</h2>
+        <div>
+          <button onClick={toggleModal}>Close</button>
+        </div>
+      </Modal>
     </div>
   );
 };

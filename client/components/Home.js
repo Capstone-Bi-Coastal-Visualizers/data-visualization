@@ -7,11 +7,12 @@ import SearchBar from "./SearchBar";
  */
 export const Home = (props) => {
   const { firstName, lastName } = props;
-  console.log('here are props', props)
 
   return (
     <div>
-      <h3>Welcome {firstName} {lastName}</h3>
+      <h3>
+        Welcome {firstName} {lastName}
+      </h3>
       <SearchBar />
     </div>
   );
@@ -24,7 +25,7 @@ const mapState = (state) => {
   return {
     email: state.auth.email,
     firstName: state.auth.firstName,
-    lastName: state.auth.lastName
+    lastName: state.auth.lastName,
   };
 };
 
