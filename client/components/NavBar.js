@@ -2,11 +2,9 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { logout } from "../store";
+import Trips from "./Trips";
 
 export default function NavBar() {
-  // const [state, setState] = useState({
-  //     menuToggle: false
-  // })
 
   const dispatch = useDispatch();
   const [isActive, setisActive] = useState(false);
@@ -42,7 +40,9 @@ export default function NavBar() {
           {isLoggedIn ? (
             <div className="navbar-start">
               {/* The navbar will show these links after you log in */}
-              <Link to="/trips">Trips</Link>
+              <Link to="/trips">
+                <Trips />
+                </Link>
               <a href="#" onClick={handleClick}>
                 Logout
               </a>
