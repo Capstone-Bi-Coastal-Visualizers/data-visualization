@@ -87,33 +87,53 @@ const SearchResult = () => {
     };
 
     return (
-      <div>
-        <Bar data={data} options={options} />
-        <Link to="/confirmation-page" onClick={() => dispatch(setTrip(1))}>
-          {" "}
-          Select Trip One{" "}
-        </Link>
-        <Link to="/confirmation-page" onClick={() => dispatch(setTrip(2))}>
-          {" "}
-          Select Trip Two{" "}
-        </Link>
-
-        <h2>{destinationOne}</h2>
-        <h3>
-          {differenceOne > 0
-            ? `Under budget by $${differenceOne.toFixed(2)}`
-            : `Over budget by $${Math.abs(differenceOne).toFixed(2)}`}
-        </h3>
-        <h2>{destinationTwo}</h2>
-        <h3>
-          {differenceTwo > 0
-            ? `Under budget by $${differenceTwo.toFixed(2)}`
-            : `Over budget by $${Math.abs(differenceTwo).toFixed(2)}`}
-        </h3>
-        <h2>
-          Cheaper to travel to:{" "}
-          {differenceOne > differenceTwo ? destinationOne : destinationTwo}
-        </h2>
+      <div className="columns results-container">
+        <div className="column is-1"></div>
+        <div className="column is-3">
+          <h2 class="title">Trip 1</h2>
+          <p>
+            <span className="subtitle">Leaving from:</span>{" "}
+            {tripOneFirstFlight[2][1].CityName}
+          </p>
+          <h2>
+            <span className="subtitle">Going to:</span> {destinationOne}
+          </h2>
+          <h3>
+            {differenceOne > 0
+              ? `Under budget by $${differenceOne.toFixed(2)}`
+              : `Over budget by $${Math.abs(differenceOne).toFixed(2)}`}
+          </h3>
+          <h2 class="title">Trip 2</h2>
+          <p>
+            <span className="subtitle">Leaving from:</span>{" "}
+            {tripTwoFirstFlight[2][1].CityName}
+          </p>
+          <h2>
+            <span className="subtitle">Going to:</span> {destinationTwo}
+          </h2>
+          <h3>
+            {differenceTwo > 0
+              ? `Under budget by $${differenceTwo.toFixed(2)}`
+              : `Over budget by $${Math.abs(differenceTwo).toFixed(2)}`}
+          </h3>
+          <p className="title">Trip Analysis</p>
+          <h2>
+            Cheaper to travel to:{" "}
+            {differenceOne > differenceTwo ? destinationOne : destinationTwo}
+          </h2>
+          <Link to="/confirmation-page" onClick={() => dispatch(setTrip(1))}>
+            {" "}
+            Select Trip One{" "}
+          </Link>
+          <Link to="/confirmation-page" onClick={() => dispatch(setTrip(2))}>
+            {" "}
+            Select Trip Two{" "}
+          </Link>
+        </div>
+        <div className="column is-7">
+          <Bar data={data} options={options} />
+        </div>
+        <div className="column is-1"></div>
       </div>
     );
   } else {

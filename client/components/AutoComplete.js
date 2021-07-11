@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import airport from "../../airports.json";
 import Fuse from "fuse.js";
 
-class Autocomplete extends React.Component {
+class AutoComplete extends React.Component {
   constructor(props) {
     super(props);
 
@@ -24,20 +24,15 @@ class Autocomplete extends React.Component {
       isCaseSensitive: false,
       includeScore: true,
       shouldSort: true,
-      // includeMatches: false,
-      // findAllMatches: false,
       minMatchCharLength: 3,
       location: 0,
       threshold: 0.1,
-      // distance: 100,
-      // useExtendedSearch: false,
-      // ignoreLocation: false,
-      // ignoreFieldNorm: false,
-      keys: ["code", "city"],
+      keys: ["code", "city", "state", "country"],
     };
 
     const fuse = new Fuse(airport, options);
     const matches = fuse.search(query);
+
     this.setState({ matches });
   }
 
@@ -51,16 +46,28 @@ class Autocomplete extends React.Component {
       airportObj: selection,
       selected: true,
     });
+
+    const { code, lon, lat } = selection.item;
+    const { firstFlight, location } = this.props;
+    const trip = {
+      firstFlight,
+      location,
+      code,
+      lon,
+      lat,
+    };
+    this.props.setTripAirportCode(trip);
   }
 
   updateQuery(e) {
     const query = e.target.value;
+
     this.setState({ query });
     this.fuzzyMatch(query);
   }
 
   render() {
-    const { label, name, placeholder } = this.props;
+    const { name, placeholder } = this.props;
     const { activeIndex, matches, query } = this.state;
 
     return (
@@ -70,7 +77,7 @@ class Autocomplete extends React.Component {
             <div className="dropdown-trigger">
               <input
                 type="text"
-                className="input"
+                className="input is-shadowless"
                 name={name}
                 value={query}
                 onChange={this.updateQuery}
@@ -82,14 +89,15 @@ class Autocomplete extends React.Component {
                 <div className="dropdown-content">
                   {matches.map((match, index) => (
                     <a
-                      className={`dropdown-item has-text-black ${
+                      className={`dropdown-item has-text-black is-clickable ${
                         index === activeIndex ? "is-active" : ""
                       }`}
                       href="/"
                       key={index}
                       onClick={(event) => this.handleSelection(event, match)}
                     >
-                      {match.item.city}
+                      {match.item.city}, {match.item.state},{" "}
+                      {match.item.country}, {match.item.code}
                     </a>
                   ))}
                 </div>
@@ -102,4 +110,4 @@ class Autocomplete extends React.Component {
   }
 }
 
-export default Autocomplete;
+export default AutoComplete;

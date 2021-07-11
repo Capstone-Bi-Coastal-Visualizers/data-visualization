@@ -7,7 +7,6 @@ import SearchBar from "./SearchBar";
  */
 export const Home = (props) => {
   const { firstName, lastName } = props;
-
   return (
     <div>
       <h3>

@@ -30,11 +30,19 @@ form div {
   align-items: center;
 }
 
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+
+.results-container {
+  width: 100vw;
+}
+
 .trips-container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
 }
-
-

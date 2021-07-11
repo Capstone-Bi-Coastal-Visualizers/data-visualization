@@ -3,14 +3,15 @@ const {
   models: { Trip, User },
 } = require("../db");
 
+const isUser = require("./isUser");
+
 module.exports = router;
 
-router.get("/", async (req, res, next) => {
+router.get("/", isUser, async (req, res, next) => {
   try {
-    const user = await User.findByToken(req.headers.authorization);
     const trips = await Trip.findAll({
       where: {
-        userId: user.id,
+        userId: req.user.id,
       },
     });
     res.send(trips);
