@@ -66,53 +66,62 @@ export const setTrip = (tripNumber) => ({
 });
 
 //Thunk Creators
-export const fetchFlightSession = (searchInput) => async (dispatch) => {
-  try {
-    const { origin, destination, flightDate, returningFlight, tripNumber } =
-      searchInput;
-    const sessionConfig = {
-      headers: {
-        "x-rapidapi-key": Env_Vars["FLIGHT_API_KEY"],
-        "x-rapidapi-host":
-          "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
-      },
-    };
-    const { data: flightSession } = await axios.get(
-      `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/${origin}/${destination}/${flightDate}`,
-      sessionConfig
-    );
-    const bestFlight = [
-      flightSession.Carriers[0],
-      flightSession.Quotes[0],
-      flightSession.Places,
-    ];
+export const fetchFlightSession =
+  (searchInput, returningFlight, tripNumber) => async (dispatch) => {
+    try {
+      let { origin, destination, departureDate, returnDate } = searchInput;
+      let flightDate;
+      const sessionConfig = {
+        headers: {
+          "x-rapidapi-key": Env_Vars["FLIGHT_API_KEY"],
+          "x-rapidapi-host":
+            "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
+        },
+      };
+      if (returningFlight) {
+        let prevOrigin = origin;
+        origin = destination;
+        destination = prevOrigin;
+        flightDate = returnDate;
+      } else {
+        flightDate = departureDate;
+      }
+      const { data: flightSession } = await axios.get(
+        `https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browsequotes/v1.0/US/USD/en-US/${origin}/${destination}/${flightDate}`,
+        sessionConfig
+      );
+      const bestFlight = [
+        flightSession.Carriers[0],
+        flightSession.Quotes[0],
+        flightSession.Places,
+      ];
 
-    if (tripNumber === 1) {
-      if (returningFlight === false) {
-        dispatch(setTripOneFirstFlight(bestFlight));
+      if (tripNumber === 1) {
+        if (returningFlight === false) {
+          dispatch(setTripOneFirstFlight(bestFlight));
+        } else {
+          dispatch(setTripOneReturningFlight(bestFlight));
+        }
       } else {
-        dispatch(setTripOneReturningFlight(bestFlight));
+        if (returningFlight === false) {
+          dispatch(setTripTwoFirstFlight(bestFlight));
+        } else {
+          dispatch(setTripTwoReturningFlight(bestFlight));
+        }
       }
-    } else {
-      if (returningFlight === false) {
-        dispatch(setTripTwoFirstFlight(bestFlight));
-      } else {
-        dispatch(setTripTwoReturningFlight(bestFlight));
-      }
+    } catch (error) {
+      console.error(error);
     }
-  } catch (error) {
-    console.error(error);
-  }
-};
+  };
 
 export const fetchHotelData =
   (airportCoordinates, departureDate, tripNumber) => async (dispatch) => {
-    const { longitude, latitude } = airportCoordinates;
+    const [lon, lat] = airportCoordinates;
     try {
-      var options = {
+      const options = {
         params: {
-          latitude,
-          longitude,
+          latitude: lat,
+          longitude: lon,
           lang: "en_US",
           hotel_class: "1,2,3",
           limit: "30",
