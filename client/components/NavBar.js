@@ -3,10 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { logout } from "../store";
 
-export default function NavBarTwo() {
-  // const [state, setState] = useState({
-  //     menuToggle: false
-  // })
+export default function NavBar() {
 
   const dispatch = useDispatch();
   const [isActive, setisActive] = useState(false);
@@ -15,7 +12,9 @@ export default function NavBarTwo() {
 
   return (
     <div className="navBar-container">
-      <h1>Bon Voyage</h1>
+       <Link to="/">
+        <h1>Bon Voyage</h1>
+      </Link>
       <nav className="navbar" role="navigation" aria-label="main navigation">
         <div className="navbar-brand">
           <a
@@ -40,7 +39,9 @@ export default function NavBarTwo() {
           {isLoggedIn ? (
             <div className="navbar-start">
               {/* The navbar will show these links after you log in */}
-              <Link to="/">Home</Link>
+              <Link to="/trips">
+                Trips
+                </Link>
               <a href="#" onClick={handleClick}>
                 Logout
               </a>

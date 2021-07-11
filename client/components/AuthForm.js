@@ -7,7 +7,6 @@ import { authenticate, authenticateSignup } from "../store";
  */
 const AuthForm = (props) => {
   const { name, displayName, handleSubmit, error } = props;
-  console.log("here are props", props);
 
   return (
     <div>

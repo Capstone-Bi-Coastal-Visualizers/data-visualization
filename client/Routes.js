@@ -5,6 +5,8 @@ import { Login, Signup } from "./components/AuthForm";
 import Home from "./components/Home";
 import SearchResult from "./components/SearchResult";
 import ConfirmationPage from "./components/ConfirmationPage";
+import Trips from "./components/Trips";
+import TripDetail from "./components/TripDetail";
 import { me } from "./store";
 
 /**
@@ -22,13 +24,16 @@ class Routes extends Component {
       <div>
         {isLoggedIn ? (
           <Switch>
+            <Route exact path="/trips/:id" component={TripDetail} />
+            <Route exact path="/trips" component={Trips} />
             <Route exact path="/" component={Home} />
-            <Route path="/search-result" component={SearchResult} />
+            <Route exact path="/search-result" component={SearchResult} />
             <Route
               exact
               path="/confirmation-page"
               component={ConfirmationPage}
             />
+            <Redirect to="/" />
           </Switch>
         ) : (
           <Switch>

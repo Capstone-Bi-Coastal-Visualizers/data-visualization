@@ -12,7 +12,6 @@ const SET_TRIP_TWO_HOTEL_DATA = "SET_TRIP_TWO_HOTEL_DATA";
 const SET_TRIP_TWO_STAY_DURATION = "SET_TRIP_TWO_STAY_DURATION";
 
 const SET_BUDGET = "SET_BUDGET";
-
 const SET_TRIP = "SET_TRIP";
 
 //ACTION CREATORS
@@ -166,7 +165,7 @@ export const fetchHotelData =
 //reducer
 const initialState = {};
 
-const tripDataReducer = (state = initialState, action) => {
+export const tripDataReducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_TRIP_ONE_FIRST_FLIGHT:
       return { ...state, tripOneFirstFlight: action.flightData };
@@ -193,4 +192,4 @@ const tripDataReducer = (state = initialState, action) => {
   }
 };
 
-export default tripDataReducer;
+

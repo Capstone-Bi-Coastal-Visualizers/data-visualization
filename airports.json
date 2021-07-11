@@ -936,18 +936,6 @@
     "icao": "OEAB"
   },
   {
-    "code": "AHC",
-    "lat": 40.2664,
-    "lon": -120.151,
-    "name": "Amedee Army Air Field",
-    "city": "Herlong",
-    "state": "California",
-    "country": "United States",
-    "woeid": 12518602,
-    "type": "Military Airport",
-    "icao": "KAHC"
-  },
-  {
     "code": "AHE",
     "lat": -14.5,
     "lon": -1.3,
@@ -1440,18 +1428,6 @@
     "icao": "HEAX"
   },
   {
-    "code": "ALZ",
-    "lat": 56.8988,
-    "lon": -154.246,
-    "name": "Alitak Seaplane Base",
-    "city": "Alitak",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 12524557,
-    "type": "Sea Plane Base",
-    "icao": ""
-  },
-  {
     "code": "AMA",
     "lat": 35.2177,
     "lon": -101.706,
@@ -1774,18 +1750,6 @@
     "woeid": 12524560,
     "type": "Airports",
     "icao": ""
-  },
-  {
-    "code": "APA",
-    "lat": 39.5752,
-    "lon": -104.845,
-    "name": "Centennial Airport",
-    "city": "Englewood",
-    "state": "Colorado",
-    "country": "United States",
-    "woeid": 12519112,
-    "type": "Other Airport",
-    "icao": "KAPA"
   },
   {
     "code": "APF",
@@ -2436,18 +2400,6 @@
     "icao": ""
   },
   {
-    "code": "AUR",
-    "lat": 44.8984,
-    "lon": 2.41982,
-    "name": "Aurillac Airport",
-    "city": "Aurillac",
-    "state": "Auvergne",
-    "country": "France",
-    "woeid": 12512848,
-    "type": "Other Airport",
-    "icao": "LFLW"
-  },
-  {
     "code": "AUS",
     "lat": 30.2027,
     "lon": -97.6653,
@@ -2530,18 +2482,6 @@
     "woeid": 1020506,
     "type": "Airports",
     "icao": ""
-  },
-  {
-    "code": "AVV",
-    "lat": -38.0408,
-    "lon": 144.468,
-    "name": "Avalon Airport",
-    "city": "Lara",
-    "state": "Victoria",
-    "country": "Australia",
-    "woeid": 12510591,
-    "type": "Other Airport",
-    "icao": "YMAV"
   },
   {
     "code": "AWB",
@@ -3444,18 +3384,6 @@
     "icao": "KBGR"
   },
   {
-    "code": "BGW",
-    "lat": 33.3328,
-    "lon": 44.3639,
-    "name": "Al Muthana Airport",
-    "city": "Baghdad",
-    "state": "Baghdad",
-    "country": "Iraq",
-    "woeid": 12513890,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "BGY",
     "lat": 45.6664,
     "lon": 9.699,
@@ -3732,18 +3660,6 @@
     "icao": "KBIL"
   },
   {
-    "code": "BIM",
-    "lat": 25.6994,
-    "lon": -79.2636,
-    "name": "South Bimini Airport",
-    "city": "Bailey's Town",
-    "state": "Bimini",
-    "country": "Bahamas",
-    "woeid": 12510880,
-    "type": "Other Airport",
-    "icao": "MYBS"
-  },
-  {
     "code": "BIO",
     "lat": 43.3025,
     "lon": -2.91112,
@@ -3972,18 +3888,6 @@
     "icao": "VTBS"
   },
   {
-    "code": "BKL",
-    "lat": 41.5115,
-    "lon": -81.6869,
-    "name": "Burke Lakefront Airport",
-    "city": "Cleveland",
-    "state": "Ohio",
-    "country": "United States",
-    "woeid": 12518976,
-    "type": "Other Airport",
-    "icao": "KBKL"
-  },
-  {
     "code": "BKM",
     "lat": 3.94515,
     "lon": 114.402,
@@ -4162,18 +4066,6 @@
     "woeid": 12510610,
     "type": "Airports",
     "icao": ""
-  },
-  {
-    "code": "BLV",
-    "lat": 38.5412,
-    "lon": -89.8499,
-    "name": "Belleville",
-    "city": "Belleville",
-    "state": "Illinois",
-    "country": "United States",
-    "woeid": 12521774,
-    "type": "Other Airport",
-    "icao": "KBLV"
   },
   {
     "code": "BLZ",
@@ -4728,18 +4620,6 @@
     "icao": "EDDW"
   },
   {
-    "code": "BRF",
-    "lat": 54.3139,
-    "lon": -2.23218,
-    "name": "United Kingdom",
-    "city": "Bradford",
-    "state": "",
-    "country": "United Kingdom",
-    "woeid": 23424975,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "BRI",
     "lat": 41.1376,
     "lon": 16.7674,
@@ -4944,18 +4824,6 @@
     "icao": ""
   },
   {
-    "code": "BSH",
-    "lat": 50.8333,
-    "lon": -0.13333,
-    "name": "Brighton Airport",
-    "city": "Brighton",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 12523976,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "BSK",
     "lat": 34.7933,
     "lon": 5.74,
@@ -4989,18 +4857,6 @@
     "country": "Philippines",
     "woeid": 12515599,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "BSR",
-    "lat": 30.5481,
-    "lon": 47.6658,
-    "name": "Basrah International Airport",
-    "city": "Gawad",
-    "state": "Al Basrah",
-    "country": "Iraq",
-    "woeid": 12513895,
-    "type": "Other Airport",
     "icao": ""
   },
   {
@@ -5148,18 +5004,6 @@
     "icao": "KBTV"
   },
   {
-    "code": "BTZ",
-    "lat": 40.2344,
-    "lon": 29.0053,
-    "name": "Bursa Airport",
-    "city": "Bursa",
-    "state": "Bursa",
-    "country": "Turkey",
-    "woeid": 12517876,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "BUA",
     "lat": -5.42232,
     "lon": 154.673,
@@ -5304,18 +5148,6 @@
     "icao": "OIBB"
   },
   {
-    "code": "BVA",
-    "lat": 49.4565,
-    "lon": 2.11552,
-    "name": "Beauvais-Tille Airport",
-    "city": "Beauvais",
-    "state": "Picardie",
-    "country": "France",
-    "woeid": 22904235,
-    "type": "Other Airport",
-    "icao": "LFOB"
-  },
-  {
     "code": "BVB",
     "lat": 2.8417,
     "lon": -60.6917,
@@ -5340,18 +5172,6 @@
     "icao": ""
   },
   {
-    "code": "BVE",
-    "lat": 45.1487,
-    "lon": 1.47441,
-    "name": "La Roche Airport",
-    "city": "Brive-la-Gaillarde",
-    "state": "Limousin",
-    "country": "France",
-    "woeid": 12512905,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "BVG",
     "lat": 70.8702,
     "lon": 29.0294,
@@ -5361,18 +5181,6 @@
     "country": "Norway",
     "woeid": 12523927,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "BVH",
-    "lat": -12.7014,
-    "lon": -60.0931,
-    "name": "Brigadeiro Camarao Airport",
-    "city": "Vilhena",
-    "state": "Rondonia",
-    "country": "Brazil",
-    "woeid": 12511373,
-    "type": "Other Airport",
     "icao": ""
   },
   {
@@ -5398,18 +5206,6 @@
     "woeid": 12515131,
     "type": "Airports",
     "icao": "VNBW"
-  },
-  {
-    "code": "BWE",
-    "lat": 52.3165,
-    "lon": 10.5595,
-    "name": "Braunschweig Airport",
-    "city": "Braunschweig",
-    "state": "Lower Saxony",
-    "country": "Germany",
-    "woeid": 22176819,
-    "type": "Other Airport",
-    "icao": "EDVE"
   },
   {
     "code": "BWF",
@@ -5626,18 +5422,6 @@
     "woeid": 12511945,
     "type": "Airports",
     "icao": "FCBB"
-  },
-  {
-    "code": "BZZ",
-    "lat": 51.7614,
-    "lon": -1.57482,
-    "name": "Brize Norton Airport",
-    "city": "Carterton",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 12518048,
-    "type": "Military Airport",
-    "icao": "EGVN"
   },
   {
     "code": "CAB",
@@ -5892,18 +5676,6 @@
     "icao": ""
   },
   {
-    "code": "CCF",
-    "lat": 43.2153,
-    "lon": 2.30989,
-    "name": "Salvaza Airport",
-    "city": "Carcassonne",
-    "state": "Languedoc-Roussillon",
-    "country": "France",
-    "woeid": 12512962,
-    "type": "Other Airport",
-    "icao": "LFMK"
-  },
-  {
     "code": "CCJ",
     "lat": 11.1329,
     "lon": 75.9536,
@@ -6058,18 +5830,6 @@
     "woeid": 12520907,
     "type": "Airports",
     "icao": "PACV"
-  },
-  {
-    "code": "CDW",
-    "lat": 40.8759,
-    "lon": -74.2775,
-    "name": "Essex County Airport",
-    "city": "Fairfield",
-    "state": "New Jersey",
-    "country": "United States",
-    "woeid": 12519660,
-    "type": "Other Airport",
-    "icao": "KCDW"
   },
   {
     "code": "CEB",
@@ -6480,18 +6240,6 @@
     "icao": "LGSA"
   },
   {
-    "code": "CHS",
-    "lat": 32.8838,
-    "lon": -80.0356,
-    "name": "Charleston International Airport",
-    "city": "North Charleston",
-    "state": "South Carolina",
-    "country": "United States",
-    "woeid": 12519142,
-    "type": "Military Airport",
-    "icao": "KCHS"
-  },
-  {
     "code": "CHT",
     "lat": -37.9723,
     "lon": 174.566,
@@ -6706,18 +6454,6 @@
     "woeid": 12512320,
     "type": "Airports",
     "icao": ""
-  },
-  {
-    "code": "CJJ",
-    "lat": 36.7131,
-    "lon": 127.509,
-    "name": "Cheongju International Airport",
-    "city": "Naesu-Eup",
-    "state": "Chungcheongbuk-Do",
-    "country": "South Korea",
-    "woeid": 12514203,
-    "type": "Military Airport",
-    "icao": "KCJJ"
   },
   {
     "code": "CJL",
@@ -7500,30 +7236,6 @@
     "icao": ""
   },
   {
-    "code": "CRK",
-    "lat": 15.1806,
-    "lon": 120.557,
-    "name": "Clark Field Airport",
-    "city": "Mabalacat",
-    "state": "Central Luzon",
-    "country": "Philippines",
-    "woeid": 12515607,
-    "type": "Military Airport",
-    "icao": "RPLC"
-  },
-  {
-    "code": "CRL",
-    "lat": 50.4601,
-    "lon": 4.45878,
-    "name": "Gosselies Airport",
-    "city": "Charleroi",
-    "state": "Hainault",
-    "country": "Belgium",
-    "woeid": 22048658,
-    "type": "Other Airport",
-    "icao": "EBCI"
-  },
-  {
     "code": "CRM",
     "lat": 12.5044,
     "lon": 124.635,
@@ -8038,18 +7750,6 @@
     "woeid": 12512344,
     "type": "Airports",
     "icao": "MWCB"
-  },
-  {
-    "code": "CYF",
-    "lat": 60.1558,
-    "lon": -164.273,
-    "name": "Chefornak Airport",
-    "city": "Chefornak",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 12524634,
-    "type": "Sea Plane Base",
-    "icao": ""
   },
   {
     "code": "CYI",
@@ -8578,18 +8278,6 @@
     "woeid": 12510746,
     "type": "Airports",
     "icao": "YMDG"
-  },
-  {
-    "code": "DGM",
-    "lat": 27.0667,
-    "lon": 105.2,
-    "name": "Dongguan",
-    "city": "Dongguan",
-    "state": "贵州省",
-    "country": "China",
-    "woeid": 12713509,
-    "type": "Other Airport",
-    "icao": ""
   },
   {
     "code": "DGO",
@@ -9336,18 +9024,6 @@
     "icao": "KDUJ"
   },
   {
-    "code": "DUQ",
-    "lat": 48.7562,
-    "lon": -123.711,
-    "name": "Duncan-Quamichan Lake Airport",
-    "city": "Duncan",
-    "state": "British Columbia",
-    "country": "Canada",
-    "woeid": 12524040,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "DUR",
     "lat": -29.9736,
     "lon": 30.9472,
@@ -9756,18 +9432,6 @@
     "icao": ""
   },
   {
-    "code": "EGC",
-    "lat": 44.8227,
-    "lon": 0.51524,
-    "name": "Bergerac-Roumaniere Airport",
-    "city": "Bergerac",
-    "state": "Aquitaine",
-    "country": "France",
-    "woeid": 12512960,
-    "type": "Other Airport",
-    "icao": "LFBE"
-  },
-  {
     "code": "EGE",
     "lat": 39.6395,
     "lon": -106.912,
@@ -9838,18 +9502,6 @@
     "woeid": 12524588,
     "type": "Airports",
     "icao": "PAII"
-  },
-  {
-    "code": "EIB",
-    "lat": 50.9853,
-    "lon": 10.485,
-    "name": "Haina Airport",
-    "city": "Eisenach",
-    "state": "Rhineland-Palatinate",
-    "country": "Germany",
-    "woeid": 12513118,
-    "type": "Other Airport",
-    "icao": ""
   },
   {
     "code": "EIE",
@@ -9934,18 +9586,6 @@
     "woeid": 12519626,
     "type": "Airports",
     "icao": "KEKO"
-  },
-  {
-    "code": "EKS",
-    "lat": 45.2681,
-    "lon": -111.65,
-    "name": "Ennis Big Sky Airport",
-    "city": "",
-    "state": "",
-    "country": "",
-    "woeid": 29387875,
-    "type": "Military Airport",
-    "icao": ""
   },
   {
     "code": "ELC",
@@ -10068,18 +9708,6 @@
     "icao": ""
   },
   {
-    "code": "ELV",
-    "lat": 58.1833,
-    "lon": -136.317,
-    "name": "Elfin Cove Airport",
-    "city": "Elfin Cove",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 12524668,
-    "type": "Sea Plane Base",
-    "icao": ""
-  },
-  {
     "code": "ELY",
     "lat": 39.3043,
     "lon": -114.853,
@@ -10198,18 +9826,6 @@
     "woeid": 1199158,
     "type": "Airports",
     "icao": ""
-  },
-  {
-    "code": "ENS",
-    "lat": 52.2678,
-    "lon": 6.89152,
-    "name": "Enschede Twente",
-    "city": "Enschede",
-    "state": "Overijssel",
-    "country": "Netherlands",
-    "woeid": 12515094,
-    "type": "Other Airport",
-    "icao": "EHTW"
   },
   {
     "code": "ENU",
@@ -11218,18 +10834,6 @@
     "woeid": 12514175,
     "type": "Airports",
     "icao": "ZKPY"
-  },
-  {
-    "code": "FNL",
-    "lat": 40.4505,
-    "lon": -105.008,
-    "name": "Fort Collins Loveland Municipal Airport",
-    "city": "Loveland",
-    "state": "Colorado",
-    "country": "United States",
-    "woeid": 12519773,
-    "type": "Other Airport",
-    "icao": "KFNL"
   },
   {
     "code": "FNT",
@@ -12276,18 +11880,6 @@
     "icao": ""
   },
   {
-    "code": "GLO",
-    "lat": 51.8925,
-    "lon": -2.1633,
-    "name": "Gloucestershire Airport",
-    "city": "Cheltenham",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 12518156,
-    "type": "Other Airport",
-    "icao": "EGBJ"
-  },
-  {
     "code": "GLT",
     "lat": -23.87,
     "lon": 151.226,
@@ -12564,18 +12156,6 @@
     "icao": "KGPI"
   },
   {
-    "code": "GPS",
-    "lat": -0.45,
-    "lon": -90.2625,
-    "name": "Seymour Airport",
-    "city": "Puerto Ayora",
-    "state": "Galapagos",
-    "country": "Ecuador",
-    "woeid": 12512651,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "GPT",
     "lat": 30.4133,
     "lon": -89.072,
@@ -12610,18 +12190,6 @@
     "woeid": 12517456,
     "type": "Airports",
     "icao": "FAGG"
-  },
-  {
-    "code": "GRK",
-    "lat": 31.0615,
-    "lon": -97.8206,
-    "name": "Killeen-Fort Hood Regional Airport",
-    "city": "Killeen",
-    "state": "Texas",
-    "country": "United States",
-    "woeid": 12521608,
-    "type": "Military Airport",
-    "icao": "KGRK"
   },
   {
     "code": "GRO",
@@ -13332,18 +12900,6 @@
     "icao": ""
   },
   {
-    "code": "HCN",
-    "lat": 22.0403,
-    "lon": 120.735,
-    "name": "Hengchun Airport",
-    "city": "Hengchun",
-    "state": "Taiwan Province",
-    "country": "Taiwan",
-    "woeid": 28760738,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "HCR",
     "lat": 62.2016,
     "lon": -159.77,
@@ -13366,18 +12922,6 @@
     "woeid": 12523860,
     "type": "Airports",
     "icao": "EDIU"
-  },
-  {
-    "code": "HDD",
-    "lat": 25.3142,
-    "lon": 68.3656,
-    "name": "Hyderabad Airport",
-    "city": "Hyderabad",
-    "state": "Sindh",
-    "country": "Pakistan",
-    "woeid": 12515237,
-    "type": "Other Airport",
-    "icao": ""
   },
   {
     "code": "HDF",
@@ -13872,18 +13416,6 @@
     "icao": "VTSP"
   },
   {
-    "code": "HLA",
-    "lat": -25.9353,
-    "lon": 27.925,
-    "name": "Lanseria Airport",
-    "city": "Johannesburg",
-    "state": "Gauteng",
-    "country": "South Africa",
-    "woeid": 12517436,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "HLD",
     "lat": 49.2,
     "lon": 119.7,
@@ -13920,18 +13452,6 @@
     "icao": "KHLN"
   },
   {
-    "code": "HLY",
-    "lat": 53.3167,
-    "lon": -4.63333,
-    "name": "Holyhead Airport",
-    "city": "Holyhead",
-    "state": "Wales",
-    "country": "United Kingdom",
-    "woeid": 12523988,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "HLZ",
     "lat": -37.8632,
     "lon": 175.328,
@@ -13942,18 +13462,6 @@
     "woeid": 12515155,
     "type": "Airports",
     "icao": "NZHN"
-  },
-  {
-    "code": "HMA",
-    "lat": 61.0286,
-    "lon": 69.0919,
-    "name": "Khanty-Nansiysk",
-    "city": "Khanty-Mansiysk",
-    "state": "Khanty-Mansiyskiy Avtonomnyy Okr",
-    "country": "Russian Federation",
-    "woeid": 2121314,
-    "type": "Other Airport",
-    "icao": ""
   },
   {
     "code": "HME",
@@ -14748,18 +14256,6 @@
     "icao": "KIAD"
   },
   {
-    "code": "IAG",
-    "lat": 43.1,
-    "lon": -78.9423,
-    "name": "Niagara Falls International Airport",
-    "city": "Niagara Falls",
-    "state": "New York",
-    "country": "United States",
-    "woeid": 12521138,
-    "type": "Other Airport",
-    "icao": "KIAG"
-  },
-  {
     "code": "IAH",
     "lat": 29.9784,
     "lon": -95.3424,
@@ -15096,18 +14592,6 @@
     "icao": "OIIE"
   },
   {
-    "code": "IKO",
-    "lat": 52.9389,
-    "lon": -168.868,
-    "name": "Nikolski",
-    "city": "Nikolski",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 2459970,
-    "type": "Military Airport",
-    "icao": "PAKO"
-  },
-  {
     "code": "IKS",
     "lat": 71.6969,
     "lon": 128.908,
@@ -15130,18 +14614,6 @@
     "woeid": 12516044,
     "type": "Airports",
     "icao": "UUII"
-  },
-  {
-    "code": "ILF",
-    "lat": 56.0557,
-    "lon": -95.5897,
-    "name": "Ilford Airport",
-    "city": "Nelson House",
-    "state": "Manitoba",
-    "country": "Canada",
-    "woeid": 12524042,
-    "type": "Railway Stations",
-    "icao": ""
   },
   {
     "code": "ILI",
@@ -15321,18 +14793,6 @@
     "country": "Mozambique",
     "woeid": 12515018,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "INI",
-    "lat": 43.3381,
-    "lon": 21.8547,
-    "name": "Nis Airport",
-    "city": "Nis",
-    "state": "Nishava",
-    "country": "Serbia",
-    "woeid": 12517587,
-    "type": "Other Airport",
     "icao": ""
   },
   {
@@ -15538,18 +14998,6 @@
     "woeid": 12522464,
     "type": "Airports",
     "icao": "KIPT"
-  },
-  {
-    "code": "IPW",
-    "lat": 52.0285,
-    "lon": 1.19325,
-    "name": "Ipswich Airport",
-    "city": "Ipswich",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 23388367,
-    "type": "Railway Stations",
-    "icao": "EGSE"
   },
   {
     "code": "IQM",
@@ -16236,18 +15684,6 @@
     "icao": "OEJN"
   },
   {
-    "code": "JEF",
-    "lat": 38.593,
-    "lon": -92.1652,
-    "name": "Jefferson City Memorial Airport",
-    "city": "Holts Summit",
-    "state": "Missouri",
-    "country": "United States",
-    "woeid": 12520356,
-    "type": "Other Airport",
-    "icao": "KJEF"
-  },
-  {
     "code": "JEG",
     "lat": 68.7075,
     "lon": -52.8069,
@@ -16462,18 +15898,6 @@
     "woeid": 1317611,
     "type": "Airports",
     "icao": "HAJM"
-  },
-  {
-    "code": "JIU",
-    "lat": 45.0377,
-    "lon": 23.2697,
-    "name": "",
-    "city": "Jiujiang",
-    "state": "Jiangxi",
-    "country": "China",
-    "woeid": 26198150,
-    "type": "Other Airport",
-    "icao": "ZSJJ"
   },
   {
     "code": "JJN",
@@ -17868,18 +17292,6 @@
     "icao": "PAKK"
   },
   {
-    "code": "KKB",
-    "lat": 58.1869,
-    "lon": -152.375,
-    "name": "Kitoi Seaplane Base",
-    "city": "Kitoi Bay",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 12524650,
-    "type": "Sea Plane Base",
-    "icao": ""
-  },
-  {
     "code": "KKC",
     "lat": 16.465,
     "lon": 102.791,
@@ -17925,18 +17337,6 @@
     "country": "United States",
     "woeid": 2347560,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "KKI",
-    "lat": 60.9057,
-    "lon": -161.424,
-    "name": "Akiachak",
-    "city": "Akiachak",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 2352459,
-    "type": "Sea Plane Base",
     "icao": ""
   },
   {
@@ -18021,18 +17421,6 @@
     "country": "United States",
     "woeid": 2438614,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "KLN",
-    "lat": 57.5383,
-    "lon": -153.98,
-    "name": "Larsen Bay",
-    "city": "Larsen Bay",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 23510510,
-    "type": "Sea Plane Base",
     "icao": ""
   },
   {
@@ -18480,30 +17868,6 @@
     "icao": ""
   },
   {
-    "code": "KOY",
-    "lat": 47.902,
-    "lon": -112.265,
-    "name": "Olga Bay",
-    "city": "Olga Bay",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 2347560,
-    "type": "Sea Plane Base",
-    "icao": ""
-  },
-  {
-    "code": "KOZ",
-    "lat": 62.8903,
-    "lon": -149.054,
-    "name": "Alaska",
-    "city": "Ouzinkie",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 2347560,
-    "type": "Sea Plane Base",
-    "icao": ""
-  },
-  {
     "code": "KPB",
     "lat": 56.3502,
     "lon": -133.622,
@@ -18513,30 +17877,6 @@
     "country": "United States",
     "woeid": 12523156,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "KPC",
-    "lat": 65.2544,
-    "lon": -166.856,
-    "name": "Port Clarence Coast Guard Station",
-    "city": "Brevig Mission",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 12521440,
-    "type": "Military Airport",
-    "icao": "PAPC"
-  },
-  {
-    "code": "KPN",
-    "lat": 59.9371,
-    "lon": -164.041,
-    "name": "Kipnuk",
-    "city": "Kipnuk",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 2433000,
-    "type": "Sea Plane Base",
     "icao": ""
   },
   {
@@ -18552,18 +17892,6 @@
     "icao": ""
   },
   {
-    "code": "KPR",
-    "lat": 58.4833,
-    "lon": -152.583,
-    "name": "Port Williams",
-    "city": "Port Williams",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 12485470,
-    "type": "Sea Plane Base",
-    "icao": ""
-  },
-  {
     "code": "KPV",
     "lat": 55.9122,
     "lon": -159.154,
@@ -18573,18 +17901,6 @@
     "country": "United States",
     "woeid": 2347560,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "KPY",
-    "lat": 58.743,
-    "lon": -154.96,
-    "name": "Alaska",
-    "city": "Port Bailey",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 2347560,
-    "type": "Sea Plane Base",
     "icao": ""
   },
   {
@@ -18912,18 +18228,6 @@
     "icao": ""
   },
   {
-    "code": "KTE",
-    "lat": 4.5378,
-    "lon": 103.428,
-    "name": "Kerteh Airport",
-    "city": "Kerteh",
-    "state": "Terengganu",
-    "country": "Malaysia",
-    "woeid": 12514994,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "KTM",
     "lat": 27.6969,
     "lon": 85.3594,
@@ -19113,30 +18417,6 @@
     "country": "Georgia",
     "woeid": 1963698,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "KUU",
-    "lat": 31.8729,
-    "lon": 77.1482,
-    "name": "Bhuntar Airport",
-    "city": "Bhuntar",
-    "state": "Himachal Pradesh",
-    "country": "India",
-    "woeid": 12513555,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
-    "code": "KUV",
-    "lat": 35.9017,
-    "lon": 126.618,
-    "name": "Gunsan Airport",
-    "city": "Gunsan-Si",
-    "state": "Jeollabuk-Do",
-    "country": "South Korea",
-    "woeid": 12514209,
-    "type": "Military Airport",
     "icao": ""
   },
   {
@@ -19332,18 +18612,6 @@
     "icao": ""
   },
   {
-    "code": "KWP",
-    "lat": 57.7696,
-    "lon": -153.554,
-    "name": "Village Seaplane Base-West Point",
-    "city": "West Point",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 12523157,
-    "type": "Sea Plane Base",
-    "icao": ""
-  },
-  {
     "code": "KWT",
     "lat": 60.8,
     "lon": -161.45,
@@ -19440,18 +18708,6 @@
     "icao": "PAKY"
   },
   {
-    "code": "KYN",
-    "lat": 52.8833,
-    "lon": -1.97685,
-    "name": "England",
-    "city": "Milton Keynes",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 24554868,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "KYP",
     "lat": 19.4267,
     "lon": 93.5347,
@@ -19497,18 +18753,6 @@
     "country": "Russia",
     "woeid": 2346879,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "KZB",
-    "lat": 57.55,
-    "lon": -153.75,
-    "name": "Zachar Bay",
-    "city": "Zachar Bay",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 12799679,
-    "type": "Sea Plane Base",
     "icao": ""
   },
   {
@@ -19593,18 +18837,6 @@
     "country": "France",
     "woeid": 12523815,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "LAJ",
-    "lat": -27.7831,
-    "lon": -50.2825,
-    "name": "Lajes Airport",
-    "city": "Lages",
-    "state": "Santa Catarina",
-    "country": "Brazil",
-    "woeid": 12511208,
-    "type": "Other Airport",
     "icao": ""
   },
   {
@@ -20472,18 +19704,6 @@
     "icao": "LIML"
   },
   {
-    "code": "LIO",
-    "lat": 9.9578,
-    "lon": -83.0291,
-    "name": "Limon International Airport",
-    "city": "Pto. Limon",
-    "state": "Limon",
-    "country": "Costa Rica",
-    "woeid": 12512435,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "LIR",
     "lat": 10.5922,
     "lon": -85.5439,
@@ -20662,18 +19882,6 @@
     "woeid": 12517645,
     "type": "Airports",
     "icao": "ESPA"
-  },
-  {
-    "code": "LLF",
-    "lat": 26.2333,
-    "lon": 111.617,
-    "name": "Lingling Airport",
-    "city": "LingLing",
-    "state": "Hunan",
-    "country": "China",
-    "woeid": 12512124,
-    "type": "Other Airport",
-    "icao": ""
   },
   {
     "code": "LLI",
@@ -21072,30 +20280,6 @@
     "icao": ""
   },
   {
-    "code": "LPT",
-    "lat": 18.2742,
-    "lon": 99.5072,
-    "name": "Lampang Airport",
-    "city": "Lampang",
-    "state": "Lampang",
-    "country": "Thailand",
-    "woeid": 12517760,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
-    "code": "LPX",
-    "lat": 56.501,
-    "lon": 21.0897,
-    "name": "Liepaja East Airport",
-    "city": "Liepaya",
-    "state": "Liepajas Rajons",
-    "country": "Latvia",
-    "woeid": 12514573,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "LPY",
     "lat": 45.0757,
     "lon": 3.76327,
@@ -21420,18 +20604,6 @@
     "icao": "KLUD"
   },
   {
-    "code": "LUF",
-    "lat": 33.5355,
-    "lon": -112.372,
-    "name": "Luke Air Force Base",
-    "city": "Webb",
-    "state": "Arizona",
-    "country": "United States",
-    "woeid": 12520723,
-    "type": "Military Airport",
-    "icao": "KLUF"
-  },
-  {
     "code": "LUG",
     "lat": 46.0013,
     "lon": 8.90909,
@@ -21502,18 +20674,6 @@
     "woeid": 12510554,
     "type": "Airports",
     "icao": ""
-  },
-  {
-    "code": "LUR",
-    "lat": 68.8482,
-    "lon": -166.118,
-    "name": "Cape Lisburne Long-Range Radar Station",
-    "city": "Point Hope",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 12519054,
-    "type": "Military Airport",
-    "icao": "PALU"
   },
   {
     "code": "LUV",
@@ -21705,18 +20865,6 @@
     "country": "China",
     "woeid": 12523313,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "LYB",
-    "lat": 19.6901,
-    "lon": -80.0385,
-    "name": "Boddenfield Airport",
-    "city": "Little Cayman",
-    "state": "Little Cayman",
-    "country": "Cayman Islands",
-    "woeid": 12512343,
-    "type": "Other Airport",
     "icao": ""
   },
   {
@@ -22042,18 +21190,6 @@
     "woeid": 12514073,
     "type": "Airports",
     "icao": "HKMO"
-  },
-  {
-    "code": "MBD",
-    "lat": -25.8,
-    "lon": 25.545,
-    "name": "Mmabatho International Airport",
-    "city": "Mmabatho",
-    "state": "North-west",
-    "country": "South Africa",
-    "woeid": 12517447,
-    "type": "Other Airport",
-    "icao": ""
   },
   {
     "code": "MBE",
@@ -22440,30 +21576,6 @@
     "icao": "KMDZ"
   },
   {
-    "code": "MEA",
-    "lat": -22.3422,
-    "lon": -41.7633,
-    "name": "Macae Airport",
-    "city": "Macae",
-    "state": "Rio de Janeiro",
-    "country": "Brazil",
-    "woeid": 12511217,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
-    "code": "MEC",
-    "lat": -0.95,
-    "lon": -80.6833,
-    "name": "Eloy Alfaro Airport",
-    "city": "Manta",
-    "state": "Manabi",
-    "country": "Ecuador",
-    "woeid": 12512629,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "MED",
     "lat": 24.5517,
     "lon": 39.7025,
@@ -22605,18 +21717,6 @@
     "country": "Fiji",
     "woeid": 12512811,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "MFK",
-    "lat": 23.5998,
-    "lon": 121.024,
-    "name": "Taiwan",
-    "city": "Matsu",
-    "state": "",
-    "country": "Taiwan",
-    "woeid": 23424971,
-    "type": "Other Airport",
     "icao": ""
   },
   {
@@ -22848,18 +21948,6 @@
     "icao": ""
   },
   {
-    "code": "MHR",
-    "lat": 38.5646,
-    "lon": -121.297,
-    "name": "Mather Airport",
-    "city": "Mather",
-    "state": "California",
-    "country": "United States",
-    "woeid": 12521692,
-    "type": "Military Airport",
-    "icao": "KMHR"
-  },
-  {
     "code": "MHT",
     "lat": 42.9293,
     "lon": -71.4386,
@@ -23086,18 +22174,6 @@
     "woeid": 2046493,
     "type": "Airports",
     "icao": ""
-  },
-  {
-    "code": "MKC",
-    "lat": 39.1197,
-    "lon": -94.5906,
-    "name": "Kansas City Downtown Airport",
-    "city": "Kansas City",
-    "state": "Missouri",
-    "country": "United States",
-    "woeid": 12520419,
-    "type": "Other Airport",
-    "icao": "KMKC"
   },
   {
     "code": "MKE",
@@ -23422,18 +22498,6 @@
     "woeid": 2344706,
     "type": "Airports",
     "icao": ""
-  },
-  {
-    "code": "MMH",
-    "lat": 37.6288,
-    "lon": -118.844,
-    "name": "Mammoth June Lakes Airport",
-    "city": "Mammoth Lakes",
-    "state": "California",
-    "country": "United States",
-    "woeid": 12520768,
-    "type": "Other Airport",
-    "icao": "KMMH"
   },
   {
     "code": "MMK",
@@ -24516,18 +23580,6 @@
     "icao": ""
   },
   {
-    "code": "MXN",
-    "lat": 48.5987,
-    "lon": -3.81735,
-    "name": "Ploujean Airport",
-    "city": "Morlaix",
-    "state": "Brittany",
-    "country": "France",
-    "woeid": 12523822,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "MXP",
     "lat": 45.6314,
     "lon": 8.72284,
@@ -24660,30 +23712,6 @@
     "icao": "KMYJ"
   },
   {
-    "code": "MYL",
-    "lat": 44.8968,
-    "lon": -116.096,
-    "name": "Mccall Airport",
-    "city": "Mccall",
-    "state": "Idaho",
-    "country": "United States",
-    "woeid": 12520848,
-    "type": "Other Airport",
-    "icao": "KMYL"
-  },
-  {
-    "code": "MYR",
-    "lat": 33.6821,
-    "lon": -78.9228,
-    "name": "Myrtle Beach International Airport",
-    "city": "Myrtle Beach",
-    "state": "South Carolina",
-    "country": "United States",
-    "woeid": 12521074,
-    "type": "Military Airport",
-    "icao": "KMYR"
-  },
-  {
     "code": "MYT",
     "lat": 25.3844,
     "lon": 97.3553,
@@ -24742,18 +23770,6 @@
     "woeid": 12517945,
     "type": "Airports",
     "icao": ""
-  },
-  {
-    "code": "MZH",
-    "lat": 40.8303,
-    "lon": 35.5202,
-    "name": "Merzifon",
-    "city": "Merzifon",
-    "state": "",
-    "country": "Turkey",
-    "woeid": 2343729,
-    "type": "Military Airport",
-    "icao": "KMZH"
   },
   {
     "code": "MZI",
@@ -24960,18 +23976,6 @@
     "icao": ""
   },
   {
-    "code": "NAV",
-    "lat": 32.5281,
-    "lon": -87.2731,
-    "name": "",
-    "city": "Nevsehir",
-    "state": "Nevşehir",
-    "country": "Turkey",
-    "woeid": 2347303,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "NAW",
     "lat": 6.5183,
     "lon": 101.748,
@@ -24984,18 +23988,6 @@
     "icao": ""
   },
   {
-    "code": "NBC",
-    "lat": 59.4615,
-    "lon": 108.832,
-    "name": "Russia",
-    "city": "Naberevnye Chelny",
-    "state": "",
-    "country": "Russia",
-    "woeid": 23424936,
-    "type": "Military Airport",
-    "icao": "KNBC"
-  },
-  {
     "code": "NBO",
     "lat": -1.31697,
     "lon": 36.9222,
@@ -25006,18 +23998,6 @@
     "woeid": 12514067,
     "type": "Airports",
     "icao": "HKJK"
-  },
-  {
-    "code": "NBW",
-    "lat": 19.9093,
-    "lon": -75.2076,
-    "name": "Guantanamo Bay Naval Air Station",
-    "city": "Caimanera",
-    "state": "Guantanamo",
-    "country": "Cuba",
-    "woeid": 12512463,
-    "type": "Military Airport",
-    "icao": ""
   },
   {
     "code": "NBX",
@@ -25296,18 +24276,6 @@
     "icao": "DRRN"
   },
   {
-    "code": "NIP",
-    "lat": 30.2342,
-    "lon": -81.6753,
-    "name": "Jacksonville Naval Air Station",
-    "city": "Jacksonville",
-    "state": "Florida",
-    "country": "United States",
-    "woeid": 12520342,
-    "type": "Military Airport",
-    "icao": "KNIP"
-  },
-  {
     "code": "NIU",
     "lat": 21.3358,
     "lon": -157.919,
@@ -25366,18 +24334,6 @@
     "woeid": 2347560,
     "type": "Airports",
     "icao": ""
-  },
-  {
-    "code": "NKM",
-    "lat": 35.2527,
-    "lon": 136.924,
-    "name": "Nagoya Airport",
-    "city": "Toyoyama-cho",
-    "state": "Aichi Prefecture",
-    "country": "Japan",
-    "woeid": 23388304,
-    "type": "Military Airport",
-    "icao": "RJNA"
   },
   {
     "code": "NLA",
@@ -25692,18 +24648,6 @@
     "icao": "EGDG"
   },
   {
-    "code": "NRA",
-    "lat": -34.6964,
-    "lon": 146.512,
-    "name": "Narrandera Leeton Aerodrome",
-    "city": "Narrandera",
-    "state": "New South Wales",
-    "country": "Australia",
-    "woeid": 12510749,
-    "type": "Military Airport",
-    "icao": "KNRA"
-  },
-  {
     "code": "NRK",
     "lat": 58.5841,
     "lon": 16.2338,
@@ -25750,18 +24694,6 @@
     "woeid": 2255009,
     "type": "Airports",
     "icao": ""
-  },
-  {
-    "code": "NSI",
-    "lat": 3.83168,
-    "lon": 11.5233,
-    "name": "Nsimalen Airport",
-    "city": "Yaounde",
-    "state": "Centre",
-    "country": "Cameroon",
-    "woeid": 12523057,
-    "type": "Military Airport",
-    "icao": "KNSI"
   },
   {
     "code": "NSK",
@@ -26148,18 +25080,6 @@
     "icao": "KOAK"
   },
   {
-    "code": "OAM",
-    "lat": -44.9679,
-    "lon": 171.086,
-    "name": "Oamaru Airport",
-    "city": "Oamaru",
-    "state": "Canterbury",
-    "country": "New Zealand",
-    "woeid": 12515162,
-    "type": "Other Airport",
-    "icao": "NZOU"
-  },
-  {
     "code": "OAX",
     "lat": 16.9986,
     "lon": -96.7264,
@@ -26532,18 +25452,6 @@
     "icao": "KOLF"
   },
   {
-    "code": "OLH",
-    "lat": 62.8903,
-    "lon": -149.054,
-    "name": "Alaska",
-    "city": "Old Harbor",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 2347560,
-    "type": "Sea Plane Base",
-    "icao": ""
-  },
-  {
     "code": "OLJ",
     "lat": -16.2368,
     "lon": 167.492,
@@ -26760,18 +25668,6 @@
     "icao": "YBCG"
   },
   {
-    "code": "OPF",
-    "lat": 25.9023,
-    "lon": -80.2677,
-    "name": "Opa Locka Airport",
-    "city": "Opa-Locka",
-    "state": "Florida",
-    "country": "United States",
-    "woeid": 12521232,
-    "type": "Other Airport",
-    "icao": "KOPF"
-  },
-  {
     "code": "OPO",
     "lat": 41.2372,
     "lon": -8.67341,
@@ -26856,18 +25752,6 @@
     "icao": "KORH"
   },
   {
-    "code": "ORI",
-    "lat": -7.6833,
-    "lon": -39.3667,
-    "name": "",
-    "city": "Port Lions",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 23510508,
-    "type": "Sea Plane Base",
-    "icao": ""
-  },
-  {
     "code": "ORJ",
     "lat": 4.71667,
     "lon": -60.0333,
@@ -26890,18 +25774,6 @@
     "woeid": 12512720,
     "type": "Airports",
     "icao": "EICK"
-  },
-  {
-    "code": "ORM",
-    "lat": 52.3,
-    "lon": -0.78333,
-    "name": "Sywell Airport",
-    "city": "Northampton",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 12523997,
-    "type": "Railway Stations",
-    "icao": "EGBK"
   },
   {
     "code": "ORN",
@@ -27420,18 +26292,6 @@
     "icao": ""
   },
   {
-    "code": "PBG",
-    "lat": 44.6508,
-    "lon": -73.4683,
-    "name": "Plattsburgh Air Force Base",
-    "city": "Plattsburgh",
-    "state": "New York",
-    "country": "United States",
-    "woeid": 12521414,
-    "type": "Military Airport",
-    "icao": "KPBG"
-  },
-  {
     "code": "PBH",
     "lat": 27.4033,
     "lon": 89.4292,
@@ -27660,18 +26520,6 @@
     "icao": ""
   },
   {
-    "code": "PED",
-    "lat": 50.0372,
-    "lon": 15.7785,
-    "name": "Pardubice",
-    "city": "Pardubice",
-    "state": "Pardubicky Kraj",
-    "country": "Czech Republic",
-    "woeid": 795793,
-    "type": "Other Airport",
-    "icao": "LKPD"
-  },
-  {
     "code": "PEE",
     "lat": 57.9114,
     "lon": 56.0174,
@@ -27814,18 +26662,6 @@
     "woeid": 12516665,
     "type": "Airports",
     "icao": "KPEX"
-  },
-  {
-    "code": "PEZ",
-    "lat": 53.2167,
-    "lon": 45,
-    "name": "Penza",
-    "city": "Penza",
-    "state": "Privolzhskiy",
-    "country": "Russian Federation",
-    "woeid": 2122796,
-    "type": "Other Airport",
-    "icao": "KPEZ"
   },
   {
     "code": "PFB",
@@ -28212,18 +27048,6 @@
     "icao": "SPUR"
   },
   {
-    "code": "PIW",
-    "lat": 55.5833,
-    "lon": -97.15,
-    "name": "Pikwitonei Airport",
-    "city": "Nelson House",
-    "state": "Manitoba",
-    "country": "Canada",
-    "woeid": 12524048,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "PIX",
     "lat": 38.5539,
     "lon": -28.4442,
@@ -28584,30 +27408,6 @@
     "icao": "SCTE"
   },
   {
-    "code": "PMD",
-    "lat": 34.6294,
-    "lon": -118.084,
-    "name": "Air Force Plant Nr 42 Palmdale",
-    "city": "Palmdale",
-    "state": "California",
-    "country": "United States",
-    "woeid": 12521290,
-    "type": "Other Airport",
-    "icao": "KPMD"
-  },
-  {
-    "code": "PME",
-    "lat": 50.8303,
-    "lon": -1.05586,
-    "name": "Portsmouth Airport",
-    "city": "Portsmouth",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 12523999,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "PMF",
     "lat": 44.8232,
     "lon": 10.2949,
@@ -28630,18 +27430,6 @@
     "woeid": 23281165,
     "type": "Airports",
     "icao": "LEPA"
-  },
-  {
-    "code": "PML",
-    "lat": 55.9833,
-    "lon": -160.533,
-    "name": "",
-    "city": "Port Moller",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 2475435,
-    "type": "Military Airport",
-    "icao": ""
   },
   {
     "code": "PMO",
@@ -28956,18 +27744,6 @@
     "icao": ""
   },
   {
-    "code": "PPE",
-    "lat": 31.35,
-    "lon": -113.526,
-    "name": "Punta Penasco Airport",
-    "city": "Pto. Penasco",
-    "state": "Sonora",
-    "country": "Mexico",
-    "woeid": 12514942,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "PPG",
     "lat": -14.3242,
     "lon": -170.706,
@@ -28989,18 +27765,6 @@
     "country": "Kazakhstan",
     "woeid": 20070174,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "PPL",
-    "lat": 28.3948,
-    "lon": 84.1278,
-    "name": "Nepal",
-    "city": "Phaplu",
-    "state": "",
-    "country": "Nepal",
-    "woeid": 23424911,
-    "type": "Other Airport",
     "icao": ""
   },
   {
@@ -29736,42 +28500,6 @@
     "icao": ""
   },
   {
-    "code": "QDU",
-    "lat": 51.0908,
-    "lon": 10.4542,
-    "name": "Germany",
-    "city": "Dusseldorf",
-    "state": "North-Rhine-Westphalia",
-    "country": "Germany",
-    "woeid": 23424829,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "QFB",
-    "lat": 47.9986,
-    "lon": 7.84964,
-    "name": "Freiburg Hauptbahnhof",
-    "city": "Freiburg",
-    "state": "Baden-Württemberg",
-    "country": "Germany",
-    "woeid": 650437,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "QFZ",
-    "lat": 49.2315,
-    "lon": 6.99827,
-    "name": "Saarbruecken Rail Station",
-    "city": "Sarrebruck",
-    "state": "Saar",
-    "country": "Germany",
-    "woeid": 690631,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "QJY",
     "lat": 33.5056,
     "lon": 126.495,
@@ -29781,30 +28509,6 @@
     "country": "South Korea",
     "woeid": 12514202,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "QJZ",
-    "lat": 46.7124,
-    "lon": 1.71832,
-    "name": "France",
-    "city": "Nantes",
-    "state": "",
-    "country": "France",
-    "woeid": 23424819,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "QKL",
-    "lat": 50.944,
-    "lon": 6.95806,
-    "name": "Koeln Hauptbahnhof",
-    "city": "Cologne",
-    "state": "North-Rhine-Westphalia",
-    "country": "Germany",
-    "woeid": 20066498,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -29829,138 +28533,6 @@
     "country": "United Kingdom",
     "woeid": 26345882,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "QQH",
-    "lat": 51.9389,
-    "lon": 1.28162,
-    "name": "Harwich Rail Station",
-    "city": "Harwich",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 26345764,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "QQK",
-    "lat": 52.8833,
-    "lon": -1.97685,
-    "name": "England",
-    "city": "London",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 24554868,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "QQM",
-    "lat": 53.365,
-    "lon": -2.27089,
-    "name": "Manchester International Airport",
-    "city": "Manchester",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 22478032,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "QQN",
-    "lat": 52.4531,
-    "lon": -1.73847,
-    "name": "Birmingham International Airport",
-    "city": "Birmingham",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 22454274,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "QQP",
-    "lat": 51.5158,
-    "lon": -0.17539,
-    "name": "Paddington Station",
-    "city": "London",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 22475708,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "QQS",
-    "lat": 51.5299,
-    "lon": -0.12549,
-    "name": "St Pancras International",
-    "city": "Britrail Rail Zone S",
-    "state": "",
-    "country": "United Kingdom",
-    "woeid": 22476283,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "QQU",
-    "lat": 52.4531,
-    "lon": -1.73847,
-    "name": "Birmingham International Airport",
-    "city": "London",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 22454274,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "QQW",
-    "lat": 51.5035,
-    "lon": -0.11297,
-    "name": "Waterloo Railway Station",
-    "city": "London",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 23380781,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "QQX",
-    "lat": 51.3851,
-    "lon": -2.36116,
-    "name": "Bath Rail Service",
-    "city": "Bath",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 12056,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "QQY",
-    "lat": 52.4531,
-    "lon": -1.73847,
-    "name": "Birmingham International Airport",
-    "city": "York",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 22454274,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "QRH",
-    "lat": 51.9525,
-    "lon": 4.4392,
-    "name": "Rotterdam Airport",
-    "city": "Rotterdam",
-    "state": "",
-    "country": "Netherlands",
-    "woeid": 23182361,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -30034,42 +28606,6 @@
     "woeid": 12512840,
     "type": "Airports",
     "icao": "LFMA"
-  },
-  {
-    "code": "QXG",
-    "lat": 47.4174,
-    "lon": -0.82135,
-    "name": "Pays de la Loire",
-    "city": "Angers",
-    "state": "Pays de la Loire",
-    "country": "France",
-    "woeid": 7153325,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "QYU",
-    "lat": 61.2661,
-    "lon": 15.9858,
-    "name": "Gavleborg",
-    "city": "Gefle",
-    "state": "Gavleborg",
-    "country": "Sweden",
-    "woeid": 2347046,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "QYX",
-    "lat": 59.8585,
-    "lon": 17.6441,
-    "name": "Uppsala Station",
-    "city": "Uppsala",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 908572,
-    "type": "Railway Stations",
-    "icao": ""
   },
   {
     "code": "RAB",
@@ -30672,18 +29208,6 @@
     "icao": "KRIC"
   },
   {
-    "code": "RIG",
-    "lat": -32.0819,
-    "lon": -52.1664,
-    "name": "Rio Grande Airport",
-    "city": "Rio Grande",
-    "state": "Rio Grande do Sul",
-    "country": "Brazil",
-    "woeid": 12511293,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "RIS",
     "lat": 45.2419,
     "lon": 141.186,
@@ -30694,18 +29218,6 @@
     "woeid": 28360519,
     "type": "Airports",
     "icao": ""
-  },
-  {
-    "code": "RIV",
-    "lat": 33.8806,
-    "lon": -117.259,
-    "name": "March Air Force Base",
-    "city": "Alessandro",
-    "state": "California",
-    "country": "United States",
-    "woeid": 12520791,
-    "type": "Military Airport",
-    "icao": "KRIV"
   },
   {
     "code": "RIW",
@@ -31068,18 +29580,6 @@
     "icao": "KBRK"
   },
   {
-    "code": "ROO",
-    "lat": -16.4458,
-    "lon": -54.6639,
-    "name": "Rondonopolis Airport",
-    "city": "Rondonópolis",
-    "state": "Mato Grosso",
-    "country": "Brazil",
-    "woeid": 12511294,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "ROP",
     "lat": 14.1667,
     "lon": 145.25,
@@ -31210,18 +29710,6 @@
     "woeid": 12510877,
     "type": "Airports",
     "icao": ""
-  },
-  {
-    "code": "RSH",
-    "lat": 61.7833,
-    "lon": -161.333,
-    "name": "Russian",
-    "city": "Russian Mission",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 12799709,
-    "type": "Sea Plane Base",
-    "icao": "PARS"
   },
   {
     "code": "RSJ",
@@ -31848,18 +30336,6 @@
     "icao": "SCEL"
   },
   {
-    "code": "SCM",
-    "lat": 61.8425,
-    "lon": -165.58,
-    "name": "Scammon Bay",
-    "city": "Scammon Bay",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 2489516,
-    "type": "Sea Plane Base",
-    "icao": ""
-  },
-  {
     "code": "SCN",
     "lat": 49.2188,
     "lon": 7.11263,
@@ -31954,18 +30430,6 @@
     "woeid": 24552823,
     "type": "Airports",
     "icao": "KSCX"
-  },
-  {
-    "code": "SCY",
-    "lat": -0.91,
-    "lon": -89.6067,
-    "name": "San Cristobal Airport",
-    "city": "Puerto Baquerizo Moreno",
-    "state": "Galapagos",
-    "country": "Ecuador",
-    "woeid": 12512650,
-    "type": "Other Airport",
-    "icao": ""
   },
   {
     "code": "SCZ",
@@ -33000,18 +31464,6 @@
     "icao": "LWSK"
   },
   {
-    "code": "SKT",
-    "lat": 32.5194,
-    "lon": 74.5555,
-    "name": "Sialkot",
-    "city": "Sialkot",
-    "state": "Punjab",
-    "country": "Pakistan",
-    "woeid": 2211467,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "SKU",
     "lat": 38.9683,
     "lon": 24.4881,
@@ -33082,18 +31534,6 @@
     "woeid": 20069883,
     "type": "Airports",
     "icao": "KSLH"
-  },
-  {
-    "code": "SLI",
-    "lat": -12.1722,
-    "lon": 26.3667,
-    "name": "",
-    "city": "Solwezi",
-    "state": "North-Western",
-    "country": "Zambia",
-    "woeid": 1575642,
-    "type": "Military Airport",
-    "icao": "KSLI"
   },
   {
     "code": "SLK",
@@ -33178,18 +31618,6 @@
     "woeid": 12517596,
     "type": "Airports",
     "icao": "TLPC"
-  },
-  {
-    "code": "SLV",
-    "lat": 31.0778,
-    "lon": 77.0728,
-    "name": "Simla Airport",
-    "city": "Jutogh",
-    "state": "Himachal Pradesh",
-    "country": "India",
-    "woeid": 12513671,
-    "type": "Other Airport",
-    "icao": ""
   },
   {
     "code": "SLW",
@@ -33420,30 +31848,6 @@
     "icao": "PASN"
   },
   {
-    "code": "SNR",
-    "lat": 47.3121,
-    "lon": -2.15411,
-    "name": "Montoir Airport",
-    "city": "Montoir-de-Bretagne",
-    "state": "Pays de la Loire",
-    "country": "France",
-    "woeid": 12512944,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
-    "code": "SNU",
-    "lat": 22.4922,
-    "lon": -79.9408,
-    "name": "Santa Clara Airport",
-    "city": "Esperanza",
-    "state": "Villa Clara",
-    "country": "Cuba",
-    "woeid": 12512488,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "SNW",
     "lat": 18.4587,
     "lon": 94.3696,
@@ -33453,18 +31857,6 @@
     "country": "Myanmar",
     "woeid": 23424763,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "SOB",
-    "lat": 46.6998,
-    "lon": 17.1494,
-    "name": "Sarmellek Airport",
-    "city": "Zalavár",
-    "state": "Zala",
-    "country": "Hungary",
-    "woeid": 12513427,
-    "type": "Other Airport",
     "icao": ""
   },
   {
@@ -33588,18 +31980,6 @@
     "icao": "PASO"
   },
   {
-    "code": "SOW",
-    "lat": 34.2595,
-    "lon": -110.005,
-    "name": "Show Low Municipal Airport",
-    "city": "Show Low",
-    "state": "Arizona",
-    "country": "United States",
-    "woeid": 12521843,
-    "type": "Other Airport",
-    "icao": "KSOW"
-  },
-  {
     "code": "SPB",
     "lat": 18.3409,
     "lon": -64.9698,
@@ -33694,18 +32074,6 @@
     "woeid": 12524036,
     "type": "Airports",
     "icao": ""
-  },
-  {
-    "code": "SPS",
-    "lat": 33.9862,
-    "lon": -98.4984,
-    "name": "Sheppard Air Force Base",
-    "city": "Wichita Falls",
-    "state": "Texas",
-    "country": "United States",
-    "woeid": 12521831,
-    "type": "Military Airport",
-    "icao": "KSPS"
   },
   {
     "code": "SPU",
@@ -34390,30 +32758,6 @@
     "woeid": 12523327,
     "type": "Airports",
     "icao": ""
-  },
-  {
-    "code": "SWK",
-    "lat": 45.4738,
-    "lon": 9.2986,
-    "name": "Segrate Airport",
-    "city": "Trezzano sul Naviglio",
-    "state": "Lombardy",
-    "country": "Italy",
-    "woeid": 12523358,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
-    "code": "SWO",
-    "lat": 36.1618,
-    "lon": -97.0751,
-    "name": "Stillwater Municipal Airport",
-    "city": "Stillwater",
-    "state": "Oklahoma",
-    "country": "United States",
-    "woeid": 12522014,
-    "type": "Other Airport",
-    "icao": "KSWO"
   },
   {
     "code": "SWQ",
@@ -35688,18 +34032,6 @@
     "icao": ""
   },
   {
-    "code": "TKE",
-    "lat": 57.7773,
-    "lon": -135.208,
-    "name": "Tenakee Springs",
-    "city": "Tenakee Springs",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 2504726,
-    "type": "Sea Plane Base",
-    "icao": ""
-  },
-  {
     "code": "TKG",
     "lat": -5.2403,
     "lon": 105.178,
@@ -35866,18 +34198,6 @@
     "woeid": 12522075,
     "type": "Airports",
     "icao": "KTLH"
-  },
-  {
-    "code": "TLJ",
-    "lat": 44.2044,
-    "lon": 23.5396,
-    "name": "",
-    "city": "Tatalina",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 2347560,
-    "type": "Military Airport",
-    "icao": "PATL"
   },
   {
     "code": "TLL",
@@ -36106,18 +34426,6 @@
     "woeid": 12578014,
     "type": "Airports",
     "icao": ""
-  },
-  {
-    "code": "TNC",
-    "lat": 65.5639,
-    "lon": -167.919,
-    "name": "Tin City AFS",
-    "city": "Tin City",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 2506552,
-    "type": "Military Airport",
-    "icao": "PATC"
   },
   {
     "code": "TNG",
@@ -36648,18 +34956,6 @@
     "icao": ""
   },
   {
-    "code": "TSO",
-    "lat": 49.9502,
-    "lon": -6.32874,
-    "name": "",
-    "city": "Isles Of Scilly",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 12695899,
-    "type": "Other Airport",
-    "icao": "KTSO"
-  },
-  {
     "code": "TSR",
     "lat": 45.8047,
     "lon": 21.3377,
@@ -36729,18 +35025,6 @@
     "country": "Japan",
     "woeid": 12514029,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "TTQ",
-    "lat": 10.5667,
-    "lon": -83.5167,
-    "name": "Tortuquero Airport",
-    "city": "Colorado",
-    "state": "Limon",
-    "country": "Costa Rica",
-    "woeid": 12524322,
-    "type": "Other Airport",
     "icao": ""
   },
   {
@@ -36814,18 +35098,6 @@
     "woeid": 12517510,
     "type": "Airports",
     "icao": ""
-  },
-  {
-    "code": "TUF",
-    "lat": 47.428,
-    "lon": 0.72414,
-    "name": "St Symphorien Airport",
-    "city": "Tours",
-    "state": "Centre",
-    "country": "France",
-    "woeid": 12512976,
-    "type": "Other Airport",
-    "icao": "LFOT"
   },
   {
     "code": "TUG",
@@ -37728,18 +36000,6 @@
     "icao": ""
   },
   {
-    "code": "URS",
-    "lat": 42.7756,
-    "lon": 1.73213,
-    "name": "",
-    "city": "Kursk",
-    "state": "Kurskaya Oblast",
-    "country": "Russia",
-    "woeid": 2121788,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "URT",
     "lat": 9.1367,
     "lon": 99.1417,
@@ -38194,18 +36454,6 @@
     "woeid": 12522283,
     "type": "Airports",
     "icao": "KVCT"
-  },
-  {
-    "code": "VCV",
-    "lat": 34.588,
-    "lon": -117.373,
-    "name": "Southern California Logistics Airport",
-    "city": "Victorville",
-    "state": "California",
-    "country": "United States",
-    "woeid": 12519884,
-    "type": "Military Airport",
-    "icao": "KVCV"
   },
   {
     "code": "VDA",
@@ -38697,18 +36945,6 @@
     "country": "Russia",
     "woeid": 12516023,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "VOL",
-    "lat": 39.2203,
-    "lon": 22.7947,
-    "name": "Nea Anchialos Airport",
-    "city": "Almiros",
-    "state": "Thessalia",
-    "country": "Greece",
-    "woeid": 12513314,
-    "type": "Other Airport",
     "icao": ""
   },
   {
@@ -39456,18 +37692,6 @@
     "icao": ""
   },
   {
-    "code": "WNS",
-    "lat": 26.2194,
-    "lon": 68.3922,
-    "name": "Nawabshah Airport",
-    "city": "Nawabshah",
-    "state": "Sindh",
-    "country": "Pakistan",
-    "woeid": 12515254,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "WNZ",
     "lat": 28.0025,
     "lon": 120.648,
@@ -39502,18 +37726,6 @@
     "woeid": 12515178,
     "type": "Airports",
     "icao": "NZWR"
-  },
-  {
-    "code": "WRG",
-    "lat": 56.4876,
-    "lon": -132.378,
-    "name": "Wrangell Airport",
-    "city": "Wrangell",
-    "state": "Alaska",
-    "country": "United States",
-    "woeid": 12522517,
-    "type": "Sea Plane Base",
-    "icao": "PAWG"
   },
   {
     "code": "WRL",
@@ -39768,18 +37980,6 @@
     "icao": "KWYS"
   },
   {
-    "code": "XAD",
-    "lat": 44.4547,
-    "lon": -79.5139,
-    "name": "Churchill Rail Station",
-    "city": "Oro-Medonte",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 23397643,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "XAP",
     "lat": -27.1325,
     "lon": -52.6611,
@@ -39790,42 +37990,6 @@
     "woeid": 12511090,
     "type": "Airports",
     "icao": "SBCH"
-  },
-  {
-    "code": "XAW",
-    "lat": 46.7052,
-    "lon": -80.9219,
-    "name": "Capreol Rail Service",
-    "city": "Capreol",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 232,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XAX",
-    "lat": 45.4389,
-    "lon": -73.7302,
-    "name": "Dorval Rail Station",
-    "city": "Dorval",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 417,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XAZ",
-    "lat": 47.9955,
-    "lon": -66.6672,
-    "name": "Cambellton",
-    "city": "Cambellton",
-    "state": "New Brunswick",
-    "country": "Canada",
-    "woeid": 4392,
-    "type": "Railway Stations",
-    "icao": ""
   },
   {
     "code": "XBE",
@@ -39876,18 +38040,6 @@
     "icao": ""
   },
   {
-    "code": "XCI",
-    "lat": 49.3771,
-    "lon": -84.7493,
-    "name": "Ontario",
-    "city": "Oro-Medonte",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 2344922,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "XCM",
     "lat": 42.4,
     "lon": -82.1833,
@@ -39912,294 +38064,6 @@
     "icao": ""
   },
   {
-    "code": "XDB",
-    "lat": 50.6333,
-    "lon": 3.06667,
-    "name": "Lille-Europe Railway Station",
-    "city": "Lille",
-    "state": "Nord-Pas-de-Calais",
-    "country": "France",
-    "woeid": 12725933,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XDD",
-    "lat": 62.3587,
-    "lon": -96.5821,
-    "name": "",
-    "city": "",
-    "state": "",
-    "country": "Canada",
-    "woeid": 23424775,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XDG",
-    "lat": 44.6462,
-    "lon": -63.5739,
-    "name": "Halifax Rail Service",
-    "city": "Halifax",
-    "state": "Nova Scotia",
-    "country": "Canada",
-    "woeid": 4177,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XDH",
-    "lat": 62.3587,
-    "lon": -96.5821,
-    "name": "",
-    "city": "",
-    "state": "",
-    "country": "Canada",
-    "woeid": 23424775,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XDM",
-    "lat": 45.8527,
-    "lon": -72.3912,
-    "name": "Drummondville Airport",
-    "city": "Drummondville",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 12511642,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XDP",
-    "lat": 46.0884,
-    "lon": -64.7783,
-    "name": "Moncton Rail Service",
-    "city": "Moncton",
-    "state": "New Brunswick",
-    "country": "Canada",
-    "woeid": 3796,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XDQ",
-    "lat": 42.9869,
-    "lon": -81.2462,
-    "name": "London Ontario Rail Service",
-    "city": "London",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 4063,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XDS",
-    "lat": 49.3771,
-    "lon": -84.7493,
-    "name": "Ontario",
-    "city": "Oro-Medonte",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 2344922,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XDU",
-    "lat": 62.3587,
-    "lon": -96.5821,
-    "name": "",
-    "city": "",
-    "state": "",
-    "country": "Canada",
-    "woeid": 23424775,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XDV",
-    "lat": 53.9167,
-    "lon": -1.76667,
-    "name": "",
-    "city": "Prince George",
-    "state": "British Columbia",
-    "country": "Canada",
-    "woeid": 9537,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XDW",
-    "lat": 62.3587,
-    "lon": -96.5821,
-    "name": "Canada",
-    "city": "Prince Rupert",
-    "state": "British Columbia",
-    "country": "Canada",
-    "woeid": 23424775,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XDX",
-    "lat": 62.3587,
-    "lon": -96.5821,
-    "name": "Sarina Rail Station",
-    "city": "Sarina",
-    "state": "",
-    "country": "Canada",
-    "woeid": 23424775,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XDY",
-    "lat": 46.5,
-    "lon": -80.9667,
-    "name": "",
-    "city": "Sudbury",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 3198,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XDZ",
-    "lat": 53.8134,
-    "lon": -101.25,
-    "name": "The Pas Rail Service",
-    "city": "The Pas",
-    "state": "Manitoba",
-    "country": "Canada",
-    "woeid": 2331,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XEA",
-    "lat": 49.2604,
-    "lon": -123.114,
-    "name": "Vancouver Rail Service",
-    "city": "Vancouver",
-    "state": "British Columbia",
-    "country": "Canada",
-    "woeid": 9807,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XEC",
-    "lat": 42.3178,
-    "lon": -83.0339,
-    "name": "Windsor Ontario Rail Service",
-    "city": "Windsor",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 4079,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XED",
-    "lat": 48.8669,
-    "lon": 2.78194,
-    "name": "Disneyland Railway Station",
-    "city": "Paris",
-    "state": "Île-de-France",
-    "country": "France",
-    "woeid": 615702,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XEE",
-    "lat": 47.6602,
-    "lon": -72.2718,
-    "name": "Lac Edouard Rail Service",
-    "city": "Lac Edouard",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 788,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XEF",
-    "lat": 49.8994,
-    "lon": -97.1407,
-    "name": "Winnipeg Rail Service",
-    "city": "Winnipeg",
-    "state": "Manitoba",
-    "country": "Canada",
-    "woeid": 4079,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XEG",
-    "lat": 44.2315,
-    "lon": -76.4793,
-    "name": "Kingston Rail Service",
-    "city": "Kingston",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 4145,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XEH",
-    "lat": 48.9974,
-    "lon": -123.821,
-    "name": "Ladysmith Rail Service",
-    "city": "Ladysmith",
-    "state": "British Columbia",
-    "country": "Canada",
-    "woeid": 9830,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XEK",
-    "lat": 54.4994,
-    "lon": -105.684,
-    "name": "Saskatchewan",
-    "city": "Melville",
-    "state": "Saskatchewan",
-    "country": "Canada",
-    "woeid": 2344925,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XEL",
-    "lat": 53.8901,
-    "lon": -68.4293,
-    "name": "Quebec",
-    "city": "New Carlisle",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 2344924,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XER",
-    "lat": 48.5851,
-    "lon": 7.73643,
-    "name": "Strasbourg Bus Station",
-    "city": "Strasbourg",
-    "state": "Alsace",
-    "country": "France",
-    "woeid": 627791,
-    "type": "Bus Stations",
-    "icao": ""
-  },
-  {
     "code": "XET",
     "lat": 51.5039,
     "lon": 0.04981,
@@ -40209,114 +38073,6 @@
     "country": "United Kingdom",
     "woeid": 22475376,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "XEV",
-    "lat": 59.3322,
-    "lon": 18.0624,
-    "name": "Stockholm Central Station",
-    "city": "Stockholm",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 906057,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XEZ",
-    "lat": 59.1972,
-    "lon": 17.624,
-    "name": "Sodertalje",
-    "city": "Sodertalje",
-    "state": "Stockholm",
-    "country": "Sweden",
-    "woeid": 905000,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XFD",
-    "lat": 43.3701,
-    "lon": -80.9819,
-    "name": "Stratford",
-    "city": "Stratford",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 4054,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XFE",
-    "lat": 47.9204,
-    "lon": -74.6246,
-    "name": "Parent Rail Service",
-    "city": "Parent",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 3418,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XFG",
-    "lat": 48.5247,
-    "lon": -64.2139,
-    "name": "Perce Rail Service",
-    "city": "Perce",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 3729,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XFJ",
-    "lat": 59.3723,
-    "lon": 16.5165,
-    "name": "Eskilstuna Station",
-    "city": "Eskilstuna",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 889077,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XFK",
-    "lat": 48.3907,
-    "lon": -77.2423,
-    "name": "Senneterre Rail Service",
-    "city": "Senneterre",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 3259,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XFL",
-    "lat": 46.5657,
-    "lon": -72.7254,
-    "name": "Shawinigan Rail Station",
-    "city": "Shawinigan",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 12697118,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XFM",
-    "lat": 48.6537,
-    "lon": -123.615,
-    "name": "Shawnigan Rail Service",
-    "city": "Cowichan Valley",
-    "state": "British Columbia",
-    "country": "Canada",
-    "woeid": 23405345,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -40332,78 +38088,6 @@
     "icao": ""
   },
   {
-    "code": "XFP",
-    "lat": 55.5966,
-    "lon": 13.0016,
-    "name": "Malmö Station",
-    "city": "Malmo",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 898091,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XFQ",
-    "lat": 47.9,
-    "lon": -73.75,
-    "name": "Weymont Rail Service",
-    "city": "Weymont",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 23395517,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XFR",
-    "lat": 55.6034,
-    "lon": 13.0008,
-    "name": "Malmo South Railway",
-    "city": "Malmo",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 898091,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XFS",
-    "lat": 45.3116,
-    "lon": -74.6366,
-    "name": "Alexandria",
-    "city": "Alexandria",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 3557,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XFU",
-    "lat": 60.3432,
-    "lon": 17.5143,
-    "name": "Tierp Station",
-    "city": "Tierp",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 907416,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XFV",
-    "lat": 43.1414,
-    "lon": -80.2617,
-    "name": "Brantford",
-    "city": "Brantford",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 4059,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "XFW",
     "lat": 53.5356,
     "lon": 9.8342,
@@ -40416,78 +38100,6 @@
     "icao": "EDHI"
   },
   {
-    "code": "XFY",
-    "lat": 46.7869,
-    "lon": -71.3708,
-    "name": "Sainte Foy Rail Service",
-    "city": "Quebec",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 4384,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XFZ",
-    "lat": 46.7137,
-    "lon": -71.2715,
-    "name": "Charny",
-    "city": "Charny",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 268,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XGC",
-    "lat": 55.7062,
-    "lon": 13.1876,
-    "name": "Lund",
-    "city": "Lund",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 897819,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XGJ",
-    "lat": 39.8753,
-    "lon": 20.005,
-    "name": "Cobourg Rail Station",
-    "city": "Cobourg",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 4367,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XGK",
-    "lat": 47.8382,
-    "lon": -64.5545,
-    "name": "Coteau Rail Station",
-    "city": "Coteau",
-    "state": "New Brunswick",
-    "country": "Canada",
-    "woeid": 23392633,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XGM",
-    "lat": 52.8833,
-    "lon": -1.97685,
-    "name": "England",
-    "city": "Grantham",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 24554868,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "XGR",
     "lat": 58.5344,
     "lon": -65.8892,
@@ -40497,102 +38109,6 @@
     "country": "Canada",
     "woeid": 12524059,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "XGY",
-    "lat": 49.3771,
-    "lon": -84.7493,
-    "name": "Ontario",
-    "city": "Grimsby",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 2344922,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XHJ",
-    "lat": 50.7781,
-    "lon": 6.08849,
-    "name": "Railway Station",
-    "city": "Aix La Chapelle",
-    "state": "North-Rhine-Westphalia",
-    "country": "Germany",
-    "woeid": 633175,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XHK",
-    "lat": 44.9913,
-    "lon": 4.97828,
-    "name": "Valence Station",
-    "city": "Valence",
-    "state": "Midi-Pyrénées",
-    "country": "France",
-    "woeid": 22885996,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XHM",
-    "lat": 46.1847,
-    "lon": -62.5339,
-    "name": "Georgetown Rail Station",
-    "city": "Georgetown",
-    "state": "Prince Edward Island",
-    "country": "Canada",
-    "woeid": 3793,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XHN",
-    "lat": 50.501,
-    "lon": 4.47677,
-    "name": "Belgium",
-    "city": "Liege",
-    "state": "Wallonie",
-    "country": "Belgium",
-    "woeid": 23424757,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XHS",
-    "lat": 54.4857,
-    "lon": -126.556,
-    "name": "British Columbia",
-    "city": "Chemainus",
-    "state": "British Columbia",
-    "country": "Canada",
-    "woeid": 2344916,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XIA",
-    "lat": 43.5661,
-    "lon": -80.1989,
-    "name": "Guelph Airport",
-    "city": "Guelph",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 12511904,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XIB",
-    "lat": 49.3771,
-    "lon": -84.7493,
-    "name": "Ontario",
-    "city": "Ingersoll",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 2344922,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -40608,30 +38124,6 @@
     "icao": "ZUXC"
   },
   {
-    "code": "XID",
-    "lat": 45.2906,
-    "lon": -74.8516,
-    "name": "Maxville Rail Station",
-    "city": "Maxville",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 3559,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XIF",
-    "lat": 49.3771,
-    "lon": -84.7493,
-    "name": "Ontario",
-    "city": "Napanee",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 2344922,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "XIL",
     "lat": 43.9667,
     "lon": 116.067,
@@ -40641,42 +38133,6 @@
     "country": "China",
     "woeid": 12512248,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "XIM",
-    "lat": 53.8901,
-    "lon": -68.4293,
-    "name": "Quebec",
-    "city": "Saint Hyacinthe",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 2344924,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XIO",
-    "lat": 46.1445,
-    "lon": -66.6164,
-    "name": "St Marys Rail Station",
-    "city": "St Marys",
-    "state": "New Brunswick",
-    "country": "Canada",
-    "woeid": 29374756,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XIP",
-    "lat": 43.1301,
-    "lon": -80.7566,
-    "name": "Woodstock Rail Service",
-    "city": "Woodstock",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 4060,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -40704,30 +38160,6 @@
     "icao": "ZLXY"
   },
   {
-    "code": "XJL",
-    "lat": 53.8901,
-    "lon": -68.4293,
-    "name": "Quebec",
-    "city": "Joliette",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 2344924,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XJQ",
-    "lat": 48.4339,
-    "lon": -71.3432,
-    "name": "Jonquiere Rail Station",
-    "city": "Jonquiere",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 3404,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "XKH",
     "lat": 19.5,
     "lon": 103,
@@ -40737,18 +38169,6 @@
     "country": "Lao People's Democratic Republic",
     "woeid": 12848854,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "XKL",
-    "lat": 3.13636,
-    "lon": 101.689,
-    "name": "Kuala Lumpur Central Station",
-    "city": "Kuala Lumpur",
-    "state": "Wilayah Persekutuan",
-    "country": "Malaysia",
-    "woeid": 22342065,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -40764,18 +38184,6 @@
     "icao": "CYAQ"
   },
   {
-    "code": "XKV",
-    "lat": 45.8997,
-    "lon": -64.3746,
-    "name": "Sackville Rail Station",
-    "city": "Sackville",
-    "state": "New Brunswick",
-    "country": "Canada",
-    "woeid": 3798,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "XLB",
     "lat": 58.65,
     "lon": -97.3667,
@@ -40785,42 +38193,6 @@
     "country": "Canada",
     "woeid": 12524062,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "XLJ",
-    "lat": 46.8,
-    "lon": -71.25,
-    "name": "Quebec Stn. Rail Svce.",
-    "city": "Quebec",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 12697028,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XLM",
-    "lat": 45.5,
-    "lon": -73.5833,
-    "name": "St Lambert Rail Svce.",
-    "city": "Montreal",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 12697167,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XLQ",
-    "lat": 62.3587,
-    "lon": -96.5821,
-    "name": "",
-    "city": "Guildwood",
-    "state": "",
-    "country": "Canada",
-    "woeid": 23424775,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -40834,42 +38206,6 @@
     "woeid": 12517509,
     "type": "Airports",
     "icao": "GOSS"
-  },
-  {
-    "code": "XLV",
-    "lat": 49.3771,
-    "lon": -84.7493,
-    "name": "Ontario",
-    "city": "Niagara Falls",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 2344922,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XLY",
-    "lat": 62.3587,
-    "lon": -96.5821,
-    "name": "Aldershot Rail Station",
-    "city": "Aldershot",
-    "state": "",
-    "country": "Canada",
-    "woeid": 23424775,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XLZ",
-    "lat": 44.7274,
-    "lon": -63.5876,
-    "name": "Nova Scotia",
-    "city": "Truro",
-    "state": "Nova Scotia",
-    "country": "Canada",
-    "woeid": 2344921,
-    "type": "Railway Stations",
-    "icao": ""
   },
   {
     "code": "XMH",
@@ -40944,18 +38280,6 @@
     "icao": ""
   },
   {
-    "code": "XNM",
-    "lat": 52.9206,
-    "lon": -1.075,
-    "name": "Nottingham Airport",
-    "city": "Nottingham",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 12518136,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "XNN",
     "lat": 36.5678,
     "lon": 101.862,
@@ -40965,30 +38289,6 @@
     "country": "China",
     "woeid": 12512251,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "XNO",
-    "lat": 54.2,
-    "lon": -1.26,
-    "name": "",
-    "city": "Northallerton",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 30597,
-    "type": "Railway Stations",
-    "icao": "KXNO"
-  },
-  {
-    "code": "XNV",
-    "lat": 52.5214,
-    "lon": -1.46445,
-    "name": "Nuneaton Rail Station",
-    "city": "Nuneaton",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 30733,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -41004,90 +38304,6 @@
     "icao": ""
   },
   {
-    "code": "XOK",
-    "lat": 49.3771,
-    "lon": -84.7493,
-    "name": "Ontario",
-    "city": "Oakville",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 2344922,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XOP",
-    "lat": 46.1325,
-    "lon": -0.17616,
-    "name": "Poitou-Charentes",
-    "city": "Poitiers",
-    "state": "Poitou-Charentes",
-    "country": "France",
-    "woeid": 7153327,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XPB",
-    "lat": 49.3203,
-    "lon": -124.322,
-    "name": "Parksville Rail Service",
-    "city": "Parksville",
-    "state": "British Columbia",
-    "country": "Canada",
-    "woeid": 12523349,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XPF",
-    "lat": 54.6643,
-    "lon": -2.75747,
-    "name": "Penrith Rail Station",
-    "city": "Penrith",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 31772,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XPG",
-    "lat": 48.8805,
-    "lon": 2.35459,
-    "name": "Gare du Nord Rail Stn",
-    "city": "Paris",
-    "state": "Île-de-France",
-    "country": "France",
-    "woeid": 20068147,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XPJ",
-    "lat": 45.6333,
-    "lon": -0.75,
-    "name": "Montpellier Railway Station",
-    "city": "Montpellier",
-    "state": "Poitou-Charentes",
-    "country": "France",
-    "woeid": 12723386,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XPN",
-    "lat": 43.6843,
-    "lon": -79.7588,
-    "name": "",
-    "city": "Brampton",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 4431,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "XPQ",
     "lat": 3,
     "lon": 101.4,
@@ -41100,30 +38316,6 @@
     "icao": ""
   },
   {
-    "code": "XPT",
-    "lat": 53.758,
-    "lon": -2.70573,
-    "name": "Preston Rail Station",
-    "city": "Preston",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 32566,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XPX",
-    "lat": 45.6585,
-    "lon": -73.5484,
-    "name": "Pointe-aux-Trembles Rail Station",
-    "city": "Pointe-aux-Trembles",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 1217,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "XQE",
     "lat": 54.3139,
     "lon": -2.23218,
@@ -41133,42 +38325,6 @@
     "country": "United Kingdom",
     "woeid": 23424975,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "XQG",
-    "lat": 55.7714,
-    "lon": -2.00702,
-    "name": "Berwick Station",
-    "city": "Berwick",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 12444,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XQH",
-    "lat": 54.3139,
-    "lon": -2.23218,
-    "name": "United Kingdom",
-    "city": "Nottingham",
-    "state": "",
-    "country": "United Kingdom",
-    "woeid": 23424975,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XQL",
-    "lat": 54.0445,
-    "lon": -2.79903,
-    "name": "Lancaster Rail Station",
-    "city": "Lancaster",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 25701,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -41196,54 +38352,6 @@
     "icao": ""
   },
   {
-    "code": "XRC",
-    "lat": 53.3304,
-    "lon": -2.70902,
-    "name": "Runcorn Rail Station",
-    "city": "Runcorn",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 33759,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XRF",
-    "lat": 43.4844,
-    "lon": 5.37588,
-    "name": "Marseille Railway",
-    "city": "Marseille",
-    "state": "Centre",
-    "country": "France",
-    "woeid": 610264,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XRP",
-    "lat": 46.4864,
-    "lon": -65.0255,
-    "name": "Pine Ridge Rail Station",
-    "city": "Pine Ridge",
-    "state": "New Brunswick",
-    "country": "Canada",
-    "woeid": 23393083,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XRU",
-    "lat": 52.3703,
-    "lon": -1.26071,
-    "name": "Rugby Rail Station",
-    "city": "Rugby",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 33744,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "XRY",
     "lat": 36.7497,
     "lon": -6.06054,
@@ -41265,18 +38373,6 @@
     "country": "Turks And Caicos Islands",
     "woeid": 12517846,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "XSH",
-    "lat": 47.6441,
-    "lon": 1.59046,
-    "name": "Centre",
-    "city": "Tours",
-    "state": "Centre",
-    "country": "France",
-    "woeid": 7153314,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -41304,18 +38400,6 @@
     "icao": "WSSL"
   },
   {
-    "code": "XSR",
-    "lat": 52.8833,
-    "lon": -1.97685,
-    "name": "England",
-    "city": "Salisbury",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 24554868,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "XTG",
     "lat": -27.9829,
     "lon": 143.812,
@@ -41326,18 +38410,6 @@
     "woeid": 12510794,
     "type": "Airports",
     "icao": "YTGM"
-  },
-  {
-    "code": "XTK",
-    "lat": 52.8833,
-    "lon": -1.97685,
-    "name": "England",
-    "city": "Thirsk",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 24554868,
-    "type": "Railway Stations",
-    "icao": ""
   },
   {
     "code": "XTL",
@@ -41352,18 +38424,6 @@
     "icao": "CYBQ"
   },
   {
-    "code": "XTY",
-    "lat": 42.9432,
-    "lon": -81.6198,
-    "name": "Strathroy Rail Station",
-    "city": "Strathroy",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 12697816,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "XUZ",
     "lat": 32.9444,
     "lon": 119.119,
@@ -41373,42 +38433,6 @@
     "country": "China",
     "woeid": 12577994,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "XVA",
-    "lat": 52.8833,
-    "lon": -1.97685,
-    "name": "England",
-    "city": "Stockport",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 24554868,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XVB",
-    "lat": 52.8833,
-    "lon": -1.97685,
-    "name": "England",
-    "city": "Stafford",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 24554868,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XVC",
-    "lat": 54.3139,
-    "lon": -2.23218,
-    "name": "United Kingdom",
-    "city": "Crewe",
-    "state": "",
-    "country": "United Kingdom",
-    "woeid": 23424975,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -41424,150 +38448,6 @@
     "icao": "KXVG"
   },
   {
-    "code": "XVH",
-    "lat": 54.3139,
-    "lon": -2.23218,
-    "name": "United Kingdom",
-    "city": "Peterborough",
-    "state": "",
-    "country": "United Kingdom",
-    "woeid": 23424975,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XVJ",
-    "lat": 51.9056,
-    "lon": -0.18868,
-    "name": "Stevenage Rail Station",
-    "city": "Stevenage",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 36094,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XVU",
-    "lat": 54.7775,
-    "lon": -1.57461,
-    "name": "Durham Rail Station",
-    "city": "Durham",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 18760,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XVV",
-    "lat": 44.161,
-    "lon": -77.3819,
-    "name": "Belleville Rail Service",
-    "city": "Belleville",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 4107,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XVW",
-    "lat": 57.0988,
-    "lon": -3.99274,
-    "name": "",
-    "city": "Belleville",
-    "state": "Scotland",
-    "country": "United Kingdom",
-    "woeid": 11627,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XWD",
-    "lat": 54.7447,
-    "lon": -2.14264,
-    "name": "Wakefield Westgate Rail Station",
-    "city": "Wakefield Westgate",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 39929,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XWH",
-    "lat": 53.0294,
-    "lon": -2.17507,
-    "name": "Stroke on Trent Rail Station",
-    "city": "Stroke on Trent",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 36240,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XWK",
-    "lat": 56.2667,
-    "lon": 15.2667,
-    "name": "Karlskrona Rail Svc.",
-    "city": "Karlskrona",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 902730,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XWL",
-    "lat": 57.7013,
-    "lon": 11.9669,
-    "name": "Gothenburg",
-    "city": "Gothenburg",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 890869,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XWM",
-    "lat": 59.0667,
-    "lon": 15.1126,
-    "name": "Hallsberg Rail Station",
-    "city": "Hallsberg",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 892152,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XWN",
-    "lat": 52.8833,
-    "lon": -1.97685,
-    "name": "England",
-    "city": "Warrington",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 24554868,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XWP",
-    "lat": 62.1984,
-    "lon": 17.5514,
-    "name": "Sweden",
-    "city": "Hassleholm",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 23424954,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "XWQ",
     "lat": 62.1984,
     "lon": 17.5514,
@@ -41577,54 +38457,6 @@
     "country": "Sweden",
     "woeid": 23424954,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "XWR",
-    "lat": 59.2707,
-    "lon": 15.2175,
-    "name": "Orebro Railway Station",
-    "city": "Orebro",
-    "state": "Orebro",
-    "country": "Sweden",
-    "woeid": 900751,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XWS",
-    "lat": 54.3139,
-    "lon": -2.23218,
-    "name": "United Kingdom",
-    "city": "Swindon",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 23424975,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XWV",
-    "lat": 57.1079,
-    "lon": 12.249,
-    "name": "Varberg Rail Station",
-    "city": "Varberg",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 909053,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XWY",
-    "lat": 42.9414,
-    "lon": -82.1204,
-    "name": "Wyoming Rail Station",
-    "city": "Wyoming",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 1964,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -41652,18 +38484,6 @@
     "icao": ""
   },
   {
-    "code": "XXD",
-    "lat": 59.2359,
-    "lon": 14.4305,
-    "name": "Degerfors Rail Station",
-    "city": "Degerfors",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 888282,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "XXK",
     "lat": 59.0167,
     "lon": 16.2167,
@@ -41673,18 +38493,6 @@
     "country": "Sweden",
     "woeid": 895148,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "XXM",
-    "lat": 58.3259,
-    "lon": 15.1313,
-    "name": "",
-    "city": "Mjolby",
-    "state": "Ostergotland",
-    "country": "Sweden",
-    "woeid": 898538,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -41700,18 +38508,6 @@
     "icao": "OERY"
   },
   {
-    "code": "XXO",
-    "lat": 60.7313,
-    "lon": 14.9974,
-    "name": "Leksand Rail Station",
-    "city": "Leksand",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 896880,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "XXT",
     "lat": 43.6167,
     "lon": 7.05,
@@ -41721,30 +38517,6 @@
     "country": "France",
     "woeid": 12523829,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "XXU",
-    "lat": 62.1984,
-    "lon": 17.5514,
-    "name": "Sweden",
-    "city": "Hedemora",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 23424954,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XXZ",
-    "lat": 62.3889,
-    "lon": 17.3069,
-    "name": "Sundsvall Railway Station",
-    "city": "Sundsvall",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 906742,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -41760,66 +38532,6 @@
     "icao": ""
   },
   {
-    "code": "XYB",
-    "lat": 60.4838,
-    "lon": 15.4344,
-    "name": "Borlange",
-    "city": "Borlänge",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 887274,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XYC",
-    "lat": 62.1984,
-    "lon": 17.5514,
-    "name": "Sweden",
-    "city": "Herrljunga",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 23424954,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XYD",
-    "lat": 45.75,
-    "lon": 4.85,
-    "name": "Lyon Part-Dieu Railway Station",
-    "city": "Lyon",
-    "state": "Rhone-Alpes",
-    "country": "France",
-    "woeid": 55863207,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XYF",
-    "lat": 58.1621,
-    "lon": 13.5548,
-    "name": "Falkoping Rail Station",
-    "city": "Falkoping",
-    "state": "Vastra Gotaland",
-    "country": "Sweden",
-    "woeid": 889227,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XYH",
-    "lat": 56.0439,
-    "lon": 12.6959,
-    "name": "Helsingborg Railway",
-    "city": "Helsingborg",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 892828,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "XYI",
     "lat": 62.1984,
     "lon": 17.5514,
@@ -41829,114 +38541,6 @@
     "country": "Sweden",
     "woeid": 23424954,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "XYK",
-    "lat": 58.5844,
-    "lon": 16.1925,
-    "name": "Norrkoping Railway Service",
-    "city": "Norrkoping",
-    "state": "Ostergotland",
-    "country": "Sweden",
-    "woeid": 899981,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XYN",
-    "lat": 59.3091,
-    "lon": 14.1061,
-    "name": "Kristinehamn",
-    "city": "Kristinehamn",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 895938,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XYP",
-    "lat": 60.1269,
-    "lon": 16.2161,
-    "name": "Kyrlbo",
-    "city": "Avesta Krylbo",
-    "state": "Dalarna",
-    "country": "Sweden",
-    "woeid": 896048,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XYQ",
-    "lat": 59.6833,
-    "lon": 15.8167,
-    "name": "Angelholm Railway Svc.",
-    "city": "Angelholm/Helsingborg",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 892828,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XYX",
-    "lat": 59.92,
-    "lon": 16.606,
-    "name": "Sala",
-    "city": "Sala",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 892828,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XYY",
-    "lat": 59.6767,
-    "lon": 12.6425,
-    "name": "Arvika Airport",
-    "city": "Arvika",
-    "state": "",
-    "country": "Sweden",
-    "woeid": 12517611,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XYZ",
-    "lat": 62.6335,
-    "lon": 17.9377,
-    "name": "Harnosand Rail Station",
-    "city": "Harnosand",
-    "state": "Vasternorrland",
-    "country": "Sweden",
-    "woeid": 892478,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XZB",
-    "lat": 45.3135,
-    "lon": -75.089,
-    "name": "Casselman Rail Station",
-    "city": "Casselman",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 3372,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XZC",
-    "lat": 42.7425,
-    "lon": -81.7128,
-    "name": "",
-    "city": "Glencoe",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 4073,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -41952,18 +38556,6 @@
     "icao": ""
   },
   {
-    "code": "XZL",
-    "lat": 53.3078,
-    "lon": -113.584,
-    "name": "Edmonton International Airport",
-    "city": "Edmonton",
-    "state": "Alberta",
-    "country": "Canada",
-    "woeid": 12511646,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "XZM",
     "lat": -7.45,
     "lon": -70.55,
@@ -41973,42 +38565,6 @@
     "country": "Macao",
     "woeid": 12824753,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "XZN",
-    "lat": 43.9487,
-    "lon": 4.80601,
-    "name": "Avignon",
-    "city": "Avignon",
-    "state": "Provence-alpes-cote d'Azur",
-    "country": "France",
-    "woeid": 577605,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XZO",
-    "lat": 59.9123,
-    "lon": 10.75,
-    "name": "Oslo Central Station",
-    "city": "Oslo",
-    "state": "",
-    "country": "Norway",
-    "woeid": 862592,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "XZU",
-    "lat": 37.2997,
-    "lon": -92.3047,
-    "name": "Off line Point",
-    "city": "Rail (Generic)",
-    "state": "Missouri",
-    "country": "United States",
-    "woeid": 2478178,
-    "type": "Off-line Point",
     "icao": ""
   },
   {
@@ -42082,18 +38638,6 @@
     "woeid": 12511827,
     "type": "Airports",
     "icao": "CYAM"
-  },
-  {
-    "code": "YAO",
-    "lat": 3.8336,
-    "lon": 11.5236,
-    "name": "Yaounde Airport",
-    "city": "Yaounde",
-    "state": "Centre",
-    "country": "Cameroon",
-    "woeid": 12512354,
-    "type": "Other Airport",
-    "icao": "FKKY"
   },
   {
     "code": "YAP",
@@ -42240,18 +38784,6 @@
     "icao": ""
   },
   {
-    "code": "YBR",
-    "lat": 49.9036,
-    "lon": -99.943,
-    "name": "Brandon Airport",
-    "city": "Killarney",
-    "state": "Manitoba",
-    "country": "Canada",
-    "woeid": 12511586,
-    "type": "Other Airport",
-    "icao": "CYBR"
-  },
-  {
     "code": "YBT",
     "lat": 57.8833,
     "lon": -101.683,
@@ -42276,18 +38808,6 @@
     "icao": "CYBV"
   },
   {
-    "code": "YBW",
-    "lat": 48.7512,
-    "lon": -123.225,
-    "name": "",
-    "city": "Bedwell Harbor",
-    "state": "",
-    "country": "Canada",
-    "woeid": 12524103,
-    "type": "Harbours",
-    "icao": ""
-  },
-  {
     "code": "YBX",
     "lat": 51.4436,
     "lon": -57.1861,
@@ -42298,30 +38818,6 @@
     "woeid": 12511736,
     "type": "Airports",
     "icao": "CYBX"
-  },
-  {
-    "code": "YBZ",
-    "lat": 43.6382,
-    "lon": -79.3466,
-    "name": "Toronto Downtown Airport",
-    "city": "Toronto",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 12523339,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "YCA",
-    "lat": 49.6833,
-    "lon": -125,
-    "name": "Courtenay Airport",
-    "city": "Courtenay",
-    "state": "British Columbia",
-    "country": "Canada",
-    "woeid": 12523298,
-    "type": "Railway Stations",
-    "icao": ""
   },
   {
     "code": "YCB",
@@ -42381,18 +38877,6 @@
     "country": "Canada",
     "woeid": 12524090,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "YCM",
-    "lat": 43.1893,
-    "lon": -79.1709,
-    "name": "St Catharines Airport",
-    "city": "Fonthill",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 12511845,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -42480,18 +38964,6 @@
     "icao": "CYDF"
   },
   {
-    "code": "YDN",
-    "lat": 51.1025,
-    "lon": -100.06,
-    "name": "Dauphin Airport",
-    "city": "Dauphin",
-    "state": "Manitoba",
-    "country": "Canada",
-    "woeid": 12511630,
-    "type": "Railway Stations",
-    "icao": "CYDN"
-  },
-  {
     "code": "YDP",
     "lat": 56.5333,
     "lon": -61.6667,
@@ -42526,18 +38998,6 @@
     "woeid": 12511646,
     "type": "Airports",
     "icao": "CYEG"
-  },
-  {
-    "code": "YEI",
-    "lat": 40.2546,
-    "lon": 29.5629,
-    "name": "",
-    "city": "Bursa",
-    "state": "Bursa",
-    "country": "Turkey",
-    "woeid": 2347273,
-    "type": "Other Airport",
-    "icao": ""
   },
   {
     "code": "YEK",
@@ -42672,18 +39132,6 @@
     "icao": "CYFS"
   },
   {
-    "code": "YFX",
-    "lat": 52.3598,
-    "lon": -55.6684,
-    "name": "Fox Harbour Aerodrome",
-    "city": "St. Anthony",
-    "state": "Newfoundland and Labrador",
-    "country": "Canada",
-    "woeid": 12524121,
-    "type": "Harbours",
-    "icao": ""
-  },
-  {
     "code": "YGB",
     "lat": 49.6942,
     "lon": -124.516,
@@ -42694,18 +39142,6 @@
     "woeid": 12511870,
     "type": "Airports",
     "icao": "CYGB"
-  },
-  {
-    "code": "YGG",
-    "lat": 48.85,
-    "lon": -123.5,
-    "name": "Ganges Harbor Airport",
-    "city": "Saltspring Island",
-    "state": "British Columbia",
-    "country": "Canada",
-    "woeid": 12524124,
-    "type": "Harbours",
-    "icao": ""
   },
   {
     "code": "YGH",
@@ -42804,18 +39240,6 @@
     "icao": "CYGT"
   },
   {
-    "code": "YGV",
-    "lat": 50.2811,
-    "lon": -63.6111,
-    "name": "Harve-St-Pierre Airport",
-    "city": "Havre St Pierre",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 12511691,
-    "type": "Other Airport",
-    "icao": "CYGV"
-  },
-  {
     "code": "YGW",
     "lat": 55.2825,
     "lon": -77.7583,
@@ -42826,18 +39250,6 @@
     "woeid": 12524130,
     "type": "Airports",
     "icao": "CYGW"
-  },
-  {
-    "code": "YGX",
-    "lat": 56.35,
-    "lon": -94.7167,
-    "name": "Gillam Airport",
-    "city": "Nelson House",
-    "state": "Manitoba",
-    "country": "Canada",
-    "woeid": 12524131,
-    "type": "Railway Stations",
-    "icao": "CYGX"
   },
   {
     "code": "YGZ",
@@ -42861,18 +39273,6 @@
     "country": "Canada",
     "woeid": 12524134,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "YHB",
-    "lat": 52.8208,
-    "lon": -102.324,
-    "name": "Hudson Bay Airport",
-    "city": "Melfort",
-    "state": "Saskatchewan",
-    "country": "Canada",
-    "woeid": 12511698,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -42984,18 +39384,6 @@
     "icao": ""
   },
   {
-    "code": "YHU",
-    "lat": 45.5087,
-    "lon": -73.4302,
-    "name": "Montreal St Hubert Airport",
-    "city": "St-Hubert",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 12511759,
-    "type": "Other Airport",
-    "icao": "CYHU"
-  },
-  {
     "code": "YHY",
     "lat": 60.8392,
     "lon": -115.781,
@@ -43078,18 +39466,6 @@
     "woeid": 12524147,
     "type": "Airports",
     "icao": "CYIO"
-  },
-  {
-    "code": "YIP",
-    "lat": 42.2385,
-    "lon": -83.5467,
-    "name": "Willow Run Airport",
-    "city": "Ypsilanti",
-    "state": "Michigan",
-    "country": "United States",
-    "woeid": 12522472,
-    "type": "Other Airport",
-    "icao": "KYIP"
   },
   {
     "code": "YIV",
@@ -43284,18 +39660,6 @@
     "icao": "CYLL"
   },
   {
-    "code": "YLQ",
-    "lat": 47.4149,
-    "lon": -72.7872,
-    "name": "La Tuque Airport",
-    "city": "La Tuque",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 12511724,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "YLW",
     "lat": 49.9509,
     "lon": -119.382,
@@ -43380,18 +39744,6 @@
     "icao": "CYMX"
   },
   {
-    "code": "YMY",
-    "lat": 45.4825,
-    "lon": -73.5486,
-    "name": "Downtown Rail Station",
-    "city": "Montreal",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 12524177,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "YNA",
     "lat": 50.1903,
     "lon": -61.79,
@@ -43426,18 +39778,6 @@
     "woeid": 12524178,
     "type": "Airports",
     "icao": "CYNC"
-  },
-  {
-    "code": "YND",
-    "lat": 45.5179,
-    "lon": -75.5618,
-    "name": "Ottawa Gatineau Airport",
-    "city": "Gatineau",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 12511778,
-    "type": "Other Airport",
-    "icao": ""
   },
   {
     "code": "YNE",
@@ -43764,18 +40104,6 @@
     "icao": "CYPX"
   },
   {
-    "code": "YPZ",
-    "lat": 54.2526,
-    "lon": -125.773,
-    "name": "Burns Lake Airport",
-    "city": "Smithers",
-    "state": "British Columbia",
-    "country": "Canada",
-    "woeid": 12511591,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "YQB",
     "lat": 46.791,
     "lon": -71.3837,
@@ -43810,18 +40138,6 @@
     "woeid": 12511871,
     "type": "Airports",
     "icao": "CYQD"
-  },
-  {
-    "code": "YQF",
-    "lat": 52.1786,
-    "lon": -113.883,
-    "name": "Red Deer Regional Airport",
-    "city": "Sylvan Lake",
-    "state": "Alberta",
-    "country": "Canada",
-    "woeid": 12511809,
-    "type": "Other Airport",
-    "icao": "CYQF"
   },
   {
     "code": "YQG",
@@ -43870,18 +40186,6 @@
     "woeid": 12511754,
     "type": "Airports",
     "icao": "CYQM"
-  },
-  {
-    "code": "YQN",
-    "lat": 50.1667,
-    "lon": -86.7,
-    "name": "Nakina Airport",
-    "city": "Marathon",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 12524206,
-    "type": "Railway Stations",
-    "icao": "CYQN"
   },
   {
     "code": "YQQ",
@@ -44088,18 +40392,6 @@
     "icao": ""
   },
   {
-    "code": "YSH",
-    "lat": 44.9289,
-    "lon": -75.9706,
-    "name": "Smiths Falls Montague Township Russ Beach Airpor",
-    "city": "Smiths Falls",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 12511834,
-    "type": "Railway Stations",
-    "icao": "CYSH"
-  },
-  {
     "code": "YSJ",
     "lat": 45.3294,
     "lon": -65.8903,
@@ -44182,18 +40474,6 @@
     "woeid": 12523262,
     "type": "Airports",
     "icao": "CYSY"
-  },
-  {
-    "code": "YTD",
-    "lat": 55.3167,
-    "lon": -97.7,
-    "name": "Thicket Portage Airport",
-    "city": "Nelson House",
-    "state": "Manitoba",
-    "country": "Canada",
-    "woeid": 12524225,
-    "type": "Railway Stations",
-    "icao": "CZLQ"
   },
   {
     "code": "YTE",
@@ -44376,18 +40656,6 @@
     "icao": "CYUY"
   },
   {
-    "code": "YVA",
-    "lat": -11.7075,
-    "lon": 43.2342,
-    "name": "Moroni Iconi Airport",
-    "city": "Moroni",
-    "state": "Grande Comore",
-    "country": "Comoros",
-    "woeid": 12512358,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
     "code": "YVB",
     "lat": 48.0717,
     "lon": -65.4614,
@@ -44544,18 +40812,6 @@
     "icao": "CYWL"
   },
   {
-    "code": "YWM",
-    "lat": 52.3333,
-    "lon": -56,
-    "name": "Williams Harbour Airport",
-    "city": "St. Anthony",
-    "state": "Newfoundland and Labrador",
-    "country": "Canada",
-    "woeid": 12524260,
-    "type": "Harbours",
-    "icao": ""
-  },
-  {
     "code": "YWP",
     "lat": 52.978,
     "lon": -87.3578,
@@ -44566,18 +40822,6 @@
     "woeid": 12524263,
     "type": "Airports",
     "icao": "CYWP"
-  },
-  {
-    "code": "YWS",
-    "lat": 50.1333,
-    "lon": -122.95,
-    "name": "Green Lake Water Aerodrome",
-    "city": "Gibsons",
-    "state": "British Columbia",
-    "country": "Canada",
-    "woeid": 12523277,
-    "type": "Other Airport",
-    "icao": ""
   },
   {
     "code": "YXC",
@@ -44626,18 +40870,6 @@
     "woeid": 12511669,
     "type": "Airports",
     "icao": "CYXJ"
-  },
-  {
-    "code": "YXK",
-    "lat": 48.4727,
-    "lon": -68.5044,
-    "name": "Rimouski Airport",
-    "city": "Rimouski",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 12511814,
-    "type": "Other Airport",
-    "icao": "CYXK"
   },
   {
     "code": "YXL",
@@ -44830,18 +41062,6 @@
     "woeid": 12511899,
     "type": "Airports",
     "icao": "CYYJ"
-  },
-  {
-    "code": "YYL",
-    "lat": 56.8617,
-    "lon": -101.071,
-    "name": "Lynn Lake Airport",
-    "city": "Nelson House",
-    "state": "Manitoba",
-    "country": "Canada",
-    "woeid": 12511737,
-    "type": "Railway Stations",
-    "icao": "CYYL"
   },
   {
     "code": "YYQ",
@@ -45084,18 +41304,6 @@
     "icao": ""
   },
   {
-    "code": "ZAQ",
-    "lat": 48.9174,
-    "lon": 11.408,
-    "name": "Bavaria",
-    "city": "Nuremberg",
-    "state": "Bavaria",
-    "country": "Germany",
-    "woeid": 2345482,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "ZAT",
     "lat": 27.3167,
     "lon": 103.8,
@@ -45105,30 +41313,6 @@
     "country": "China",
     "woeid": 2160703,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "ZAZ",
-    "lat": 41.6607,
-    "lon": -1.0078,
-    "name": "Zaragoza Air Base",
-    "city": "Zaragoza",
-    "state": "Aragon",
-    "country": "Spain",
-    "woeid": 12517581,
-    "type": "Military Airport",
-    "icao": "LEZG"
-  },
-  {
-    "code": "ZBA",
-    "lat": 47.5487,
-    "lon": 7.58768,
-    "name": "Switzerland",
-    "city": "Basel",
-    "state": "Canton of Basel-City",
-    "country": "Switzerland",
-    "woeid": 23424957,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -45142,30 +41326,6 @@
     "woeid": 12511575,
     "type": "Airports",
     "icao": "CZBF"
-  },
-  {
-    "code": "ZBL",
-    "lat": -24.3903,
-    "lon": 150.519,
-    "name": "Australia",
-    "city": "Biloela",
-    "state": "Queensland",
-    "country": "Australia",
-    "woeid": 23424748,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
-    "code": "ZBP",
-    "lat": 39.3117,
-    "lon": -76.6183,
-    "name": "",
-    "city": "Baltimore",
-    "state": "Maryland",
-    "country": "United States",
-    "woeid": 2358820,
-    "type": "Railway Stations",
-    "icao": ""
   },
   {
     "code": "ZBR",
@@ -45216,18 +41376,6 @@
     "icao": "SCTC"
   },
   {
-    "code": "ZDH",
-    "lat": 47.5487,
-    "lon": 7.58768,
-    "name": "Basel SBB station",
-    "city": "Basel",
-    "state": "Basel-Stadt",
-    "country": "Switzerland",
-    "woeid": 781739,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "ZDN",
     "lat": -33.9344,
     "lon": 151.168,
@@ -45237,18 +41385,6 @@
     "country": "Australia",
     "woeid": 23388205,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "ZDU",
-    "lat": 51.5039,
-    "lon": 0.04981,
-    "name": "London City Airport",
-    "city": "London",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 22475376,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -45312,18 +41448,6 @@
     "icao": "CZEM"
   },
   {
-    "code": "ZEP",
-    "lat": 39.0804,
-    "lon": -78.4233,
-    "name": "",
-    "city": "London",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 44418,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "ZEU",
     "lat": 2.51769,
     "lon": 30.7978,
@@ -45333,30 +41457,6 @@
     "country": "Uganda",
     "woeid": 1455541,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "ZFI",
-    "lat": 52.8833,
-    "lon": -1.97685,
-    "name": "England",
-    "city": "Chesterfield",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 24554868,
-    "type": "Bus Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZFJ",
-    "lat": 46.7124,
-    "lon": 1.71832,
-    "name": "France",
-    "city": "Rennes",
-    "state": "",
-    "country": "France",
-    "woeid": 23424819,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -45384,30 +41484,6 @@
     "icao": "CZFN"
   },
   {
-    "code": "ZFQ",
-    "lat": 46.7124,
-    "lon": 1.71832,
-    "name": "France",
-    "city": "Bordeaux",
-    "state": "",
-    "country": "France",
-    "woeid": 23424819,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZFV",
-    "lat": 40.9946,
-    "lon": -77.6045,
-    "name": "Philadelphia Rail",
-    "city": "Philadelphia",
-    "state": "Pennsylvania",
-    "country": "United States",
-    "woeid": 2347597,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "ZFZ",
     "lat": 40.7145,
     "lon": -74.0071,
@@ -45417,42 +41493,6 @@
     "country": "United States",
     "woeid": 2459115,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "ZGD",
-    "lat": 41.3564,
-    "lon": -72.0965,
-    "name": "New London",
-    "city": "Groton",
-    "state": "Connecticut",
-    "country": "United States",
-    "woeid": 2458689,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZGG",
-    "lat": 54.3139,
-    "lon": -2.23218,
-    "name": "United Kingdom",
-    "city": "Glasgow",
-    "state": "Scotland",
-    "country": "United Kingdom",
-    "woeid": 23424975,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZGH",
-    "lat": 55.6205,
-    "lon": 12.6495,
-    "name": "Copenhagen Main Station",
-    "city": "Copenhagen",
-    "state": "",
-    "country": "Denmark",
-    "woeid": 22851127,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -45477,18 +41517,6 @@
     "country": "China",
     "woeid": 2161664,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "ZGO",
-    "lat": 50.9496,
-    "lon": 10.7087,
-    "name": "Gotha",
-    "city": "Gotha",
-    "state": "Thuringia",
-    "country": "Germany",
-    "woeid": 653514,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -45528,30 +41556,6 @@
     "icao": ""
   },
   {
-    "code": "ZHO",
-    "lat": 29.7605,
-    "lon": -95.3698,
-    "name": "Bus Station",
-    "city": "Houston",
-    "state": "Texas",
-    "country": "United States",
-    "woeid": 2424766,
-    "type": "Bus Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZIF",
-    "lat": 45.4167,
-    "lon": -75.7,
-    "name": "Fallowfield Railway",
-    "city": "Ottawa",
-    "state": "Ontario",
-    "country": "Canada",
-    "woeid": 12697427,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "ZIG",
     "lat": 12.5561,
     "lon": -16.2758,
@@ -45574,18 +41578,6 @@
     "woeid": 12514897,
     "type": "Airports",
     "icao": "MMZH"
-  },
-  {
-    "code": "ZIV",
-    "lat": 57.48,
-    "lon": -4.22347,
-    "name": "Inverness Rail Station",
-    "city": "Inverness",
-    "state": "Scotland",
-    "country": "United Kingdom",
-    "woeid": 24502,
-    "type": "Railway Stations",
-    "icao": ""
   },
   {
     "code": "ZJT",
@@ -45624,18 +41616,6 @@
     "icao": ""
   },
   {
-    "code": "ZLN",
-    "lat": 48.0081,
-    "lon": 0.19784,
-    "name": "Le Mans",
-    "city": "Le Mans",
-    "state": "Pays de la Loire",
-    "country": "France",
-    "woeid": 603413,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "ZLO",
     "lat": 19.1478,
     "lon": -104.56,
@@ -45646,66 +41626,6 @@
     "woeid": 12514936,
     "type": "Airports",
     "icao": "MMZO"
-  },
-  {
-    "code": "ZLS",
-    "lat": 52.8833,
-    "lon": -1.97685,
-    "name": "England",
-    "city": "London",
-    "state": "England",
-    "country": "United Kingdom",
-    "woeid": 24554868,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZLT",
-    "lat": 50.833,
-    "lon": -58.9902,
-    "name": "La Tabatiere Airport",
-    "city": "Havre-St-Pierre",
-    "state": "Quebec",
-    "country": "Canada",
-    "woeid": 12524296,
-    "type": "Other Airport",
-    "icao": ""
-  },
-  {
-    "code": "ZLY",
-    "lat": 42.7426,
-    "lon": -73.809,
-    "name": "Albany International Airport",
-    "city": "Albany",
-    "state": "New York",
-    "country": "United States",
-    "woeid": 12518554,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZMB",
-    "lat": -13.1519,
-    "lon": 27.8525,
-    "name": "Hamburg Hauptbahnhof",
-    "city": "Hamburg",
-    "state": "Hamburg",
-    "country": "Germany",
-    "woeid": 656958,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZME",
-    "lat": 40.1428,
-    "lon": -74.7267,
-    "name": "New Jersey",
-    "city": "Newark",
-    "state": "New Jersey",
-    "country": "United States",
-    "woeid": 2347589,
-    "type": "Railway Stations",
-    "icao": ""
   },
   {
     "code": "ZML",
@@ -45730,30 +41650,6 @@
     "woeid": 12524297,
     "type": "Airports",
     "icao": "CZMT"
-  },
-  {
-    "code": "ZMU",
-    "lat": 48.9174,
-    "lon": 11.408,
-    "name": "Bavaria",
-    "city": "Munich",
-    "state": "Bavaria",
-    "country": "Germany",
-    "woeid": 2345482,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZMY",
-    "lat": 43.8321,
-    "lon": 4.36677,
-    "name": "Huangpu Harbour",
-    "city": "Huangpu",
-    "state": "Shanghai",
-    "country": "China",
-    "woeid": 22726048,
-    "type": "Harbours",
-    "icao": ""
   },
   {
     "code": "ZNA",
@@ -45864,30 +41760,6 @@
     "icao": ""
   },
   {
-    "code": "ZRB",
-    "lat": 50.0483,
-    "lon": 8.57041,
-    "name": "Frankfurt International Airport",
-    "city": "Frankfurt",
-    "state": "Hesse",
-    "country": "Germany",
-    "woeid": 22981759,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZRD",
-    "lat": 37.5406,
-    "lon": -77.4334,
-    "name": "Richmond",
-    "city": "Richmond",
-    "state": "Virginia",
-    "country": "United States",
-    "woeid": 2480894,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "ZRH",
     "lat": 47.454,
     "lon": 8.56137,
@@ -45912,66 +41784,6 @@
     "icao": "CZRJ"
   },
   {
-    "code": "ZRL",
-    "lat": 40.038,
-    "lon": -76.3013,
-    "name": "Lancaster",
-    "city": "Lancaster",
-    "state": "Pennsylvania",
-    "country": "United States",
-    "woeid": 2436076,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZRP",
-    "lat": 40.7333,
-    "lon": -74.1667,
-    "name": "Pennsylvania Station",
-    "city": "Newark",
-    "state": "New Jersey",
-    "country": "United States",
-    "woeid": 12760686,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZRT",
-    "lat": 41.7633,
-    "lon": -72.674,
-    "name": "Hartford",
-    "city": "Hartford",
-    "state": "Connecticut",
-    "country": "United States",
-    "woeid": 2418244,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZRU",
-    "lat": 42.322,
-    "lon": -71.0918,
-    "name": "",
-    "city": "Boston",
-    "state": "Massachusetts",
-    "country": "United States",
-    "woeid": 2367105,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZRV",
-    "lat": 41.8238,
-    "lon": -71.412,
-    "name": "Providence",
-    "city": "Providence",
-    "state": "Rhode Island",
-    "country": "United States",
-    "woeid": 2477058,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "ZSA",
     "lat": 24.06,
     "lon": -74.5331,
@@ -45994,18 +41806,6 @@
     "woeid": 1511237,
     "type": "Airports",
     "icao": "FMEP"
-  },
-  {
-    "code": "ZSF",
-    "lat": 42.1039,
-    "lon": -72.592,
-    "name": "Springfield MA RR",
-    "city": "Springfield",
-    "state": "Massachusetts",
-    "country": "United States",
-    "woeid": 12758361,
-    "type": "Railway Stations",
-    "icao": ""
   },
   {
     "code": "ZSJ",
@@ -46056,42 +41856,6 @@
     "icao": ""
   },
   {
-    "code": "ZTD",
-    "lat": 42.8161,
-    "lon": -73.9442,
-    "name": "",
-    "city": "Schenectady",
-    "state": "New York",
-    "country": "United States",
-    "woeid": 2489634,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZTE",
-    "lat": 43.1531,
-    "lon": -77.6177,
-    "name": "",
-    "city": "Rochester",
-    "state": "New York",
-    "country": "United States",
-    "woeid": 2482949,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZTF",
-    "lat": 41.0464,
-    "lon": -73.5429,
-    "name": "",
-    "city": "Stamford",
-    "state": "Connecticut",
-    "country": "United States",
-    "woeid": 2498846,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "ZTH",
     "lat": 37.7522,
     "lon": 20.8847,
@@ -46116,18 +41880,6 @@
     "icao": ""
   },
   {
-    "code": "ZTJ",
-    "lat": 40.1428,
-    "lon": -74.7267,
-    "name": "New Jersey",
-    "city": "Princeton",
-    "state": "New Jersey",
-    "country": "United States",
-    "woeid": 2347589,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "ZTM",
     "lat": 55.8667,
     "lon": -92.0833,
@@ -46140,30 +41892,6 @@
     "icao": "CZTM"
   },
   {
-    "code": "ZTN",
-    "lat": 40.217,
-    "lon": -74.7551,
-    "name": "",
-    "city": "Philadelphia",
-    "state": "New Jersey",
-    "country": "United States",
-    "woeid": 2347589,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZTO",
-    "lat": 42.3374,
-    "lon": -71.0591,
-    "name": "",
-    "city": "Boston",
-    "state": "Massachusetts",
-    "country": "United States",
-    "woeid": 2367105,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "ZTV",
     "lat": 38.1865,
     "lon": -85.7462,
@@ -46173,42 +41901,6 @@
     "country": "United States",
     "woeid": 12521983,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "ZTY",
-    "lat": 42.3433,
-    "lon": -71.0506,
-    "name": "",
-    "city": "Boston",
-    "state": "Massachusetts",
-    "country": "United States",
-    "woeid": 2367105,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZUA",
-    "lat": 43.0958,
-    "lon": -75.2428,
-    "name": "Utica",
-    "city": "Utica",
-    "state": "New York",
-    "country": "United States",
-    "woeid": 2510530,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZUG",
-    "lat": 47.1715,
-    "lon": 8.51622,
-    "name": "",
-    "city": "Harrisburg",
-    "state": "Pennsylvania",
-    "country": "United States",
-    "woeid": 2418046,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -46248,18 +41940,6 @@
     "icao": "KZUN"
   },
   {
-    "code": "ZVE",
-    "lat": 41.3071,
-    "lon": -72.9249,
-    "name": "New Haven",
-    "city": "New Haven",
-    "state": "Connecticut",
-    "country": "United States",
-    "woeid": 2458410,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "ZVK",
     "lat": 16.5536,
     "lon": 104.763,
@@ -46270,30 +41950,6 @@
     "woeid": 12514556,
     "type": "Airports",
     "icao": "VLSK"
-  },
-  {
-    "code": "ZVR",
-    "lat": 52.3778,
-    "lon": 9.74213,
-    "name": "Hannover Hauptbahnhof",
-    "city": "Hanover",
-    "state": "Lower-Saxony",
-    "country": "Germany",
-    "woeid": 20065987,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZWB",
-    "lat": 37.0294,
-    "lon": -76.3467,
-    "name": "Williamsburg Rail",
-    "city": "Hampton",
-    "state": "Virginia",
-    "country": "United States",
-    "woeid": 12767461,
-    "type": "Railway Stations",
-    "icao": ""
   },
   {
     "code": "ZWE",
@@ -46308,42 +41964,6 @@
     "icao": ""
   },
   {
-    "code": "ZWI",
-    "lat": 41.1418,
-    "lon": -80.3211,
-    "name": "Wilmington Rail",
-    "city": "Wilmington",
-    "state": "Pennsylvania",
-    "country": "United States",
-    "woeid": 28744866,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZWS",
-    "lat": 48.7831,
-    "lon": 9.18139,
-    "name": "Stuttgart Hauptbahnhof",
-    "city": "Stuttgart",
-    "state": "Baden-Württemberg",
-    "country": "Germany",
-    "woeid": 698064,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZWU",
-    "lat": 38.9,
-    "lon": -77.25,
-    "name": "Union Station",
-    "city": "Washington",
-    "state": "Virginia",
-    "country": "United States",
-    "woeid": 12766844,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
     "code": "ZWV",
     "lat": 39.7393,
     "lon": -89.5041,
@@ -46353,54 +41973,6 @@
     "country": "United States",
     "woeid": 2347572,
     "type": "Airports",
-    "icao": ""
-  },
-  {
-    "code": "ZWW",
-    "lat": 36.9805,
-    "lon": -76.4295,
-    "name": "Newport News",
-    "city": "Hampton",
-    "state": "Virginia",
-    "country": "United States",
-    "woeid": 2459618,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZXA",
-    "lat": 57.1538,
-    "lon": -2.10679,
-    "name": "Aberdeen railway station",
-    "city": "Aberdeen",
-    "state": "Scotland",
-    "country": "United Kingdom",
-    "woeid": 10243,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZXE",
-    "lat": 55.9521,
-    "lon": -3.189,
-    "name": "Waverley station",
-    "city": "Edinburgh",
-    "state": "Scotland",
-    "country": "United Kingdom",
-    "woeid": 19344,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZYA",
-    "lat": 52.3784,
-    "lon": 4.90016,
-    "name": "Amsterdam Central Station",
-    "city": "Amsterdam",
-    "state": "",
-    "country": "Netherlands",
-    "woeid": 15003814,
-    "type": "Railway Stations",
     "icao": ""
   },
   {
@@ -46426,66 +41998,6 @@
     "woeid": 12510892,
     "type": "Airports",
     "icao": "VGSY"
-  },
-  {
-    "code": "ZYN",
-    "lat": 43.8321,
-    "lon": 4.36677,
-    "name": "Nimes Rail Station",
-    "city": "Nimes",
-    "state": "Languedoc-Roussillon",
-    "country": "France",
-    "woeid": 614326,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZYP",
-    "lat": 40.7501,
-    "lon": 40.7501,
-    "name": "Penn Station",
-    "city": "New York",
-    "state": "New York",
-    "country": "United States",
-    "woeid": 23682829,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZYQ",
-    "lat": 43.05,
-    "lon": -76.1474,
-    "name": "Syracuse",
-    "city": "Syracuse",
-    "state": "New York",
-    "country": "United States",
-    "woeid": 2503418,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZYR",
-    "lat": 50.8346,
-    "lon": 4.33628,
-    "name": "Brussels Midi Railway Station",
-    "city": "Brussels",
-    "state": "Vlaams Brabant",
-    "country": "Belgium",
-    "woeid": 968019,
-    "type": "Railway Stations",
-    "icao": ""
-  },
-  {
-    "code": "ZYZ",
-    "lat": 51.1992,
-    "lon": 4.43246,
-    "name": "Berchem Railway Stn.",
-    "city": "Antwerp",
-    "state": "Flanders",
-    "country": "Belgium",
-    "woeid": 12817574,
-    "type": "Railway Stations",
-    "icao": ""
   },
   {
     "code": "TNM",
