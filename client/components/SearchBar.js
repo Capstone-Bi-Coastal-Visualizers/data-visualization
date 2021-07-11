@@ -133,8 +133,8 @@ export default function SearchBar() {
             location="origin"
             placeholder="Leaving from"
           />
-          <span class="icon is-small is-right">
-            <i class="fas fa-plane-departure"></i>
+          <span className="icon is-small is-right">
+            <i className="fas fa-plane-departure"></i>
           </span>
         </div>
         <div className="control has-icons-right ">
@@ -146,8 +146,8 @@ export default function SearchBar() {
             location="destination"
             placeholder="Going to"
           />
-          <span class="icon is-small is-right">
-            <i class="fas fa-plane-arrival"></i>
+          <span className="icon is-small is-right">
+            <i className="fas fa-plane-arrival"></i>
           </span>
         </div>
         <div className="control has-icons-right">
@@ -165,8 +165,8 @@ export default function SearchBar() {
               });
             }}
           />
-          <span class="icon is-small is-right">
-            <i class="fas fa-calendar-week"></i>
+          <span className="icon is-small is-right">
+            <i className="fas fa-calendar-week"></i>
           </span>
         </div>
         <div className="control has-icons-right">
@@ -184,8 +184,8 @@ export default function SearchBar() {
               });
             }}
           />
-          <span class="icon is-small is-right">
-            <i class="fas fa-calendar-week"></i>
+          <span className="icon is-small is-right">
+            <i className="fas fa-calendar-week"></i>
           </span>
         </div>
       </div>
@@ -199,8 +199,8 @@ export default function SearchBar() {
             location="origin"
             placeholder="Leaving from"
           />
-          <span class="icon is-small is-right">
-            <i class="fas fa-plane-departure"></i>
+          <span className="icon is-small is-right">
+            <i className="fas fa-plane-departure"></i>
           </span>
         </div>
         <div className="control has-icons-right">
@@ -212,8 +212,8 @@ export default function SearchBar() {
             location="destination"
             placeholder="Going to"
           />
-          <span class="icon is-small is-right">
-            <i class="fas fa-plane-arrival"></i>
+          <span className="icon is-small is-right">
+            <i className="fas fa-plane-arrival"></i>
           </span>
         </div>
         <div className="control has-icons-right">
@@ -231,8 +231,8 @@ export default function SearchBar() {
               });
             }}
           />
-          <span class="icon is-small is-right">
-            <i class="fas fa-calendar-week"></i>
+          <span className="icon is-small is-right">
+            <i className="fas fa-calendar-week"></i>
           </span>
         </div>
         <div className="control has-icons-right">
@@ -250,8 +250,8 @@ export default function SearchBar() {
               });
             }}
           />
-          <span class="icon is-small is-right">
-            <i class="fas fa-calendar-week"></i>
+          <span className="icon is-small is-right">
+            <i className="fas fa-calendar-week"></i>
           </span>
         </div>
       </div>

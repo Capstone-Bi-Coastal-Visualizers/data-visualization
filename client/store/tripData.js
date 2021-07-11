@@ -191,5 +191,3 @@ export const tripDataReducer = (state = initialState, action) => {
       return state;
   }
 };
-
-
