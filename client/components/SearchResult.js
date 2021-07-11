@@ -90,7 +90,7 @@ const SearchResult = () => {
       <div className="columns results-container">
         <div className="column is-1"></div>
         <div className="column is-3">
-          <h2 class="title">Trip 1</h2>
+          <h2 className="title">Trip 1</h2>
           <p>
             <span className="subtitle">Leaving from:</span>{" "}
             {tripOneFirstFlight[2][1].CityName}
@@ -103,7 +103,7 @@ const SearchResult = () => {
               ? `Under budget by $${differenceOne.toFixed(2)}`
               : `Over budget by $${Math.abs(differenceOne).toFixed(2)}`}
           </h3>
-          <h2 class="title">Trip 2</h2>
+          <h2 className="title">Trip 2</h2>
           <p>
             <span className="subtitle">Leaving from:</span>{" "}
             {tripTwoFirstFlight[2][1].CityName}
@@ -121,6 +121,17 @@ const SearchResult = () => {
             Cheaper to travel to:{" "}
             {differenceOne > differenceTwo ? destinationOne : destinationTwo}
           </h2>
+          {/* <Link to="/confirmation-page" onClick={() => dispatch(setTrip(1))}>
+            {" "}
+            Select Trip One{" "}
+          </Link>
+          <Link to="/confirmation-page" onClick={() => dispatch(setTrip(2))}>
+            {" "}
+            Select Trip Two{" "}
+          </Link> */}
+        </div>
+        <div className="column is-7">
+          <Bar data={data} options={options} />
           <Link to="/confirmation-page" onClick={() => dispatch(setTrip(1))}>
             {" "}
             Select Trip One{" "}
@@ -129,9 +140,6 @@ const SearchResult = () => {
             {" "}
             Select Trip Two{" "}
           </Link>
-        </div>
-        <div className="column is-7">
-          <Bar data={data} options={options} />
         </div>
         <div className="column is-1"></div>
       </div>
