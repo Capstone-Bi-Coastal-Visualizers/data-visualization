@@ -183,7 +183,7 @@ const ConfirmationPage = () => {
       <Bar data={data} options={options} />
       <button onClick={handleClick}>Email</button>
       <Modal isOpen={showModal} onRequestClose={toggleModal}>
-        <h2>Please Login or Sign-Up To User This Service!</h2>
+        <h2>Please Login or Sign-Up To Use This Service!</h2>
         <div>
           <Link to="/login">
             <div className="navbar-item">Login</div>
