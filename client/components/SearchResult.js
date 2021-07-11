@@ -117,7 +117,7 @@ const SearchResult = () => {
       </div>
     );
   } else {
-    return <h2>PLEASAE WAIT, LOADING DATA</h2>;
+    return <h2>PLEASE WAIT, LOADING DATA</h2>;
   }
 };
 
