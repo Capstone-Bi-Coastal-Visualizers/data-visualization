@@ -131,7 +131,7 @@ export default function SearchBar() {
             setTripAirportCode={setAirportCode}
             firstFlight={true}
             location="origin"
-            placeholder="Origin"
+            placeholder="Leaving from"
           />
           <span class="icon is-small is-right">
             <i class="fas fa-plane-departure"></i>
@@ -144,7 +144,7 @@ export default function SearchBar() {
             setTripAirportCode={setAirportCode}
             firstFlight={true}
             location="destination"
-            placeholder="Destination"
+            placeholder="Going to"
           />
           <span class="icon is-small is-right">
             <i class="fas fa-plane-arrival"></i>
@@ -197,7 +197,7 @@ export default function SearchBar() {
             setTripAirportCode={setAirportCode}
             firstFlight={false}
             location="origin"
-            placeholder="Origin"
+            placeholder="Leaving from"
           />
           <span class="icon is-small is-right">
             <i class="fas fa-plane-departure"></i>
@@ -210,7 +210,7 @@ export default function SearchBar() {
             setTripAirportCode={setAirportCode}
             firstFlight={false}
             location="destination"
-            placeholder="Destination"
+            placeholder="Going to"
           />
           <span class="icon is-small is-right">
             <i class="fas fa-plane-arrival"></i>
