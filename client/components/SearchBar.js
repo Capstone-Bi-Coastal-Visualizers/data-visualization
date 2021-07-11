@@ -15,17 +15,17 @@ export default function SearchBar() {
 
   const [tripBudget, setTripBudget] = useState("");
   const [firstTripState, setFirstTripState] = useState({
-    origin: "JFK",
-    destination: "ORD",
-    departureDate: "2021-07-10",
-    returnDate: "2021-07-15",
+    origin: "",
+    destination: "",
+    departureDate: "2021-07-15",
+    returnDate: "2021-07-25",
   });
 
   const [secondTripState, setSecondTripState] = useState({
-    origin: "IAH",
-    destination: "LAX",
-    departureDate: "2021-07-10",
-    returnDate: "2021-07-15",
+    origin: "",
+    destination: "",
+    departureDate: "2021-07-15",
+    returnDate: "2021-07-25",
   });
 
   const [airportCoordinates, setAirportCoordinates] = useState({});
@@ -58,6 +58,8 @@ export default function SearchBar() {
 
   const handleclick = () => {
     let returningFlight, tripNumber;
+    const trip1Dest = firstTripState["destination"];
+    const trip2Dest = secondTripState["destination"];
     dispatch(setBudget(tripBudget));
     dispatch(
       fetchFlightSession(
@@ -87,41 +89,6 @@ export default function SearchBar() {
         (tripNumber = 2)
       )
     );
-    // dispatch(fetchFlightSession(firstTripState, true));
-    // const tripOneFirstFlight = {
-    //   origin: firstTripState.origin,
-    //   destination: firstTripState.destination,
-    //   flightDate: firstTripState.departureDate,
-    //   tripNumber: 1,
-    // };
-    // const tripTwoFirstFlight = {
-    //   origin: secondTripState.origin,
-    //   destination: secondTripState.destination,
-    //   flightDate: secondTripState.departureDate,
-    //   returningFlight: false,
-    //   tripNumber: 2,
-    // };
-    // dispatch(fetchFlightSession(tripOneFirstFlight));
-    // dispatch(fetchFlightSession(tripTwoFirstFlight));
-    // const tripOneReturnFlight = {
-    //   origin: firstTripState.destination,
-    //   destination: firstTripState.origin,
-    //   flightDate: firstTripState.returnDate,
-    //   returningFlight: true,
-    //   tripNumber: 1,
-    // };
-    // const tripTwoReturnFlight = {
-    //   origin: secondTripState.destination,
-    //   destination: secondTripState.origin,
-    //   flightDate: secondTripState.returnDate,
-    //   returningFlight: true,
-    //   tripNumber: 2,
-    // };
-    // dispatch(fetchFlightSession(tripOneReturnFlight));
-    // dispatch(fetchFlightSession(tripTwoReturnFlight));
-    const trip1Dest = firstTripState["destination"];
-
-    const trip2Dest = secondTripState["destination"];
     dispatch(
       fetchHotelData(
         airportCoordinates[trip1Dest],
@@ -155,116 +122,163 @@ export default function SearchBar() {
   };
 
   return (
-    <div>
-      <Autocomplete
-        name="airport"
-        label="airports"
-        placeholder="Begin typing in your airport"
-        setTripAirportCode={setAirportCode}
-        firstFlight={true}
-        location="origin"
-      />
-      <Autocomplete
-        name="airport"
-        label="airports"
-        placeholder="Begin typing in your airport"
-        setTripAirportCode={setAirportCode}
-        firstFlight={true}
-        location="destination"
-      />
-      <input
-        type="date"
-        placeholder="departure date"
-        name="departureDate"
-        className="input"
-        required
-        value={firstTripState.departureDate}
-        onChange={(event) => {
-          setFirstTripState({
-            ...firstTripState,
-            departureDate: event.target.value,
-          });
-        }}
-      />
-      <input
-        type="date"
-        placeholder="return date"
-        name="returnDate"
-        className="input"
-        required
-        value={firstTripState.returnDate}
-        onChange={(event) => {
-          setFirstTripState({
-            ...firstTripState,
-            returnDate: event.target.value,
-          });
-        }}
-      />
-      <div>
-        <Autocomplete
-          name="airport"
-          label="airports"
-          placeholder="Begin typing in your airport"
-          setTripAirportCode={setAirportCode}
-          firstFlight={false}
-          location="origin"
-        />
-        <Autocomplete
-          name="airport"
-          label="airports"
-          placeholder="Begin typing in your airport"
-          setTripAirportCode={setAirportCode}
-          firstFlight={false}
-          location="destination"
-        />
-
-        <input
-          type="date"
-          placeholder="departure date"
-          name="departureDate"
-          className="input"
-          required
-          value={secondTripState.departureDate}
-          onChange={(event) => {
-            setSecondTripState({
-              ...secondTripState,
-              departureDate: event.target.value,
-            });
-          }}
-        />
-        <input
-          type="date"
-          placeholder="return date"
-          name="returnDate"
-          className="input"
-          required
-          value={secondTripState.returnDate}
-          onChange={(event) => {
-            setSecondTripState({
-              ...secondTripState,
-              returnDate: event.target.value,
-            });
-          }}
-        />
+    <div className="container">
+      <div className="field has-addons is-justify-content-center">
+        <div className="control has-icons-right">
+          <Autocomplete
+            name="trip1Origin"
+            label="airports"
+            setTripAirportCode={setAirportCode}
+            firstFlight={true}
+            location="origin"
+            placeholder="Origin"
+          />
+          <span class="icon is-small is-right">
+            <i class="fas fa-plane-departure"></i>
+          </span>
+        </div>
+        <div className="control has-icons-right ">
+          <Autocomplete
+            name="trip1Dest"
+            label="airports"
+            setTripAirportCode={setAirportCode}
+            firstFlight={true}
+            location="destination"
+            placeholder="Destination"
+          />
+          <span class="icon is-small is-right">
+            <i class="fas fa-plane-arrival"></i>
+          </span>
+        </div>
+        <div className="control has-icons-right">
+          <input
+            type="date"
+            placeholder="departure date"
+            name="departureDate"
+            className="input is-shadowless"
+            required
+            value={firstTripState.departureDate}
+            onChange={(event) => {
+              setFirstTripState({
+                ...firstTripState,
+                departureDate: event.target.value,
+              });
+            }}
+          />
+          <span class="icon is-small is-right">
+            <i class="fas fa-calendar-week"></i>
+          </span>
+        </div>
+        <div className="control has-icons-right">
+          <input
+            type="date"
+            placeholder="return date"
+            name="returnDate"
+            className="input is-shadowless"
+            required
+            value={firstTripState.returnDate}
+            onChange={(event) => {
+              setFirstTripState({
+                ...firstTripState,
+                returnDate: event.target.value,
+              });
+            }}
+          />
+          <span class="icon is-small is-right">
+            <i class="fas fa-calendar-week"></i>
+          </span>
+        </div>
       </div>
-      <input
-        type="number"
-        placeholder="budget"
-        name="budget"
-        className="input"
-        required
-        value={tripBudget}
-        onChange={(event) => {
-          setTripBudget(event.target.value);
-        }}
-      />
-      <Link
-        to="/search-result"
-        onClick={handleclick}
-        className="button is-danger"
-      >
-        Submit
-      </Link>
+      <div className="field has-addons is-justify-content-center">
+        <div className="control has-icons-right">
+          <Autocomplete
+            name="trip2Origin"
+            label="airports"
+            setTripAirportCode={setAirportCode}
+            firstFlight={false}
+            location="origin"
+            placeholder="Origin"
+          />
+          <span class="icon is-small is-right">
+            <i class="fas fa-plane-departure"></i>
+          </span>
+        </div>
+        <div className="control has-icons-right">
+          <Autocomplete
+            name="trip2Dest"
+            label="airports"
+            setTripAirportCode={setAirportCode}
+            firstFlight={false}
+            location="destination"
+            placeholder="Destination"
+          />
+          <span class="icon is-small is-right">
+            <i class="fas fa-plane-arrival"></i>
+          </span>
+        </div>
+        <div className="control has-icons-right">
+          <input
+            type="date"
+            placeholder="departure date"
+            name="departureDate"
+            className="input is-shadowless"
+            required
+            value={secondTripState.departureDate}
+            onChange={(event) => {
+              setSecondTripState({
+                ...secondTripState,
+                departureDate: event.target.value,
+              });
+            }}
+          />
+          <span class="icon is-small is-right">
+            <i class="fas fa-calendar-week"></i>
+          </span>
+        </div>
+        <div className="control has-icons-right">
+          <input
+            type="date"
+            placeholder="return date"
+            name="returnDate"
+            className="input is-shadowless"
+            required
+            value={secondTripState.returnDate}
+            onChange={(event) => {
+              setSecondTripState({
+                ...secondTripState,
+                returnDate: event.target.value,
+              });
+            }}
+          />
+          <span class="icon is-small is-right">
+            <i class="fas fa-calendar-week"></i>
+          </span>
+        </div>
+      </div>
+      <div className="field has-addons is-justify-content-center">
+        <div className="control ">
+          <input
+            type="text"
+            placeholder="Budget"
+            name="budget"
+            className="input is-shadowless"
+            required
+            value={tripBudget}
+            onChange={(event) => {
+              setTripBudget(event.target.value);
+            }}
+          />
+        </div>
+        <div className="control">
+          <Link
+            to="/search-result"
+            onClick={handleclick}
+            className="button is-danger"
+          >
+            Submit
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }
