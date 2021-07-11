@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchUserTripHistory } from '../store/userTripData'
+import { fetchUserTripsHistory } from '../store/userTripsData'
 
 const Trips = () => {
     //console.log('here is state in Trips', state)
@@ -10,10 +10,10 @@ const Trips = () => {
     const dispatch = useDispatch();
     useEffect(() => {
         const token = localStorage.getItem('token');
-        dispatch(fetchUserTripHistory(token))
+        dispatch(fetchUserTripsHistory(token))
         }, [])
     
-    const tripHistory = useSelector((state) => state.userTripReducer)
+    const tripHistory = useSelector((state) => state.userTripsReducer)
     // console.log('here is trip history', tripHistory)
 
 return (
