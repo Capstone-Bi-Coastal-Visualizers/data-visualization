@@ -9,7 +9,6 @@ export const setUserTripsHistory = (userTripsHistory) => ({
   userTripsHistory,
 });
 
-
 //THUNK CREATORS
 export const fetchUserTripsHistory = (token) => async (dispatch) => {
   console.log("here is token", token);
@@ -18,6 +17,7 @@ export const fetchUserTripsHistory = (token) => async (dispatch) => {
   //console.log('here is reassigned token', token)
   //if token then axios.get request
   try {
+    console.log("hit user trips thunk");
     const { data: user } = await axios.get("/api/trips/", {
       headers: {
         authorization: token,
