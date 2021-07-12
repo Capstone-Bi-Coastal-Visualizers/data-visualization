@@ -19,7 +19,7 @@ const TripDetail = (props) => {
     
 return (
     <div className="trip-detail-container">
-        <h1>Trip <Link to="/trips">000{trip.id}</Link> Detail</h1>
+        <h1>Trip <Link to="/trips">{trip.id}</Link> Detail</h1>
        
               <div className="trip-detail-list">
                   {/* <Link to={"/trips/"}>
