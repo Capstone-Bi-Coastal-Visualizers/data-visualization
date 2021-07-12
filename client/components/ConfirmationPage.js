@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import { Bar } from "react-chartjs-2";
 import axios from "axios";
+import Modal from "react-modal";
+import { Link, useHistory } from "react-router-dom";
 
+Modal.setAppElement("#app");
 const ConfirmationPage = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [showConfirmModal, setShowConfirmModal] = useState(false);
+  const [count, setCount] = useState(0);
+  const toggleModal = () => {
+    setShowModal(!showModal);
+  };
+  const history = useHistory();
+  const toggleConfirmModal = () => {
+    if (count === 0) {
+      setShowConfirmModal(!showConfirmModal);
+      setCount(1);
+    } else {
+      setShowConfirmModal(!showConfirmModal);
+      //redirect to trips page here
+      history.push("/trips");
+    }
+  };
+
   const tripData = useSelector((state) => state.tripDataReducer);
   const {
     tripOneFirstFlight,
@@ -112,56 +133,73 @@ const ConfirmationPage = () => {
   // TODO!!: If user is not logged in, have a message pop up that has asks them to sign in.
   const handleClick = async () => {
     const token = window.localStorage.getItem("token");
-    console.log(
-      "hotel coordinates",
-      hotelCoordinates.longitude,
-      hotelCoordinates.latitude
-    );
-
-    await axios.post(
-      "/api/trips",
-      {
-        originAirport: departureAirport,
-        destinationAirport,
-        departureDate,
-        returnDate,
-        airfareCost: selectedFlights,
-        hotelCost: selectedHotel,
-        budget,
-        destCoordinates,
-      },
-      {
-        headers: {
-          authorization: token,
+    if (token) {
+      await axios.post(
+        "/api/trips",
+        {
+          originAirport: departureAirport,
+          destinationAirport,
+          departureDate,
+          returnDate,
+          airfareCost: selectedFlights,
+          hotelCost: selectedHotel,
+          budget,
+          destCoordinates,
         },
-      }
-    );
-    await axios.post(
-      "/api/users/email",
-      {
-        departureAirport,
-        departureDate,
-        destinationAirport,
-        returnDate,
-        hotel: tripHotel.name,
-        nights,
-        airfare: selectedFlights,
-        hotelPrice: selectedHotel,
-        total: selectedFlights + selectedHotel,
-        budget,
-      },
-      {
-        headers: {
-          authorization: token,
+        {
+          headers: {
+            authorization: token,
+          },
+        }
+      );
+      await axios.post(
+        "/api/users/email",
+        {
+          departureAirport,
+          departureDate,
+          destinationAirport,
+          returnDate,
+          hotel: tripHotel.name,
+          nights,
+          airfare: selectedFlights,
+          hotelPrice: selectedHotel,
+          total: selectedFlights + selectedHotel,
+          budget,
         },
-      }
-    );
+        {
+          headers: {
+            authorization: token,
+          },
+        }
+      );
+      toggleConfirmModal();
+    } else {
+      toggleModal();
+    }
   };
 
   return (
     <div>
       <Bar data={data} options={options} />
       <button onClick={handleClick}>Email</button>
+      <Modal isOpen={showModal} onRequestClose={toggleModal}>
+        <h2>Please Login or Sign-Up To Use This Service!</h2>
+        <div>
+          <Link to="/login">
+            <div className="navbar-item">Login</div>
+          </Link>
+          <Link to="/signup">
+            <div className="navbar-item">Sign Up</div>
+          </Link>
+        </div>
+        <div>
+          <button onClick={toggleModal}>Close</button>
+        </div>
+      </Modal>
+      <Modal isOpen={showConfirmModal} onRequestClose={toggleConfirmModal}>
+        <h2>E-mail Was Successfully Sent!</h2>
+        <button onClick={toggleConfirmModal}>Close</button>
+      </Modal>
     </div>
   );
 };
