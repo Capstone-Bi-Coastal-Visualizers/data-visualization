@@ -20,6 +20,15 @@ router.get("/", isUser, async (req, res, next) => {
   }
 });
 
+router.get('/:id', isUser, async(req, res, next) => {
+  try {
+    const trip = await Trip.findByPk(req.params.id);
+    res.send(trip)
+  } catch (error) {
+    next(error)
+  }
+})
+
 router.post("/", async (req, res, next) => {
   try {
     const token = req.headers.authorization;

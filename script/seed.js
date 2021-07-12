@@ -40,7 +40,7 @@ async function seed() {
       airfareCost: 199,
       hotelCost: 200,
       budget: 600,
-      destCoordinates: [40.6413, 73.7781],
+      destCoordinates: [40.6413, -73.7781],
       userId: 1,
     }),
   ]);

@@ -1,41 +1,37 @@
 import axios from "axios";
 
-const SET_USER_TRIPS_HISTORY = "SET_USER_TRIPS_HISTORY";
+//ACTIONS
+const SET_USER_TRIP_DETAIL = "SET_USER_TRIP_DETAIL";
 
 //ACTION CREATORS
-export const setUserTripsHistory = (userTripHistory) => ({
-    type: SET_USER_TRIPS_HISTORY,
-    userTripHistory
+export const setUserTripDetail = (userTripDetail) => ({
+    type: SET_USER_TRIP_DETAIL,
+    userTripDetail,
   });
 
-//Thunk Creators
-export const fetchUserTripHistory = (token) => async (dispatch) => {
-    console.log('here is regular token', token)
-    //console.log('here is window token', window.localStorage.token)
-    //token = window.localStorage.token
-    //console.log('here is reassigned token', token)
-    //if token then axios.get request
+//THUNK CREATORS
+export const fetchUserTripDetail = (token, id) => async (dispatch) => {
+    console.log("here is token", token);
     try {
-      const { data: user } = await axios.get("/api/trips", {
+      const { data: trip } = await axios.get(`/api/trips/${id}`, {
         headers: {
-          authorization: token
-        }
+          authorization: token,
+        },
       });
-      console.log('here is userTripHistory', user)
-      console.log('here is the dispatch', setUserTripsHistory(user))
-      dispatch(setUserTripsHistory(user))
+      console.log("here is userTripDetail", trip);
+      console.log("here is the dispatch", setUserTripDetail(trip));
+      dispatch(setUserTripDetail(trip));
     } catch (error) {
-      console.log(error)
+      console.log(error);
     }
-  } 
+  };
 
-  //reducer
-
-  export const userTripReducer = (state = [], action) => {
+//REDUCER
+export const userTripReducer = (state = [], action) => {
     switch (action.type) {
-      case SET_USER_TRIPS_HISTORY:
-        return action.userTripHistory;
+      case SET_USER_TRIP_DETAIL:
+        return action.userTripDetail;
       default:
         return state;
     }
-  }
+  };

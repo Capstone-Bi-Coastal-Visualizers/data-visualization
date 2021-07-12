@@ -4,11 +4,13 @@ import thunkMiddleware from 'redux-thunk'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import auth from './auth'
 import { tripDataReducer } from './tripData'
+import { userTripsReducer  } from './userTripsData'
 import { userTripReducer  } from './userTripData'
 
 const reducer = combineReducers({
    auth,
    tripDataReducer,
+   userTripsReducer,
    userTripReducer })
  
 const middleware = composeWithDevTools(
