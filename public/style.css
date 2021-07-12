@@ -37,4 +37,10 @@ form div {
   align-items: center;
 }
 
+.trip-detail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
 

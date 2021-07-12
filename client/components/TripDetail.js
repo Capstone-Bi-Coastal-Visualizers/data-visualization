@@ -19,19 +19,19 @@ const TripDetail = (props) => {
     
 return (
     <div className="trip-detail-container">
-        <h1>Trip Detail</h1>
+        <h1>Trip <Link to="/trips">000{trip.id}</Link> Detail</h1>
        
-              <div className="trip-detail-container">
+              <div className="trip-detail-list">
                   {/* <Link to={"/trips/"}>
                   <div>{trip.id}</div>
                   </Link> */}
-                  <h2>Departure Date {trip.departureDate}</h2>
-                  <h2>Return Date {trip.returnDate}</h2>
-                  <h2>Hotel Cost {trip.hotelCost}</h2>
-                  <h2>Airfare Cost {trip.airfareCost}</h2>
-                  <h2>Budget {trip.budget}</h2>
+                  <h2>Departure Date: {trip.departureDate}</h2>
+                  <h2>Return Date: {trip.returnDate}</h2>
+                  <h2>Hotel Cost: ${trip.hotelCost}.00</h2>
+                  <h2>Airfare Cost: ${trip.airfareCost}.00</h2>
+                  <h2>Budget: ${trip.budget}.00</h2>
                   <hr></hr>
-                  <h2>Savings {trip.budget - (trip.hotelCost + trip.airfareCost)}</h2>
+                  <h2>Savings ${trip.budget - (trip.hotelCost + trip.airfareCost)}.00</h2>
               </div>
 
     </div>

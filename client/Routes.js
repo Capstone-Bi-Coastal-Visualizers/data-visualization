@@ -24,8 +24,8 @@ class Routes extends Component {
       <div>
         {isLoggedIn ? (
           <Switch>
-            <Route exact path="/trips/:id" component={TripDetail} />
             <Route exact path="/trips" component={Trips} />
+            <Route exact path="/trips/:id" component={TripDetail} />
             <Route exact path="/" component={Home} />
             <Route exact path="/search-result" component={SearchResult} />
             <Route
