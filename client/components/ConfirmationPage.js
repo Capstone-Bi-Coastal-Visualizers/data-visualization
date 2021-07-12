@@ -54,7 +54,6 @@ const ConfirmationPage = () => {
   const tripReturningFlight =
     selectedTrip === 1 ? tripOneReturningFlight : tripTwoReturningFlight;
   const tripHotel = selectedTrip === 1 ? tripOneHotelData : tripTwoHotelData;
-
   const departureAirport = tripFirstFlight[2].filter((airportId) => {
     return airportId.PlaceId === tripFirstFlight[1].OutboundLeg.OriginId;
   })[0].SkyscannerCode;
@@ -145,6 +144,7 @@ const ConfirmationPage = () => {
           hotelCost: selectedHotel,
           budget,
           destCoordinates,
+          cityName: tripHotel.location_string.split(",")[0],
         },
         {
           headers: {

@@ -29,11 +29,10 @@ router.get("/:id", isUser, async (req, res, next) => {
   }
 });
 
-router.post("/", async (req, res, next) => {
+router.post("/", isUser, async (req, res, next) => {
   try {
-    const token = req.headers.authorization;
-    const user = await User.findByToken(token);
-    const data = { ...req.body, userId: user.id };
+    console.log(req.body, "---------------------------------------");
+    const data = { ...req.body, userId: req.user.id };
     const trip = await Trip.create(data);
     res.json(trip);
   } catch (error) {
