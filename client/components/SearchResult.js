@@ -19,7 +19,15 @@ const SearchResult = () => {
     tripTwoHotelData,
     tripTwoStayDuration,
   } = tripData;
-  if (Object.keys(tripData).length >= 9) {
+  if (
+    Object.keys(tripData).length >= 9 &&
+    !tripOneFirstFlight["error"] &&
+    !tripOneReturningFlight["error"] &&
+    !tripOneHotelData["error"] &&
+    !tripTwoFirstFlight["error"] &&
+    !tripTwoReturningFlight["error"] &&
+    !tripTwoHotelData["error"]
+  ) {
     const tripOneFlights =
       tripOneFirstFlight[1].MinPrice + tripOneReturningFlight[1].MinPrice;
     const tripTwoFlights =
@@ -148,6 +156,24 @@ const SearchResult = () => {
         <div className="column is-1"></div>
       </div>
     );
+  } else if (Object.keys(tripData).length >= 9) {
+    if (
+      tripOneFirstFlight["error"] ||
+      tripOneReturningFlight["error"] ||
+      tripOneHotelData["error"] ||
+      tripTwoFirstFlight["error"] ||
+      tripTwoReturningFlight["error"] ||
+      tripTwoHotelData["error"]
+    ) {
+      return (
+        <div>
+          <h2>
+            There was an error in loading your search. Please search a different
+            trip or try again later
+          </h2>
+        </div>
+      );
+    }
   } else if (
     tripOneStayDuration === null ||
     tripOneStayDuration === undefined

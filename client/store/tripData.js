@@ -13,7 +13,7 @@ const SET_TRIP_TWO_STAY_DURATION = "SET_TRIP_TWO_STAY_DURATION";
 
 const SET_BUDGET = "SET_BUDGET";
 const SET_TRIP = "SET_TRIP";
-const SET_ERROR = "SET_ERROR"
+const DELETE_TRIP = "DELETE_TRIP";
 
 //ACTION CREATORS
 const setTripOneFirstFlight = (flightData) => ({
@@ -66,10 +66,9 @@ export const setTrip = (tripNumber) => ({
   tripNumber,
 });
 
-export const setError = (boolean) => ({
-  type: SET_ERROR,
-  boolean
-})
+export const deleteTrip = () => ({
+  type: DELETE_TRIP,
+});
 
 //Thunk Creators
 export const fetchFlightSession =
@@ -94,7 +93,6 @@ export const fetchFlightSession =
       const { data: bestFlight } = await axios.get(`/api/travelData/flight`, {
         params: travelDataParams,
       });
-      dispatch(setError(false))
       if (tripNumber === 1) {
         if (returningFlight === false) {
           dispatch(setTripOneFirstFlight(bestFlight));
@@ -109,7 +107,20 @@ export const fetchFlightSession =
         }
       }
     } catch (error) {
-      dispatch(setError(true))
+      const errorObj = { error: true };
+      if (tripNumber === 1) {
+        if (returningFlight === false) {
+          dispatch(setTripOneFirstFlight(errorObj));
+        } else {
+          dispatch(setTripOneReturningFlight(errorObj));
+        }
+      } else {
+        if (returningFlight === false) {
+          dispatch(setTripTwoFirstFlight(errorObj));
+        } else {
+          dispatch(setTripTwoReturningFlight(errorObj));
+        }
+      }
       console.error(error);
     }
   };
@@ -126,20 +137,24 @@ export const fetchHotelData =
       const { data: bestHotel } = await axios.get(`api/travelData/hotel`, {
         params: hotelParams,
       });
-      dispatch(setError(false))
       if (tripNumber === 1) {
         dispatch(setTripOneHotelData(bestHotel));
       } else {
         dispatch(setTripTwoHotelData(bestHotel));
       }
     } catch (error) {
-      dispatch(setError(true))
+      const errorObj = { error: true };
+      if (tripNumber === 1) {
+        dispatch(setTripOneHotelData(errorObj));
+      } else {
+        dispatch(setTripTwoHotelData(errorObj));
+      }
       console.error(error);
     }
   };
 
 //reducer
-const initialState = { error: false };
+const initialState = {};
 
 export const tripDataReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -163,8 +178,8 @@ export const tripDataReducer = (state = initialState, action) => {
       return { ...state, tripTwoStayDuration: action.stayDuration };
     case SET_TRIP:
       return { ...state, selectedTrip: action.tripNumber };
-    case SET_ERROR:
-      return { ...state, error: action.boolean };
+    case DELETE_TRIP:
+      return {};
     default:
       return state;
   }

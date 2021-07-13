@@ -8,6 +8,7 @@ import {
   setBudget,
   setTripOneStayDuration,
   setTripTwoStayDuration,
+  deleteTrip,
 } from "../store/tripData";
 
 export default function SearchBar() {
@@ -57,6 +58,7 @@ export default function SearchBar() {
   };
 
   const handleclick = () => {
+    dispatch(deleteTrip());
     let returningFlight, tripNumber;
     const trip1Dest = firstTripState["destination"];
     const trip2Dest = secondTripState["destination"];
