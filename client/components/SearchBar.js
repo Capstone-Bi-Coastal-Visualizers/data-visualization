@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import Autocomplete from "./AutoComplete";
 import {
   fetchFlightSession,
@@ -8,24 +8,30 @@ import {
   setBudget,
   setTripOneStayDuration,
   setTripTwoStayDuration,
+  deleteTrip,
 } from "../store/tripData";
 
 export default function SearchBar() {
   const dispatch = useDispatch();
 
   const [tripBudget, setTripBudget] = useState("");
+  const date = new Date();
+  const month = date.getMonth() + 1;
+  const monthString =
+    month.toString().length === 2 ? month + 1 : "0" + month.toString();
+  const today = `${date.getFullYear()}-${monthString}-${date.getDate()}`;
   const [firstTripState, setFirstTripState] = useState({
     origin: "",
     destination: "",
-    departureDate: "2021-07-15",
-    returnDate: "2021-07-25",
+    departureDate: today,
+    returnDate: today,
   });
 
   const [secondTripState, setSecondTripState] = useState({
     origin: "",
     destination: "",
-    departureDate: "2021-07-15",
-    returnDate: "2021-07-25",
+    departureDate: today,
+    returnDate: today,
   });
 
   const [airportCoordinates, setAirportCoordinates] = useState({});
@@ -57,6 +63,7 @@ export default function SearchBar() {
   };
 
   const handleclick = () => {
+    dispatch(deleteTrip());
     let returningFlight, tripNumber;
     const trip1Dest = firstTripState["destination"];
     const trip2Dest = secondTripState["destination"];
@@ -159,6 +166,7 @@ export default function SearchBar() {
             required
             value={firstTripState.departureDate}
             onChange={(event) => {
+              console.log(event.target.value);
               setFirstTripState({
                 ...firstTripState,
                 departureDate: event.target.value,
@@ -265,7 +273,18 @@ export default function SearchBar() {
             required
             value={tripBudget}
             onChange={(event) => {
-              setTripBudget(event.target.value);
+              if (
+                !Number(event.target.value) ||
+                Number(event.target.value) < 0
+              ) {
+                window.alert(
+                  "Please enter a number greater than 0 in the budget input"
+                );
+                event.target.value = "";
+                setTripBudget("");
+              } else {
+                setTripBudget(event.target.value);
+              }
             }}
           />
         </div>
