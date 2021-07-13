@@ -1,15 +1,17 @@
-import React from "react";
-import { connect } from "react-redux";
+import React, { useState } from "react";
+import { connect, useDispatch } from "react-redux";
 import { authenticate, authenticateSignup } from "../store";
+import { toggleModal } from "../store/auth";
 
 /**
  * COMPONENT
  */
 const AuthForm = (props) => {
+  const dispatch = useDispatch();
   const { name, displayName, handleSubmit, error } = props;
 
   return (
-    <div>
+    <div className="box">
       <form onSubmit={handleSubmit} name={name}>
         <div>
           <label htmlFor="email">
@@ -40,7 +42,9 @@ const AuthForm = (props) => {
           </div>
         )}
         <div>
-          <button type="submit">{displayName}</button>
+          <button type="submit" onClick={() => dispatch(toggleModal())}>
+            {displayName}
+          </button>
         </div>
         {error && error.response && <div> {error.response.data} </div>}
       </form>
@@ -48,13 +52,6 @@ const AuthForm = (props) => {
   );
 };
 
-/**
- * CONTAINER
- *   Note that we have two different sets of 'mapStateToProps' functions -
- *   one for Login, and one for Signup. However, they share the same 'mapDispatchToProps'
- *   function, and share the same Component. This is a good example of how we
- *   can stay DRY with interfaces that are very similar to each other!
- */
 const mapLogin = (state) => {
   return {
     name: "login",

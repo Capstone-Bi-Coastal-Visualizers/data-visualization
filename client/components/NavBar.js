@@ -2,17 +2,20 @@ import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { logout } from "../store";
+import { toggleModal, modalContent } from "../store/auth";
 
 export default function NavBar() {
-
   const dispatch = useDispatch();
   const [isActive, setisActive] = useState(false);
-  const isLoggedIn = useSelector((state) => !!state.auth.id);
+  const isLoggedIn = useSelector((state) => !!state.auth.user.id);
   const handleClick = () => dispatch(logout());
-
+  const handleToggle = (displayName) => {
+    dispatch(toggleModal());
+    dispatch(modalContent(displayName));
+  };
   return (
     <div className="navBar-container">
-       <Link to="/">
+      <Link to="/">
         <h1>Bon Voyage</h1>
       </Link>
       <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -38,22 +41,19 @@ export default function NavBar() {
         >
           {isLoggedIn ? (
             <div className="navbar-start">
-              {/* The navbar will show these links after you log in */}
-              <Link to="/trips">
-                Trips
-                </Link>
+              <Link to="/trips">Trips</Link>
               <a href="#" onClick={handleClick}>
                 Logout
               </a>
             </div>
           ) : (
             <div className="navbar-start">
-              <Link to="/login">
+              <a onClick={() => handleToggle("Login")}>
                 <div className="navbar-item">Login</div>
-              </Link>
-              <Link to="/signup">
+              </a>
+              <a onClick={() => handleToggle("Signup")}>
                 <div className="navbar-item">Sign Up</div>
-              </Link>
+              </a>
             </div>
           )}
         </div>

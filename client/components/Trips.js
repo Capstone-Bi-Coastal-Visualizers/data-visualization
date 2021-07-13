@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { fetchUserTripsHistory } from "../store/userTripsData";
 import { Pie } from "react-chartjs-2";
-import Map from "./Map";
 
 import {
   ComposableMap,
