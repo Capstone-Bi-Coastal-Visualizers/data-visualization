@@ -1,49 +1,66 @@
-import React from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { authenticate, authenticateSignup } from "../store";
+import { useHistory } from "react-router-dom";
 
 /**
  * COMPONENT
  */
 const AuthForm = (props) => {
   const { name, displayName, handleSubmit, error } = props;
-
+  // const [showModal, setShowModal] = useState("is-active");
+  // const history = useHistory();
+  // const handleClose = () => {
+  //   setShowModal("");
+  //   history.push("/");
+  // };
   return (
-    <div>
-      <form onSubmit={handleSubmit} name={name}>
-        <div>
-          <label htmlFor="email">
-            <small>Email</small>
-          </label>
-          <input name="email" type="text" />
-        </div>
-        <div>
-          <label htmlFor="password">
-            <small>Password</small>
-          </label>
-          <input name="password" type="password" />
-        </div>
-        {displayName === "Sign Up" && (
+    <div className="i">
+      <div className="modal-background">
+        <form
+          className="modal-content has-background-white"
+          onSubmit={handleSubmit}
+          name={name}
+        >
           <div>
-            <div>
-              <label htmlFor="firstName">
-                <small>First Name</small>
-              </label>
-              <input name="firstName" type="text" />
-            </div>
-            <div>
-              <label htmlFor="lastName">
-                <small>Last Name</small>
-              </label>
-              <input name="lastName" type="text" />
-            </div>{" "}
+            <label htmlFor="email">
+              <small>Email</small>
+            </label>
+            <input name="email" type="text" />
           </div>
-        )}
-        <div>
-          <button type="submit">{displayName}</button>
-        </div>
-        {error && error.response && <div> {error.response.data} </div>}
-      </form>
+          <div>
+            <label htmlFor="password">
+              <small>Password</small>
+            </label>
+            <input name="password" type="password" />
+          </div>
+          {displayName === "Sign Up" && (
+            <div>
+              <div>
+                <label htmlFor="firstName">
+                  <small>First Name</small>
+                </label>
+                <input name="firstName" type="text" />
+              </div>
+              <div>
+                <label htmlFor="lastName">
+                  <small>Last Name</small>
+                </label>
+                <input name="lastName" type="text" />
+              </div>{" "}
+            </div>
+          )}
+          <div>
+            <button type="submit">{displayName}</button>
+          </div>
+          {error && error.response && <div> {error.response.data} </div>}
+        </form>
+      </div>
+      <button
+        className="modal-close is-large"
+        aria-label="close"
+        // onClick={handleClose}
+      ></button>
     </div>
   );
 };
@@ -80,11 +97,12 @@ const mapDispatch = (dispatch) => {
       const password = evt.target.password.value;
       if (formName === "login") {
         dispatch(authenticate(email, password, formName));
-      }
-      else {
-      const firstName = evt.target.firstName.value;
-      const lastName = evt.target.lastName.value;
-      dispatch(authenticateSignup(email, password, firstName, lastName, formName));
+      } else {
+        const firstName = evt.target.firstName.value;
+        const lastName = evt.target.lastName.value;
+        dispatch(
+          authenticateSignup(email, password, firstName, lastName, formName)
+        );
       }
     },
   };

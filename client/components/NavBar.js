@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { logout } from "../store";
 
 export default function NavBar() {
-
   const dispatch = useDispatch();
   const [isActive, setisActive] = useState(false);
   const isLoggedIn = useSelector((state) => !!state.auth.id);
@@ -12,7 +11,7 @@ export default function NavBar() {
 
   return (
     <div className="navBar-container">
-       <Link to="/">
+      <Link to="/">
         <h1>Bon Voyage</h1>
       </Link>
       <nav className="navbar" role="navigation" aria-label="main navigation">
@@ -39,9 +38,7 @@ export default function NavBar() {
           {isLoggedIn ? (
             <div className="navbar-start">
               {/* The navbar will show these links after you log in */}
-              <Link to="/trips">
-                Trips
-                </Link>
+              <Link to="/trips">Trips</Link>
               <a href="#" onClick={handleClick}>
                 Logout
               </a>
