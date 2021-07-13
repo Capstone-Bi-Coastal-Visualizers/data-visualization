@@ -65,6 +65,20 @@ const Trip = db.define("trip", {
       notEmpty: true,
     },
   },
+  hotelName: {
+    type: Sequelize.STRING,
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+    },
+  },
+  airlineNames: {
+    type: Sequelize.ARRAY(Sequelize.STRING),
+    allowNull: false,
+    validate: {
+      notEmpty: true,
+    },
+  },
 });
 
 module.exports = Trip;

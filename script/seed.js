@@ -42,6 +42,8 @@ async function seed() {
       budget: 600,
       destCoordinates: [40.6413, -73.7781],
       cityName: "New York",
+      hotelName: "Hilton",
+      airlineNames: ["Delta Airlines"],
       userId: 1,
     }),
     Trip.create({
@@ -54,6 +56,8 @@ async function seed() {
       budget: 300,
       destCoordinates: [51.5074, 0.1278],
       cityName: "London",
+      hotelName: "Claridges",
+      airlineNames: ["Delta Airlines", "United Airlines"],
       userId: 1,
     }),
   ]);

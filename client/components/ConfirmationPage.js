@@ -76,13 +76,18 @@ const ConfirmationPage = () => {
   const difference = budget - selectedFlights - selectedHotel;
   const budgetLabel = difference >= 0 ? "Remaining budget" : "Over budget";
   const destination = selectedTrip === 1 ? destinationOne : destinationTwo;
-
+  const budgetBackgroundColor =
+    difference > 0 ? "rgba(255, 0, 0, 0.2)" : "rgba(0, 255, 0, 0.2)";
   const hotelCoordinates =
     selectedTrip === 1 ? tripOneHotelData : tripTwoHotelData;
   const destCoordinates = [
     hotelCoordinates.latitude,
     hotelCoordinates.longitude,
   ];
+  const tripFlightNameArray = [tripFirstFlight[0].Name];
+  if (tripFirstFlight[0].Name !== tripReturningFlight[0].Name) {
+    tripFlightNameArray.push(tripReturningFlight[0].Name);
+  }
 
   const data = {
     labels: [destination],
@@ -91,19 +96,19 @@ const ConfirmationPage = () => {
       {
         stack: arbitraryStackKey,
         label: "Flight",
-        backgroundColor: ["rgba(255, 99, 132, 0.2)"],
+        backgroundColor: ["rgba(54, 162, 235, 0.2)"],
         data: [selectedFlights],
       },
       {
         stack: arbitraryStackKey,
         label: "Hotel",
-        backgroundColor: ["rgba(54, 162, 235, 0.2)"],
+        backgroundColor: ["rgba(255, 206, 86, 0.2)"],
         data: [selectedHotel],
       },
       {
         stack: arbitraryStackKey,
         label: budgetLabel,
-        backgroundColor: ["rgba(0, 0, 0, 0.2)"],
+        backgroundColor: [budgetBackgroundColor],
         data: [Math.abs(difference)],
       },
     ],
@@ -145,6 +150,8 @@ const ConfirmationPage = () => {
           budget,
           destCoordinates,
           cityName: tripHotel.location_string.split(",")[0],
+          airlineNames: tripFlightNameArray,
+          hotelName: tripHotel.name,
         },
         {
           headers: {

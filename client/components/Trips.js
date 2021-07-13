@@ -35,7 +35,6 @@ const Trips = () => {
       coordinates: [trip.destCoordinates[1], trip.destCoordinates[0]],
     };
   });
-
   const hotelTotalCost = tripHistory.reduce((accumulator, current) => {
     return accumulator + current.hotelCost;
   }, 0);
@@ -84,79 +83,87 @@ const Trips = () => {
       },
     ],
   };
-
+  // TODO Place map under row that contains the table and pie chart
   return (
     <div className="trips-container">
-      <h1>Trip History</h1>
+      <h1 className="title">Trip History</h1>
       <div className="trips-list">
-        <table>
-          <tr>
-            <th scope="col">Trip ID</th>
-            <th scope="col">Destination</th>
-            <th scope="col">Departure Date</th>
-            <th scope="col">Return Date</th>
-          </tr>
-          {tripHistory.map((trip) => {
-            return (
+        <div className="table-container">
+          <table className="table">
+            <thead>
               <tr>
-                <Link to={`/trips/${trip.id}`}>
-                  <th scope="row">{trip.id}</th>
-                </Link>
-                <td scope="row">{trip.cityName}</td>
-                <td scope="row">{trip.departureDate}</td>
-                <td scope="row">{trip.returnDate}</td>
+                <th scope="col">Trip ID</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Departure Date</th>
+                <th scope="col">Return Date</th>
               </tr>
-            );
-          })}
-        </table>
+            </thead>
+            <tbody>
+              {tripHistory.map((trip) => {
+                return (
+                  <tr key={trip.id}>
+                    <th scope="row">
+                      <Link to={`/trips/${trip.id}`}>{trip.id}</Link>
+                    </th>
+                    <td scope="row">{trip.cityName}</td>
+                    <td scope="row">{trip.departureDate}</td>
+                    <td scope="row">{trip.returnDate}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
       </div>
-      <ComposableMap
-        projection="geoEqualEarth"
-        projectionConfig={{
-          scale: 150,
-        }}
-      >
-        <Geographies geography={geoUrl}>
-          {({ geographies }) =>
-            geographies
-              //.filter(d => d.properties.REGION_UN === "Asia")
-              .map((geo) => (
-                <Geography
-                  key={geo.rsmKey}
-                  geography={geo}
-                  fill="#EAEAEC"
-                  stroke="#D6D6DA"
-                />
-              ))
-          }
-        </Geographies>
-        {markers.map(({ name, coordinates, markerOffset }) => (
-          <Marker key={name} coordinates={coordinates}>
-            <g fill="#FF5533">
-              <circle r="3" />
-            </g>
-            <text
-              textAnchor="middle"
-              y={markerOffset}
-              style={{
-                fontFamily: "system-ui",
-                fill: "#5D5A6D",
-                fontSize: "8pt",
-              }}
-            >
-              {name}
-            </text>
-          </Marker>
-        ))}
-      </ComposableMap>
+      <div className="chart-container">
+        <div className="map-chart">
+          <h1 className="title">Cities Visited</h1>
+          <ComposableMap
+            projection="geoEqualEarth"
+            projectionConfig={{
+              scale: 200,
+            }}
+          >
+            <Geographies geography={geoUrl}>
+              {({ geographies }) =>
+                geographies
+                  //.filter(d => d.properties.REGION_UN === "Asia")
+                  .map((geo) => (
+                    <Geography
+                      key={geo.rsmKey}
+                      geography={geo}
+                      fill="#EAEAEC"
+                      stroke="#D6D6DA"
+                    />
+                  ))
+              }
+            </Geographies>
+            {markers.map(({ name, coordinates, markerOffset }) => (
+              <Marker key={name} coordinates={coordinates}>
+                <g fill="#FF5533">
+                  <circle r="3" />
+                </g>
+                <text
+                  textAnchor="middle"
+                  y={markerOffset}
+                  style={{
+                    fontFamily: "system-ui",
+                    fill: "#5D5A6D",
+                    fontSize: "8pt",
+                  }}
+                >
+                  {name}
+                </text>
+              </Marker>
+            ))}
+          </ComposableMap>
+        </div>
 
-      <div className="header">
-        <h1 className="title">Trip History Breakdown</h1>
+        <div className="pie-chart">
+          <h1 className="title">Trip History Breakdown</h1>
+          <Pie data={data} />
+        </div>
       </div>
-      <Pie data={data} />
-      {/* <div>
-     <Map />
-       </div>    */}
     </div>
   );
 };
