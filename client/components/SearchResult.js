@@ -36,6 +36,10 @@ const SearchResult = () => {
 
     const differenceOne = budget - tripOneFlights - tripOneHotel;
     const differenceTwo = budget - tripTwoFlights - tripTwoHotel;
+    const budgetOneBackgroundColor =
+      differenceOne > 0 ? "rgba(255, 0, 0, 0.2)" : "rgba(0, 255, 0, 0.2)";
+    const budgetTwoBackgroundColor =
+      differenceTwo > 0 ? "rgba(255, 0, 0, 0.2)" : "rgba(0, 255, 0, 0.2)";
     const data = {
       labels: [destinationOne, destinationTwo],
       datasets: [
@@ -44,8 +48,8 @@ const SearchResult = () => {
           stack: arbitraryStackKey,
           label: "Flight",
           backgroundColor: [
-            "rgba(255, 99, 132, 0.2)",
-            "rgba(255, 99, 132, 0.2)",
+            "rgba(54, 162, 235, 0.2)",
+            "rgba(54, 162, 235, 0.2)",
           ],
           data: [tripOneFlights, tripTwoFlights],
         },
@@ -53,16 +57,16 @@ const SearchResult = () => {
           stack: arbitraryStackKey,
           label: "Hotel",
           backgroundColor: [
-            "rgba(54, 162, 235, 0.2)",
-            "rgba(54, 162, 235, 0.2)",
+            "rgba(255, 206, 86, 0.2)",
+            "rgba(255, 206, 86, 0.2)",
           ],
           data: [tripOneHotel, tripTwoHotel],
         },
         {
           stack: arbitraryStackKey,
           label: "Budget",
-          backgroundColor: ["rgba(0, 0, 0, 0.2)", "rgba(0, 0, 0, 0.2)"],
-          data: [differenceOne, differenceTwo],
+          backgroundColor: [budgetOneBackgroundColor, budgetTwoBackgroundColor],
+          data: [Math.abs(differenceOne), Math.abs(differenceTwo)],
         },
       ],
     };
