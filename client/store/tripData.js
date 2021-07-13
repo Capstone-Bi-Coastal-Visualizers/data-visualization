@@ -13,6 +13,7 @@ const SET_TRIP_TWO_STAY_DURATION = "SET_TRIP_TWO_STAY_DURATION";
 
 const SET_BUDGET = "SET_BUDGET";
 const SET_TRIP = "SET_TRIP";
+const SET_ERROR = "SET_ERROR"
 
 //ACTION CREATORS
 const setTripOneFirstFlight = (flightData) => ({
@@ -65,6 +66,11 @@ export const setTrip = (tripNumber) => ({
   tripNumber,
 });
 
+export const setError = (boolean) => ({
+  type: SET_ERROR,
+  boolean
+})
+
 //Thunk Creators
 export const fetchFlightSession =
   (searchInput, returningFlight, tripNumber) => async (dispatch) => {
@@ -88,7 +94,7 @@ export const fetchFlightSession =
       const { data: bestFlight } = await axios.get(`/api/travelData/flight`, {
         params: travelDataParams,
       });
-
+      dispatch(setError(false))
       if (tripNumber === 1) {
         if (returningFlight === false) {
           dispatch(setTripOneFirstFlight(bestFlight));
@@ -103,6 +109,7 @@ export const fetchFlightSession =
         }
       }
     } catch (error) {
+      dispatch(setError(true))
       console.error(error);
     }
   };
@@ -119,19 +126,20 @@ export const fetchHotelData =
       const { data: bestHotel } = await axios.get(`api/travelData/hotel`, {
         params: hotelParams,
       });
-
+      dispatch(setError(false))
       if (tripNumber === 1) {
         dispatch(setTripOneHotelData(bestHotel));
       } else {
         dispatch(setTripTwoHotelData(bestHotel));
       }
     } catch (error) {
+      dispatch(setError(true))
       console.error(error);
     }
   };
 
 //reducer
-const initialState = {};
+const initialState = { error: false };
 
 export const tripDataReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -155,6 +163,8 @@ export const tripDataReducer = (state = initialState, action) => {
       return { ...state, tripTwoStayDuration: action.stayDuration };
     case SET_TRIP:
       return { ...state, selectedTrip: action.tripNumber };
+    case SET_ERROR:
+      return { ...state, error: action.boolean };
     default:
       return state;
   }

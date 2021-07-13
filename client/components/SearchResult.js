@@ -37,9 +37,9 @@ const SearchResult = () => {
     const differenceOne = budget - tripOneFlights - tripOneHotel;
     const differenceTwo = budget - tripTwoFlights - tripTwoHotel;
     const budgetOneBackgroundColor =
-      differenceOne > 0 ? "rgba(255, 0, 0, 0.2)" : "rgba(0, 255, 0, 0.2)";
+      differenceOne > 0 ? "rgba(0, 255, 0, 0.2)" : "rgba(255, 0, 0, 0.2)";
     const budgetTwoBackgroundColor =
-      differenceTwo > 0 ? "rgba(255, 0, 0, 0.2)" : "rgba(0, 255, 0, 0.2)";
+      differenceTwo > 0 ? "rgba(0, 255, 0, 0.2)" : "rgba(255, 0, 0, 0.2)";
     const data = {
       labels: [destinationOne, destinationTwo],
       datasets: [
@@ -148,8 +148,26 @@ const SearchResult = () => {
         <div className="column is-1"></div>
       </div>
     );
+  } else if (
+    tripOneStayDuration === null ||
+    tripOneStayDuration === undefined
+  ) {
+    return (
+      <div className="navigate-home-container">
+        <h2>Please navigate to home page to search for trip</h2>
+        <div className="control">
+          <Link to="/" className="button is-danger">
+            Submit
+          </Link>
+        </div>
+      </div>
+    );
   } else {
-    return <h2>PLEASE WAIT, LOADING DATA</h2>;
+    return (
+      <div className="loading-data-container">
+        <h2>Please wait loading data...</h2>
+      </div>
+    );
   }
 };
 
