@@ -28,6 +28,26 @@ const SearchResult = () => {
     !tripTwoReturningFlight["error"] &&
     !tripTwoHotelData["error"]
   ) {
+    if (
+      !tripOneFirstFlight[1] ||
+      !tripOneReturningFlight[1] ||
+      !tripTwoFirstFlight[1] ||
+      !tripTwoReturningFlight[1]
+    ) {
+      return (
+        <div className="navigate-home-container">
+          <h2>
+            There was an error in loading your search. Please search a different
+            trip or try again later
+          </h2>
+          <div className="control">
+            <Link to="/" className="button is-danger">
+              Return
+            </Link>
+          </div>
+        </div>
+      );
+    }
     const tripOneFlights =
       tripOneFirstFlight[1].MinPrice + tripOneReturningFlight[1].MinPrice;
     const tripTwoFlights =
@@ -166,11 +186,16 @@ const SearchResult = () => {
       tripTwoHotelData["error"]
     ) {
       return (
-        <div>
+        <div className="navigate-home-container">
           <h2>
             There was an error in loading your search. Please search a different
             trip or try again later
           </h2>
+          <div className="control">
+            <Link to="/" className="button is-danger">
+              Return
+            </Link>
+          </div>
         </div>
       );
     }
@@ -183,7 +208,7 @@ const SearchResult = () => {
         <h2>Please navigate to home page to search for trip</h2>
         <div className="control">
           <Link to="/" className="button is-danger">
-            Submit
+            Return
           </Link>
         </div>
       </div>
