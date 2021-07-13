@@ -60,6 +60,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     flex-direction: column;
     justify-content: center;
   }
+  
   .chart-container {
     flex-direction: column;
     justify-content: center;
@@ -107,3 +108,44 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   padding-top: 8em;
   text-align: center;
  }
+
+ .result-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   background-color: pink;
+ }
+
+ .trip-result-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: greenyellow;
+  padding: 2em;
+}
+
+.trip-analysis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: orange;
+  padding: 2em;
+}
+
+.trips-bar-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: lightblue;
+  padding: 2em;
+}
+
+.trips-bar-chart-selector {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: violet;
+  width: 100%;
+  padding: 2em;
+}

@@ -119,61 +119,69 @@ const SearchResult = () => {
     };
 
     return (
-      <div className="columns results-container">
-        <div className="column is-1"></div>
-        <div className="column is-3">
-          <h2 className="title">Trip 1</h2>
-          <p>
-            <span className="subtitle">Leaving from:</span>{" "}
-            {tripOneFirstFlight[2][1].CityName}
-          </p>
-          <h2>
-            <span className="subtitle">Going to:</span> {destinationOne}
-          </h2>
-          <h3>
-            {differenceOne > 0
-              ? `Under budget by $${differenceOne.toFixed(2)}`
-              : `Over budget by $${Math.abs(differenceOne).toFixed(2)}`}
-          </h3>
-          <h2 className="title">Trip 2</h2>
-          <p>
-            <span className="subtitle">Leaving from:</span>{" "}
-            {tripTwoFirstFlight[2][1].CityName}
-          </p>
-          <h2>
-            <span className="subtitle">Going to:</span> {destinationTwo}
-          </h2>
-          <h3>
-            {differenceTwo > 0
-              ? `Under budget by $${differenceTwo.toFixed(2)}`
-              : `Over budget by $${Math.abs(differenceTwo).toFixed(2)}`}
-          </h3>
-          <p className="title">Trip Analysis</p>
-          <h2>
-            Cheaper to travel to:{" "}
-            {differenceOne > differenceTwo ? destinationOne : destinationTwo}
-          </h2>
-          {/* <Link to="/confirmation-page" onClick={() => dispatch(setTrip(1))}>
-            {" "}
-            Select Trip One{" "}
-          </Link>
-          <Link to="/confirmation-page" onClick={() => dispatch(setTrip(2))}>
-            {" "}
-            Select Trip Two{" "}
-          </Link> */}
+      <div className="container">
+        <div className="result-container">
+          <div className="trip-result-container">
+          <div className="trip-1-result">
+            <h2 className="title">Result 1</h2>
+            <p>
+              <span className="subtitle">Leaving from:</span>{" "}
+              {tripOneFirstFlight[2][1].CityName}
+            </p>
+            <h2>
+              <span className="subtitle">Going to:</span> {destinationOne}
+            </h2>
+            <h3>
+              {differenceOne > 0
+                ? `Under budget by $${differenceOne.toFixed(2)}`
+                : `Over budget by $${Math.abs(differenceOne).toFixed(2)}`}
+            </h3>
+          </div>
+          <div className="trip-2-result">
+            <h2 className="title">Result 2</h2>
+            <p>
+              <span className="subtitle">Leaving from:</span>{" "}
+              {tripTwoFirstFlight[2][1].CityName}
+            </p>
+            <h2>
+              <span className="subtitle">Going to:</span> {destinationTwo}
+            </h2>
+            <h3>
+              {differenceTwo > 0
+                ? `Under budget by $${differenceTwo.toFixed(2)}`
+                : `Over budget by $${Math.abs(differenceTwo).toFixed(2)}`}
+            </h3>
+          </div>
+          </div>
+          <div className="trip-analysis">
+            <p className="title">Trip Analysis</p>
+            <h2>
+              Cheaper to travel to:{" "}
+              {differenceOne > differenceTwo ? destinationOne : destinationTwo}
+            </h2>
+            {/* <Link to="/confirmation-page" onClick={() => dispatch(setTrip(1))}>
+              {" "}
+              Select Trip One{" "}
+            </Link>
+            <Link to="/confirmation-page" onClick={() => dispatch(setTrip(2))}>
+              {" "}
+              Select Trip Two{" "}
+            </Link> */}
+          </div>
+          <div className="trips-bar-chart">
+          <div className="trips-bar-chart-selector">
+            <Link to="/confirmation-page" onClick={() => dispatch(setTrip(1))}>
+              {" "}
+              Select Trip One{" "}
+            </Link>
+            <Link to="/confirmation-page" onClick={() => dispatch(setTrip(2))}>
+              {" "}
+              Select Trip Two{" "}
+            </Link>
+            </div>
+            <Bar data={data} options={options} />
+          </div>
         </div>
-        <div className="column is-7">
-          <Bar data={data} options={options} />
-          <Link to="/confirmation-page" onClick={() => dispatch(setTrip(1))}>
-            {" "}
-            Select Trip One{" "}
-          </Link>
-          <Link to="/confirmation-page" onClick={() => dispatch(setTrip(2))}>
-            {" "}
-            Select Trip Two{" "}
-          </Link>
-        </div>
-        <div className="column is-1"></div>
       </div>
     );
   } else if (Object.keys(tripData).length >= 9) {
@@ -204,19 +212,23 @@ const SearchResult = () => {
     tripOneStayDuration === undefined
   ) {
     return (
-      <div className="navigate-home-container">
-        <h2>Please navigate to home page to search for trip</h2>
-        <div className="control">
-          <Link to="/" className="button is-danger">
-            Return
-          </Link>
+      <div className="container">
+        <div className="navigate-home-container">
+          <h2>Please navigate to home page to search for trip</h2>
+          <div className="control">
+            <Link to="/" className="button is-danger">
+              Return
+            </Link>
+          </div>
         </div>
       </div>
     );
   } else {
     return (
-      <div className="loading-data-container">
-        <h2>Please wait loading data...</h2>
+      <div className="container">
+        <div className="loading-data-container">
+          <h2>Please wait loading data...</h2>
+        </div>
       </div>
     );
   }
