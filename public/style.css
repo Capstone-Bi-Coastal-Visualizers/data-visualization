@@ -54,3 +54,42 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   align-items: center;
 }
 
+@media (max-width: 800px) {
+  .trip-detail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .chart-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.chart-container {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.pie-chart {
+  width: 30%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.map-chart {
+  width: 60%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.table-container {
+  margin-bottom: 4em;
+}

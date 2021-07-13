@@ -1,17 +1,36 @@
 import React from "react";
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 import SearchBar from "./SearchBar";
+import { Login, Signup } from "./AuthForm";
+import { toggleModal, modalContent } from "../store/auth";
 
 /**
  * COMPONENT
  */
+
 export const Home = (props) => {
-  const { firstName, lastName } = props;
+  const dispatch = useDispatch();
+  const resetDisplayName = () => {
+    dispatch(toggleModal());
+    dispatch(modalContent(""));
+  };
+  const { firstName, lastName, showModal, displayName } = props;
   return (
     <div>
       <h3>
         Welcome {firstName} {lastName}
       </h3>
+      <div className={`modal ${showModal ? "is-active" : ""}`}>
+        <div className="modal-background"></div>
+        <div className="modal-content">
+          {displayName === "Login" ? <Login /> : <Signup />}
+        </div>
+        <button
+          className="modal-close is-large"
+          aria-label="close"
+          onClick={resetDisplayName}
+        ></button>
+      </div>
       <SearchBar />
     </div>
   );
@@ -22,9 +41,11 @@ export const Home = (props) => {
  */
 const mapState = (state) => {
   return {
-    email: state.auth.email,
-    firstName: state.auth.firstName,
-    lastName: state.auth.lastName,
+    email: state.auth.user.email,
+    firstName: state.auth.user.firstName,
+    lastName: state.auth.user.lastName,
+    showModal: state.auth.showModal,
+    displayName: state.auth.displayName,
   };
 };
 

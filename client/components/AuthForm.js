@@ -1,77 +1,57 @@
 import React, { useState } from "react";
-import { connect } from "react-redux";
+import { connect, useDispatch } from "react-redux";
 import { authenticate, authenticateSignup } from "../store";
-import { useHistory } from "react-router-dom";
+import { toggleModal } from "../store/auth";
 
 /**
  * COMPONENT
  */
 const AuthForm = (props) => {
+  const dispatch = useDispatch();
   const { name, displayName, handleSubmit, error } = props;
-  // const [showModal, setShowModal] = useState("is-active");
-  // const history = useHistory();
-  // const handleClose = () => {
-  //   setShowModal("");
-  //   history.push("/");
-  // };
+
   return (
-    <div className="i">
-      <div className="modal-background">
-        <form
-          className="modal-content has-background-white"
-          onSubmit={handleSubmit}
-          name={name}
-        >
+    <div className="box">
+      <form onSubmit={handleSubmit} name={name}>
+        <div>
+          <label htmlFor="email">
+            <small>Email</small>
+          </label>
+          <input name="email" type="text" />
+        </div>
+        <div>
+          <label htmlFor="password">
+            <small>Password</small>
+          </label>
+          <input name="password" type="password" />
+        </div>
+        {displayName === "Sign Up" && (
           <div>
-            <label htmlFor="email">
-              <small>Email</small>
-            </label>
-            <input name="email" type="text" />
-          </div>
-          <div>
-            <label htmlFor="password">
-              <small>Password</small>
-            </label>
-            <input name="password" type="password" />
-          </div>
-          {displayName === "Sign Up" && (
             <div>
-              <div>
-                <label htmlFor="firstName">
-                  <small>First Name</small>
-                </label>
-                <input name="firstName" type="text" />
-              </div>
-              <div>
-                <label htmlFor="lastName">
-                  <small>Last Name</small>
-                </label>
-                <input name="lastName" type="text" />
-              </div>{" "}
+              <label htmlFor="firstName">
+                <small>First Name</small>
+              </label>
+              <input name="firstName" type="text" />
             </div>
-          )}
-          <div>
-            <button type="submit">{displayName}</button>
+            <div>
+              <label htmlFor="lastName">
+                <small>Last Name</small>
+              </label>
+              <input name="lastName" type="text" />
+            </div>{" "}
           </div>
-          {error && error.response && <div> {error.response.data} </div>}
-        </form>
-      </div>
-      <button
-        className="modal-close is-large"
-        aria-label="close"
-        // onClick={handleClose}
-      ></button>
+        )}
+        <div>
+          <button type="submit" onClick={() => dispatch(toggleModal())}>
+            {displayName}
+          </button>
+        </div>
+        {error && error.response && <div> {error.response.data} </div>}
+      </form>
     </div>
   );
 };
 
-/**
- * CONTAINER
- *   Note that we have two different sets of 'mapStateToProps' functions -
- *   one for Login, and one for Signup. However, they share the same 'mapDispatchToProps'
- *   function, and share the same Component. This is a good example of how we
- *   can stay DRY with interfaces that are very similar to each other!
- */
 const mapLogin = (state) => {
   return {
     name: "login",
