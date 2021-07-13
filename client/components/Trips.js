@@ -137,8 +137,8 @@ const Trips = () => {
                   ))
               }
             </Geographies>
-            {markers.map(({ name, coordinates, markerOffset }) => (
-              <Marker key={name} coordinates={coordinates}>
+            {markers.map(({ name, coordinates, markerOffset }, idx) => (
+              <Marker key={idx} coordinates={coordinates}>
                 <g fill="#FF5533">
                   <circle r="3" />
                 </g>

@@ -4,22 +4,20 @@ import SearchBar from "./SearchBar";
 import { Login, Signup } from "./AuthForm";
 import { toggleModal, modalContent } from "../store/auth";
 
+
 /**
  * COMPONENT
  */
 
 export const Home = (props) => {
   const dispatch = useDispatch();
-  const resetDisplayName = () => {
+  const resetDisplayName = () => { 
     dispatch(toggleModal());
     dispatch(modalContent(""));
   };
   const { firstName, lastName, showModal, displayName } = props;
   return (
     <div>
-      <h3>
-        Welcome {firstName} {lastName}
-      </h3>
       <div className={`modal ${showModal ? "is-active" : ""}`}>
         <div className="modal-background"></div>
         <div className="modal-content">
@@ -36,6 +34,7 @@ export const Home = (props) => {
   );
 };
 
+
 /**
  * CONTAINER
  */
@@ -50,3 +49,4 @@ const mapState = (state) => {
 };
 
 export default connect(mapState)(Home);
+

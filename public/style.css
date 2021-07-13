@@ -93,3 +93,17 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .table-container {
   margin-bottom: 4em;
 }
+
+.container {
+ padding-top: 8em;
+}
+
+.navigate-home-container {
+ padding-top: 8em;
+ text-align: center;
+}
+
+.loading-data-container {
+  padding-top: 8em;
+  text-align: center;
+ }
