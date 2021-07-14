@@ -50,10 +50,20 @@ const SearchResult = () => {
       tripOneFirstFlight[1].MinPrice + tripOneReturningFlight[1].MinPrice;
     const tripTwoFlights =
       tripTwoFirstFlight[1].MinPrice + tripTwoReturningFlight[1].MinPrice;
-    const tripOneHotel =
-      tripOneHotelData.price.split(" ")[0].split("$")[1] * tripOneStayDuration;
-    const tripTwoHotel =
-      tripTwoHotelData.price.split(" ")[0].split("$")[1] * tripTwoStayDuration;
+    const tripOneHotelNightlyRate = tripOneHotelData.price
+      .split(" ")[0]
+      .split("$")[1];
+    const tripTwoHotelNightlyRate = tripTwoHotelData.price
+      .split(" ")[0]
+      .split("$")[1];
+    const tripOneHotelCost =
+      tripOneStayDuration === 0
+        ? tripOneHotelNightlyRate * 1
+        : tripOneHotelNightlyRate * tripOneStayDuration;
+    const tripTwoHotelCost =
+      tripTwoStayDuration === 0
+        ? tripTwoHotelNightlyRate * 1
+        : tripTwoHotelNightlyRate * tripTwoStayDuration;
     const budget = tripData.budget;
     const destinationOne = tripOneHotelData.location_string;
     const destinationTwo = tripTwoHotelData.location_string;
@@ -84,8 +94,8 @@ const SearchResult = () => {
 
     const arbitraryStackKey = "stack1";
 
-    const differenceOne = budget - tripOneFlights - tripOneHotel;
-    const differenceTwo = budget - tripTwoFlights - tripTwoHotel;
+    const differenceOne = budget - tripOneFlights - tripOneHotelCost;
+    const differenceTwo = budget - tripTwoFlights - tripTwoHotelCost;
     const budgetOneBackgroundColor =
       differenceOne > 0 ? "rgba(0, 255, 0, 0.2)" : "rgba(255, 0, 0, 0.2)";
     const budgetTwoBackgroundColor =
@@ -110,7 +120,7 @@ const SearchResult = () => {
             "rgba(255, 206, 86, 0.2)",
             "rgba(255, 206, 86, 0.2)",
           ],
-          data: [tripOneHotel, tripTwoHotel],
+          data: [tripOneHotelCost, tripTwoHotelCost],
         },
         {
           stack: arbitraryStackKey,

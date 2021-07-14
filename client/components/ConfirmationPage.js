@@ -61,10 +61,20 @@ const ConfirmationPage = () => {
       tripOneFirstFlight[1].MinPrice + tripOneReturningFlight[1].MinPrice;
     const tripTwoFlights =
       tripTwoFirstFlight[1].MinPrice + tripTwoReturningFlight[1].MinPrice;
+    const tripOneHotelNightlyRate = tripOneHotelData.price
+      .split(" ")[0]
+      .split("$")[1];
+    const tripTwoHotelNightlyRate = tripTwoHotelData.price
+      .split(" ")[0]
+      .split("$")[1];
     const tripOneHotelCost =
-      tripOneHotelData.price.split(" ")[0].split("$")[1] * tripOneStayDuration;
+      tripOneStayDuration === 0
+        ? tripOneHotelNightlyRate * 1
+        : tripOneHotelNightlyRate * tripOneStayDuration;
     const tripTwoHotelCost =
-      tripTwoHotelData.price.split(" ")[0].split("$")[1] * tripTwoStayDuration;
+      tripTwoStayDuration === 0
+        ? tripTwoHotelNightlyRate * 1
+        : tripTwoHotelNightlyRate * tripTwoStayDuration;
     const budget = tripData.budget;
     const destinationOne = tripOneReturningFlight[2].filter((airportId) => {
       return (
