@@ -9,24 +9,51 @@ import { toggleModal } from "../store/auth";
 const AuthForm = (props) => {
   const dispatch = useDispatch();
   const { name, displayName, handleSubmit, error } = props;
+  const [state, setState] = useState({
+    email: "",
+    password: "",
+    firstName: "",
+    lastName: "",
+    name: name,
+  });
 
   return (
-    <div className="box field">
+    <div className="box field is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
       {/* <form onSubmit={handleSubmit} name={name}> */}
       {/* <label className="label" htmlFor="email">
               <small>Email</small>
           </label>
           <input name="email" type="text" /> */}
-      <div class="field">
-        <label class="label has-text-centered">E-Mail</label>
-        <div class="control">
-          <input class="email" type="text" placeholder="E-Mail" />
+      <div className="field">
+        <label className="label has-text-centered" htmlFor="email">
+          E-Mail
+        </label>
+        <div className="control">
+          <input
+            name="email"
+            type="email"
+            value={state.email}
+            onChange={(event) => {
+              setState({ ...state, email: event.target.value });
+            }}
+            placeholder="E-Mail"
+          />
         </div>
       </div>
-      <div class="field">
-        <label class="label has-text-centered">Password</label>
-        <div class="control">
-          <input class="password" type="text" placeholder="Password" />
+      <div className="field">
+        <label className="label has-text-centered" htmlFor="password">
+          Password
+        </label>
+        <div className="control">
+          <input
+            name="password"
+            type="password"
+            value={state.password}
+            onChange={(event) => {
+              setState({ ...state, password: event.target.value });
+            }}
+            placeholder="Password"
+          />
         </div>
       </div>
       {/* <div>
@@ -36,23 +63,50 @@ const AuthForm = (props) => {
           <input name="password" type="password" />
         </div> */}
       {displayName === "Sign Up" && (
-        <div>
-          <div>
-            <label htmlFor="firstName">
-              <small>First Name</small>
+        <>
+          <div className="field">
+            <label className="label has-text-centered" htmlFor="firstName">
+              First Name
             </label>
-            <input name="firstName" type="text" />
+            <div className="control">
+              <input
+                name="firstName"
+                type="text"
+                onChange={(event) => {
+                  setState({ ...state, firstName: event.target.value });
+                }}
+                value={state.firstName}
+                placeholder="First Name"
+              />
+            </div>
           </div>
-          <div>
-            <label htmlFor="lastName">
-              <small>Last Name</small>
+          <div className="field">
+            <label className="label has-text-centered" htmlFor="lastName">
+              Last Name
             </label>
-            <input name="lastName" type="text" />
-          </div>{" "}
-        </div>
+            <div className="control">
+              <input
+                name="lastName"
+                type="text"
+                onChange={(event) => {
+                  setState({ ...state, lastName: event.target.value });
+                }}
+                value={state.lastName}
+                placeholder="Last Name"
+              />
+            </div>
+          </div>
+        </>
       )}
-      <div>
-        <button type="submit" onClick={() => dispatch(toggleModal())}>
+      <div className="control">
+        <button
+          type="submit"
+          className="button"
+          onClick={() => {
+            handleSubmit(state);
+            dispatch(toggleModal());
+          }}
+        >
           {displayName}
         </button>
       </div>
@@ -80,16 +134,15 @@ const mapSignup = (state) => {
 
 const mapDispatch = (dispatch) => {
   return {
-    handleSubmit(evt) {
-      evt.preventDefault();
-      const formName = evt.target.name;
-      const email = evt.target.email.value;
-      const password = evt.target.password.value;
+    handleSubmit(state) {
+      const formName = state.name;
+      const email = state.email;
+      const password = state.password;
       if (formName === "login") {
         dispatch(authenticate(email, password, formName));
       } else {
-        const firstName = evt.target.firstName.value;
-        const lastName = evt.target.lastName.value;
+        const firstName = state.firstName;
+        const lastName = state.lastName;
         dispatch(
           authenticateSignup(email, password, firstName, lastName, formName)
         );
