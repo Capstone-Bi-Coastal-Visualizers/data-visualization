@@ -1,21 +1,18 @@
 import React from "react";
-import { connect, useDispatch } from "react-redux";
+import { connect, useDispatch, useSelector } from "react-redux";
 import SearchBar from "./SearchBar";
 import { Login, Signup } from "./AuthForm";
 import { toggleModal, modalContent } from "../store/auth";
 
+export const Home = () => {
+  const auth = useSelector((state) => state.auth);
+  const { showModal, displayName } = auth;
 
-/**
- * COMPONENT
- */
-
-export const Home = (props) => {
   const dispatch = useDispatch();
-  const resetDisplayName = () => { 
+  const resetDisplayName = () => {
     dispatch(toggleModal());
     dispatch(modalContent(""));
   };
-  const { firstName, lastName, showModal, displayName } = props;
   return (
     <div>
       <div className={`modal ${showModal ? "is-active" : ""}`}>
@@ -34,19 +31,4 @@ export const Home = (props) => {
   );
 };
 
-
-/**
- * CONTAINER
- */
-const mapState = (state) => {
-  return {
-    email: state.auth.user.email,
-    firstName: state.auth.user.firstName,
-    lastName: state.auth.user.lastName,
-    showModal: state.auth.showModal,
-    displayName: state.auth.displayName,
-  };
-};
-
-export default connect(mapState)(Home);
-
+export default Home;

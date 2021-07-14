@@ -86,8 +86,9 @@ const Trips = () => {
   return (
     <div className="trips-container">
       <h1 className="title">Trip History</h1>
-      <div className="trips-list">
-        <div className="table-container">
+      <div className="trip-history-pie-container">
+        <div className="trips-list">
+          <h2 className="title">Trip Details</h2>
           <table className="table">
             <thead>
               <tr>
@@ -113,55 +114,52 @@ const Trips = () => {
             </tbody>
           </table>
         </div>
-      </div>
-      <div className="chart-container">
-        <div className="map-chart">
-          <h1 className="title">Cities Visited</h1>
-          <ComposableMap
-            projection="geoEqualEarth"
-            projectionConfig={{
-              scale: 200,
-            }}
-          >
-            <Geographies geography={geoUrl}>
-              {({ geographies }) =>
-                geographies
-                  //.filter(d => d.properties.REGION_UN === "Asia")
-                  .map((geo) => (
-                    <Geography
-                      key={geo.rsmKey}
-                      geography={geo}
-                      fill="#EAEAEC"
-                      stroke="#D6D6DA"
-                    />
-                  ))
-              }
-            </Geographies>
-            {markers.map(({ name, coordinates, markerOffset }, idx) => (
-              <Marker key={idx} coordinates={coordinates}>
-                <g fill="#FF5533">
-                  <circle r="3" />
-                </g>
-                <text
-                  textAnchor="middle"
-                  y={markerOffset}
-                  style={{
-                    fontFamily: "system-ui",
-                    fill: "#5D5A6D",
-                    fontSize: "8pt",
-                  }}
-                >
-                  {name}
-                </text>
-              </Marker>
-            ))}
-          </ComposableMap>
-        </div>
-
         <div className="pie-chart">
-          <h1 className="title">Trip History Breakdown</h1>
+          <h2 className="title">Trip History Breakdown</h2>
           <Pie data={data} />
         </div>
+      </div>
+      <div className="map-chart">
+        <h1 className="title">Cities Visited</h1>
+        <ComposableMap
+          projection="geoEqualEarth"
+          projectionConfig={{
+            scale: 200,
+          }}
+        >
+          <Geographies geography={geoUrl}>
+            {({ geographies }) =>
+              geographies
+                //.filter(d => d.properties.REGION_UN === "Asia")
+                .map((geo) => (
+                  <Geography
+                    key={geo.rsmKey}
+                    geography={geo}
+                    fill="#EAEAEC"
+                    stroke="#D6D6DA"
+                  />
+                ))
+            }
+          </Geographies>
+          {markers.map(({ name, coordinates, markerOffset }, idx) => (
+            <Marker key={idx} coordinates={coordinates}>
+              <g fill="#FF5533">
+                <circle r="3" />
+              </g>
+              <text
+                textAnchor="middle"
+                y={markerOffset}
+                style={{
+                  fontFamily: "system-ui",
+                  fill: "#5D5A6D",
+                  fontSize: "8pt",
+                }}
+              >
+                {name}
+              </text>
+            </Marker>
+          ))}
+        </ComposableMap>
       </div>
     </div>
   );
