@@ -122,36 +122,36 @@ const SearchResult = () => {
       <div className="container">
         <div className="result-container">
           <div className="trip-result-container">
-          <div className="trip-1-result">
-            <h2 className="title">Result 1</h2>
-            <p>
-              <span className="subtitle">Leaving from:</span>{" "}
-              {tripOneFirstFlight[2][1].CityName}
-            </p>
-            <h2>
-              <span className="subtitle">Going to:</span> {destinationOne}
-            </h2>
-            <h3>
-              {differenceOne > 0
-                ? `Under budget by $${differenceOne.toFixed(2)}`
-                : `Over budget by $${Math.abs(differenceOne).toFixed(2)}`}
-            </h3>
-          </div>
-          <div className="trip-2-result">
-            <h2 className="title">Result 2</h2>
-            <p>
-              <span className="subtitle">Leaving from:</span>{" "}
-              {tripTwoFirstFlight[2][1].CityName}
-            </p>
-            <h2>
-              <span className="subtitle">Going to:</span> {destinationTwo}
-            </h2>
-            <h3>
-              {differenceTwo > 0
-                ? `Under budget by $${differenceTwo.toFixed(2)}`
-                : `Over budget by $${Math.abs(differenceTwo).toFixed(2)}`}
-            </h3>
-          </div>
+            <div className="trip-1-result">
+              <h2 className="title">Result 1</h2>
+              <p>
+                <span className="subtitle">Leaving from:</span>{" "}
+                {tripOneFirstFlight[2][1].CityName}
+              </p>
+              <h2>
+                <span className="subtitle">Going to:</span> {destinationOne}
+              </h2>
+              <h3>
+                {differenceOne > 0
+                  ? `Under budget by $${differenceOne.toFixed(2)}`
+                  : `Over budget by $${Math.abs(differenceOne).toFixed(2)}`}
+              </h3>
+            </div>
+            <div className="trip-2-result">
+              <h2 className="title">Result 2</h2>
+              <p>
+                <span className="subtitle">Leaving from:</span>{" "}
+                {tripTwoFirstFlight[2][1].CityName}
+              </p>
+              <h2>
+                <span className="subtitle">Going to:</span> {destinationTwo}
+              </h2>
+              <h3>
+                {differenceTwo > 0
+                  ? `Under budget by $${differenceTwo.toFixed(2)}`
+                  : `Over budget by $${Math.abs(differenceTwo).toFixed(2)}`}
+              </h3>
+            </div>
           </div>
           <div className="trip-analysis">
             <p className="title">Trip Analysis</p>
@@ -169,15 +169,19 @@ const SearchResult = () => {
             </Link> */}
           </div>
           <div className="trips-bar-chart">
-          <div className="trips-bar-chart-selector">
-            <Link to="/confirmation-page" onClick={() => dispatch(setTrip(1))}>
-              {" "}
-              Select Trip One{" "}
-            </Link>
-            <Link to="/confirmation-page" onClick={() => dispatch(setTrip(2))}>
-              {" "}
-              Select Trip Two{" "}
-            </Link>
+            <div className="trips-bar-chart-selector">
+              <Link
+                to="/confirmation-page"
+                onClick={() => dispatch(setTrip(1))}
+              >
+                <button className="button"> Select Trip One </button>
+              </Link>
+              <Link
+                to="/confirmation-page"
+                onClick={() => dispatch(setTrip(2))}
+              >
+                <button className="button"> Select Trip Two </button>
+              </Link>
             </div>
             <Bar data={data} options={options} />
           </div>
@@ -199,11 +203,9 @@ const SearchResult = () => {
             There was an error in loading your search. Please search a different
             trip or try again later
           </h2>
-          <div className="control">
-            <Link to="/" className="button is-danger">
-              Return
-            </Link>
-          </div>
+          <Link to="/">
+            <button className="button">Return</button>
+          </Link>
         </div>
       );
     }
@@ -213,21 +215,19 @@ const SearchResult = () => {
   ) {
     return (
       <div className="container">
-        <div className="navigate-home-container">
-          <h2>Please navigate to home page to search for trip</h2>
-          <div className="control">
-            <Link to="/" className="button is-danger">
-              Return
-            </Link>
-          </div>
+        <div className="navigate-home-error">
+          <div>Please navigate to home page to search for trip</div>
         </div>
+          <Link to="/">
+            <button className="button">Return</button>
+          </Link>
       </div>
     );
   } else {
     return (
       <div className="container">
-        <div className="loading-data-container">
-          <h2>Please wait loading data...</h2>
+        <div className="navigate-home-error">
+          <div>Please wait loading data...</div>
         </div>
       </div>
     );

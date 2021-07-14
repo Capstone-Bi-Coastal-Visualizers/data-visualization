@@ -60,7 +60,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     flex-direction: column;
     justify-content: center;
   }
-  
+
   .chart-container {
     flex-direction: column;
     justify-content: center;
@@ -96,28 +96,28 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .container {
- padding-top: 8em;
+  padding-top: 8em;
 }
 
 .navigate-home-container {
- padding-top: 8em;
- text-align: center;
+  padding-top: 8em;
+  text-align: center;
 }
 
 .loading-data-container {
   padding-top: 8em;
   text-align: center;
- }
+}
 
- .result-container {
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   text-align: center;
-   background-color: pink;
- }
+.result-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  background-color: pink;
+}
 
- .trip-result-container {
+.trip-result-container {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -149,3 +149,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 100%;
   padding: 2em;
 }
+
+.navigate-home-error {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
