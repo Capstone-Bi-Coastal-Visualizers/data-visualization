@@ -96,7 +96,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   justify-content: left;
 }
 
-.container {
+.navigate-home-container {
+  padding-top: 8em;
+  text-align: center;
   padding-top: 5em;
 }
 
@@ -105,6 +107,30 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   text-align: center;
 }
 
+/* Confirmation Page CSS */
+.confirmation-page-graph {
+  width: 70%;
+}
+
+.table-width {
+  width: 90%;
+}
+
+@media (max-width: 1000px) {
+  .confirmation-page-graph {
+    width: 90%;
+  }
+  .table-width {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .confirmation-page-graph {
+    width: 90%;
+  }
+}
+/* Confirmation Page CSS */
 .result-container {
   display: flex;
   flex-direction: column;
