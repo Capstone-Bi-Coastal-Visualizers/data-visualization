@@ -84,11 +84,11 @@ const Trips = () => {
   };
   // TODO Place map under row that contains the table and pie chart
   return (
-    <div className="trips-container">
+    <div className="trips-container container has-text-centered pt-6">
       <h1 className="title">Trip History</h1>
-      <div className="trip-history-pie-container">
-        <div className="trips-list">
-          <h2 className="title">Trip Details</h2>
+      <div className="trip-history-pie-container mt-5">
+        <div className="trips-list has-text-centered box">
+          <h2 className="title">Details</h2>
           <table className="table">
             <thead>
               <tr>
@@ -114,12 +114,12 @@ const Trips = () => {
             </tbody>
           </table>
         </div>
-        <div className="pie-chart">
-          <h2 className="title">Trip History Breakdown</h2>
+        <div className="pie-chart box">
+          <h2 className="title">Cost Analysis</h2>
           <Pie data={data} />
         </div>
       </div>
-      <div className="map-chart">
+      <div className="map-chart mt-5">
         <h1 className="title">Cities Visited</h1>
         <ComposableMap
           projection="geoEqualEarth"

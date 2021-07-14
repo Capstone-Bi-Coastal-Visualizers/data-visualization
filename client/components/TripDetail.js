@@ -15,13 +15,12 @@ const TripDetail = (props) => {
   }, []);
 
   const trip = useSelector((state) => state.userTripReducer);
-  console.log("here is trip in component", trip);
 
   return (
-    <div className="trip-detail-container">
+    <div className="container trip-detail-container has-text-centered pt-6">
       <h1 className="title">Trip Detail</h1>
 
-      <div className="trip-detail-list">
+      <div className="trip-detail-list box has-text-centered">
         <table className="table">
           <thead>
             <tr>
@@ -38,7 +37,7 @@ const TripDetail = (props) => {
           </thead>
           <tbody>
             <tr key={trip.id}>
-              <tr scope="row">{trip.id}</tr>
+              <td scope="row">{trip.id}</td>
               <td scope="row">{trip.cityName}</td>
               <td scope="row">{trip.departureDate}</td>
               <td scope="row">{trip.returnDate}</td>
