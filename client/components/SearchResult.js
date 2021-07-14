@@ -35,15 +35,15 @@ const SearchResult = () => {
       !tripTwoReturningFlight[1]
     ) {
       return (
-        <div className="container navigate-home-container" >
-        <h2>
-          There was an error in loading your search. Please search a
-          different trip or try again later
-        </h2>
+        <div className="container navigate-home-container">
+          <h2>
+            There was an error in loading your search. Please search a different
+            trip or try again later
+          </h2>
           <Link to="/" className="button mt-3">
             Return
           </Link>
-    </div>
+        </div>
       );
     }
     const tripOneFlights =
@@ -149,7 +149,7 @@ const SearchResult = () => {
                 : `Over budget by $${Math.abs(differenceTwo).toFixed(2)}`}
             </h3>
           </div>
-
+        </div>
         <div className="trip-analysis">
           <p className="title">Trip Analysis</p>
           <h2>
@@ -159,15 +159,22 @@ const SearchResult = () => {
         </div>
         <div className="trips-bar-chart">
           <div className="trips-bar-chart-selector">
-            <Link to="/confirmation-page" className="button" onClick={() => dispatch(setTrip(1))}>
+            <Link
+              to="/confirmation-page"
+              className="button"
+              onClick={() => dispatch(setTrip(1))}
+            >
               Select Trip One
             </Link>
-            <Link to="/confirmation-page" className="button" onClick={() => dispatch(setTrip(2))}>
+            <Link
+              to="/confirmation-page"
+              className="button"
+              onClick={() => dispatch(setTrip(2))}
+            >
               Select Trip Two
             </Link>
           </div>
           <Bar data={data} options={options} />
-        </div>
         </div>
       </div>
     );
@@ -181,14 +188,14 @@ const SearchResult = () => {
       tripTwoHotelData["error"]
     ) {
       return (
-        <div className="container navigate-home-container" >
-            <h2>
-              There was an error in loading your search. Please search a
-              different trip or try again later
-            </h2>
-              <Link to="/" className="button mt-3">
-                Return
-              </Link>
+        <div className="container navigate-home-container">
+          <h2>
+            There was an error in loading your search. Please search a different
+            trip or try again later
+          </h2>
+          <Link to="/" className="button mt-3">
+            Return
+          </Link>
         </div>
       );
     }
@@ -197,17 +204,17 @@ const SearchResult = () => {
     tripOneStayDuration === undefined
   ) {
     return (
-      <div className="container navigate-home-container" >
-          <h2>Please navigate to home page to search for trip</h2>
-          <Link to="/" className="button mt-3">
-            Return
-          </Link>
+      <div className="container navigate-home-container">
+        <h2>Please navigate to home page to search for trip</h2>
+        <Link to="/" className="button mt-3">
+          Return
+        </Link>
       </div>
     );
   } else {
     return (
-      <div className="container navigate-home-container" >
-          <h2>Please wait loading data...</h2>
+      <div className="container navigate-home-container">
+        <h2>Please wait loading data...</h2>
       </div>
     );
   }
