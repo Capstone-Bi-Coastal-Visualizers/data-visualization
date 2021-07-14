@@ -39,11 +39,9 @@ const ConfirmationPage = () => {
             No trip to display. Please navigate to the home page to search for
             trips.
           </p>
-          <div className="control">
-            <Link to="/" className="button is-danger">
-              Home Page
-            </Link>
-          </div>
+          <Link to="/" className="button is-danger">
+            Home Page
+          </Link>
         </div>
       </div>
     );
