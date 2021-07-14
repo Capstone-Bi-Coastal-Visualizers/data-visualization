@@ -60,6 +60,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     flex-direction: column;
     justify-content: center;
   }
+
   .chart-container {
     flex-direction: column;
     justify-content: center;
@@ -94,13 +95,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   margin-bottom: 4em;
 }
 
-.container {
-  padding-top: 8em;
-}
-
 .navigate-home-container {
   padding-top: 8em;
   text-align: center;
+  padding-top: 5em;
 }
 
 .loading-data-container {
@@ -132,3 +130,47 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 /* Confirmation Page CSS */
+.result-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.trip-result-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /* padding: 2em; */
+}
+
+.trip-analysis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  padding: 2em;
+}
+
+.trips-bar-chart {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2em;
+}
+
+.trips-bar-chart-selector {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  padding: 2em;
+}
+
+.navigate-home-container {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
