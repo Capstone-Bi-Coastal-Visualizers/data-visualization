@@ -216,7 +216,7 @@ const SearchResult = () => {
     return (
       <div className="container">
         <div className="navigate-home-error">
-          <div>Please navigate to home page to search for trip</div>
+          <h2>Please navigate to home page to search for trip</h2>
         </div>
           <Link to="/">
             <button className="button">Return</button>
@@ -227,7 +227,7 @@ const SearchResult = () => {
     return (
       <div className="container">
         <div className="navigate-home-error">
-          <div>Please wait loading data...</div>
+          <h2>Please wait loading data...</h2>
         </div>
       </div>
     );
