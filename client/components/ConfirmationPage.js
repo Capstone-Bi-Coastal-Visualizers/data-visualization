@@ -27,7 +27,7 @@ const ConfirmationPage = () => {
     return (
       <div className="container has-text-centered pt-6">
         <h2 className="title mb-6">Confirmation Page</h2>
-        <div className="is-flex is-flex-direction-column has-text-centered">
+        <div className="has-text-centered">
           <p
             className="mb-4 is-size-7-mobile	
       is-size-5-touch	
