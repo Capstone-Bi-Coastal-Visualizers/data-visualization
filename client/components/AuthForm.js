@@ -11,43 +11,53 @@ const AuthForm = (props) => {
   const { name, displayName, handleSubmit, error } = props;
 
   return (
-    <div className="box">
-      <form onSubmit={handleSubmit} name={name}>
-        <div>
-          <label htmlFor="email">
-            <small>Email</small>
+    <div className="box field">
+      {/* <form onSubmit={handleSubmit} name={name}> */}
+      {/* <label className="label" htmlFor="email">
+              <small>Email</small>
           </label>
-          <input name="email" type="text" />
+          <input name="email" type="text" /> */}
+      <div class="field">
+        <label class="label has-text-centered">E-Mail</label>
+        <div class="control">
+          <input class="email" type="text" placeholder="E-Mail" />
         </div>
-        <div>
+      </div>
+      <div class="field">
+        <label class="label has-text-centered">Password</label>
+        <div class="control">
+          <input class="password" type="text" placeholder="Password" />
+        </div>
+      </div>
+      {/* <div>
           <label htmlFor="password">
             <small>Password</small>
           </label>
           <input name="password" type="password" />
-        </div>
-        {displayName === "Sign Up" && (
-          <div>
-            <div>
-              <label htmlFor="firstName">
-                <small>First Name</small>
-              </label>
-              <input name="firstName" type="text" />
-            </div>
-            <div>
-              <label htmlFor="lastName">
-                <small>Last Name</small>
-              </label>
-              <input name="lastName" type="text" />
-            </div>{" "}
-          </div>
-        )}
+        </div> */}
+      {displayName === "Sign Up" && (
         <div>
-          <button type="submit" onClick={() => dispatch(toggleModal())}>
-            {displayName}
-          </button>
+          <div>
+            <label htmlFor="firstName">
+              <small>First Name</small>
+            </label>
+            <input name="firstName" type="text" />
+          </div>
+          <div>
+            <label htmlFor="lastName">
+              <small>Last Name</small>
+            </label>
+            <input name="lastName" type="text" />
+          </div>{" "}
         </div>
-        {error && error.response && <div> {error.response.data} </div>}
-      </form>
+      )}
+      <div>
+        <button type="submit" onClick={() => dispatch(toggleModal())}>
+          {displayName}
+        </button>
+      </div>
+      {error && error.response && <div> {error.response.data} </div>}
+      {/* </form> */}
     </div>
   );
 };

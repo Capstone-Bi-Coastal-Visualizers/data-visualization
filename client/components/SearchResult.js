@@ -144,7 +144,7 @@ const SearchResult = () => {
       <div className="container pt-6">
         <div className="trip-result-container">
           <div className="trip-1-result has-text-centered">
-            <h2 className="title">Result 1</h2>
+            <h2 className="title">Trip One</h2>
             <p>
               <span>Leaving from:</span> {tripOneDepartureCity}
             </p>
@@ -158,7 +158,7 @@ const SearchResult = () => {
             </h3>
           </div>
           <div className="trip-2-result has-text-centered">
-            <h2 className="title">Result 2</h2>
+            <h2 className="title">Trip Two</h2>
             <p>
               <span>Leaving from:</span> {tripTwoDepartureCity}
             </p>
@@ -173,7 +173,7 @@ const SearchResult = () => {
           </div>
         </div>
         <div className="trip-analysis">
-          <p className="title">Trip Analysis</p>
+          <p className="title">Analysis</p>
           <h2>
             Cheaper to travel to:{" "}
             {differenceOne > differenceTwo

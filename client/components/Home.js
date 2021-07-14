@@ -26,9 +26,7 @@ export const Home = () => {
           onClick={resetDisplayName}
         ></button>
       </div>
-      <div className="mt-5">
-        <SearchBar />
-      </div>
+      <SearchBar />
     </div>
   );
 };
