@@ -95,15 +95,40 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .container {
- padding-top: 8em;
+  padding-top: 8em;
 }
 
 .navigate-home-container {
- padding-top: 8em;
- text-align: center;
+  padding-top: 8em;
+  text-align: center;
 }
 
 .loading-data-container {
   padding-top: 8em;
   text-align: center;
- }
+}
+
+/* Confirmation Page CSS */
+.confirmation-page-graph {
+  width: 70%;
+}
+
+.table-width {
+  width: 90%;
+}
+
+@media (max-width: 1000px) {
+  .confirmation-page-graph {
+    width: 90%;
+  }
+  .table-width {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .confirmation-page-graph {
+    width: 90%;
+  }
+}
+/* Confirmation Page CSS */
