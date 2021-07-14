@@ -66,8 +66,16 @@ const ConfirmationPage = () => {
     const tripTwoHotelCost =
       tripTwoHotelData.price.split(" ")[0].split("$")[1] * tripTwoStayDuration;
     const budget = tripData.budget;
-    const destinationOne = tripOneHotelData.location_string;
-    const destinationTwo = tripTwoHotelData.location_string;
+    const destinationOne = tripOneReturningFlight[2].filter((airportId) => {
+      return (
+        airportId.PlaceId === tripOneReturningFlight[1].OutboundLeg.OriginId
+      );
+    })[0].CityName;
+    const destinationTwo = tripTwoReturningFlight[2].filter((airportId) => {
+      return (
+        airportId.PlaceId === tripTwoReturningFlight[1].OutboundLeg.OriginId
+      );
+    })[0].CityName;
 
     const tripFirstFlight =
       selectedTrip === 1 ? tripOneFirstFlight : tripTwoFirstFlight;
@@ -81,6 +89,10 @@ const ConfirmationPage = () => {
     const destinationAirport = tripReturningFlight[2].filter((airportId) => {
       return airportId.PlaceId === tripReturningFlight[1].OutboundLeg.OriginId;
     })[0].SkyscannerCode;
+
+    const destinationCity = tripReturningFlight[2].filter((airportId) => {
+      return airportId.PlaceId === tripReturningFlight[1].OutboundLeg.OriginId;
+    })[0].CityName;
 
     const departureDate =
       tripFirstFlight[1].OutboundLeg.DepartureDate.split("T")[0];
@@ -165,7 +177,7 @@ const ConfirmationPage = () => {
           hotelCost: selectedHotel,
           budget,
           destCoordinates,
-          cityName: tripHotel.location_string.split(",")[0],
+          cityName: destinationCity,
           airlineNames: tripFlightNameArray,
           hotelName: tripHotel.name,
         },
@@ -200,7 +212,7 @@ const ConfirmationPage = () => {
 
     return (
       <div className="container is-flex is-flex-direction-column is-justify-content-center is-align-items-center has-text-centered pt-6">
-        <h2 className="title">Confirmation Page</h2>
+        <h2 className="title">Confirmation</h2>
         <div className="confirmation-page-graph">
           <Bar data={data} options={options} />
         </div>
@@ -216,16 +228,18 @@ const ConfirmationPage = () => {
             </tr>
           </thead>
           <tbody>
-            <th scope="row">{departureAirport}</th>
-            <th scope="row">{destinationAirport}</th>
-            <th scope="row">{departureDate}</th>
-            <th scope="row">{returnDate}</th>
-            <th scope="row">
-              {tripFlightNameArray && tripFlightNameArray.length > 1
-                ? `${tripFlightNameArray[0]}, ${tripFlightNameArray[1]}`
-                : tripFlightNameArray[0]}
-            </th>
-            <th scope="row">{tripHotel.name}</th>
+            <tr>
+              <td scope="row">{departureAirport}</td>
+              <td scope="row">{destinationAirport}</td>
+              <td scope="row">{departureDate}</td>
+              <td scope="row">{returnDate}</td>
+              <td scope="row">
+                {tripFlightNameArray && tripFlightNameArray.length > 1
+                  ? `${tripFlightNameArray[0]}, ${tripFlightNameArray[1]}`
+                  : tripFlightNameArray[0]}
+              </td>
+              <td scope="row">{tripHotel.name}</td>
+            </tr>
           </tbody>
         </table>
         <div>

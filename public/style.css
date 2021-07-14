@@ -68,7 +68,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 
-.chart-container {
+.trip-history-pie-container {
   display: flex;
   width: 100%;
   align-items: flex-start;
@@ -84,7 +84,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .map-chart {
-  width: 60%;
+  width: 80%;
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -93,6 +93,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .table-container {
   margin-bottom: 4em;
+  justify-content: left;
 }
 
 .navigate-home-container {

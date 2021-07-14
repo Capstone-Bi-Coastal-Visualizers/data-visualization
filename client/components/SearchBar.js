@@ -266,17 +266,14 @@ export default function SearchBar() {
       <div className="field has-addons is-justify-content-center">
         <div className="control ">
           <input
-            type="text"
+            type="number"
             placeholder="Budget"
             name="budget"
             className="input is-shadowless"
             required
             value={tripBudget}
             onChange={(event) => {
-              if (
-                !Number(event.target.value) ||
-                Number(event.target.value) < 0
-              ) {
+              if (Number(event.target.value) < 0) {
                 window.alert(
                   "Please enter a number greater than 0 in the budget input"
                 );
