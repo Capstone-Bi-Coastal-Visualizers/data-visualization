@@ -354,7 +354,7 @@ export default function SearchBar() {
           <div className="control">
             <button
               onClick={handleclick}
-              className="button search-button has-text-white"
+              className="button is-primary"
             >
               Submit
             </button>

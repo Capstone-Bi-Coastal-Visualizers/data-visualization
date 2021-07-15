@@ -5,6 +5,7 @@ import { logout } from "../store";
 import { toggleModal, modalContent } from "../store/auth";
 
 export default function NavBar() {
+  const history = useHistory();
   const dispatch = useDispatch();
   const [isActive, setisActive] = useState(false);
   const isLoggedIn = useSelector((state) => !!state.auth.user.id);
@@ -14,11 +15,14 @@ export default function NavBar() {
     dispatch(modalContent(displayName));
   };
   const handleNav = (route) => {
-    history.push(`/${route}`);
+    history.push(route);
   };
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
-      <div className="image logo-container"></div>
+      <div className="container-logo">
+      <div className="image logo-container is-clickable" onClick={() => {handleNav("/")}}>
+      </div>
+      </div>
       <div className="navbar-brand">
         <a
           onClick={() => {
@@ -36,28 +40,26 @@ export default function NavBar() {
         </a>
       </div>
       <div className="navbar-end">
-        <div className="navbar-item">
-          <div className="buttons">
+        <div className="navbar-button-container">
             {isLoggedIn ? (
-              <div>
-                <Link to="/trips">Trips</Link>
-                <a href="#" onClick={handleClick}>
+              <div className="button-container">
+                <a className="button is-primary"  onClick={() => {handleNav("/trips")}}>Trips</a>
+                <a className="button is-primary" href="#" onClick={handleClick}>
                   Logout
                 </a>
               </div>
             ) : (
-              <div className="navbar-start">
+              <div className="button-container">
                 <a onClick={() => handleToggle("Login")}>
-                  <div className="button navbar-item is-primary">Login</div>
+                  <div className="button is-primary">Login</div>
                 </a>
                 <a onClick={() => handleToggle("Signup")}>
-                  <div className="button navbar-item is-primary">Sign Up</div>
+                  <div className="button is-primary">Sign Up</div>
                 </a>
               </div>
             )}
           </div>
         </div>
-      </div>
     </nav>
   );
 }
