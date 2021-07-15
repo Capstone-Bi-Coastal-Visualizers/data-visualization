@@ -62,7 +62,7 @@ const Trips = () => {
       : "rgba(0, 255, 0, 1)";
 
   const data = {
-    labels: ["Hotel", "Airfare", budgetLabel],
+    labels: ["Hotel ($)", "Airfare ($)", `${budgetLabel} ($)`],
     datasets: [
       {
         label: "# of Votes",

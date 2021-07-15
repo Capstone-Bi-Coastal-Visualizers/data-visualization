@@ -106,7 +106,7 @@ const SearchResult = () => {
         // These two will be in the same stack.
         {
           stack: arbitraryStackKey,
-          label: "Flight",
+          label: "Flight ($)",
           backgroundColor: [
             "rgba(54, 162, 235, 0.2)",
             "rgba(54, 162, 235, 0.2)",
@@ -115,7 +115,7 @@ const SearchResult = () => {
         },
         {
           stack: arbitraryStackKey,
-          label: "Hotel",
+          label: "Hotel ($)",
           backgroundColor: [
             "rgba(255, 206, 86, 0.2)",
             "rgba(255, 206, 86, 0.2)",
@@ -124,7 +124,7 @@ const SearchResult = () => {
         },
         {
           stack: arbitraryStackKey,
-          label: "Budget",
+          label: "Budget ($)",
           backgroundColor: [budgetOneBackgroundColor, budgetTwoBackgroundColor],
           data: [Math.abs(differenceOne), Math.abs(differenceTwo)],
         },
@@ -195,6 +195,7 @@ const SearchResult = () => {
           <div className="trips-bar-chart-selector">
             <Link
               to="/confirmation-page"
+              budgetLabel
               className="button"
               onClick={() => dispatch(setTrip(1))}
             >

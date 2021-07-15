@@ -138,19 +138,19 @@ const ConfirmationPage = () => {
       datasets: [
         {
           stack: arbitraryStackKey,
-          label: "Flight",
+          label: "Flight ($)",
           backgroundColor: ["rgba(54, 162, 235, 0.2)"],
           data: [selectedFlights],
         },
         {
           stack: arbitraryStackKey,
-          label: "Hotel",
+          label: "Hotel ($)",
           backgroundColor: ["rgba(255, 206, 86, 0.2)"],
           data: [selectedHotel],
         },
         {
           stack: arbitraryStackKey,
-          label: budgetLabel,
+          label: `${budgetLabel} ($)`,
           backgroundColor: [budgetBackgroundColor],
           data: [Math.abs(difference)],
         },
