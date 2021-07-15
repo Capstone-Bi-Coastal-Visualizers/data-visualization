@@ -17,7 +17,7 @@ const TripDetail = (props) => {
 
   const trip = useSelector((state) => state.userTripReducer);
 
-  const leftoverBudget = trip.budget - trip.hotelCost + trip.airfareCost;
+  const leftoverBudget = trip.budget - trip.hotelCost - trip.airfareCost;
 
   const budgetLabel = leftoverBudget > 0 ? "Budget Deficit" : "Budget Surplus";
 
