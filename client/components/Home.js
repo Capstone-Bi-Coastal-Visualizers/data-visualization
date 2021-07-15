@@ -4,6 +4,7 @@ import SearchBar from "./SearchBar";
 import { Login, Signup } from "./AuthForm";
 import { toggleModal, modalContent } from "../store/auth";
 
+
 export const Home = () => {
   const auth = useSelector((state) => state.auth);
   const { showModal, displayName } = auth;
@@ -14,7 +15,7 @@ export const Home = () => {
     dispatch(modalContent(""));
   };
   return (
-    <div>
+    <div className="search-container">
       <div className={`modal ${showModal ? "is-active" : ""}`}>
         <div className="modal-background"></div>
         <div className="modal-content">

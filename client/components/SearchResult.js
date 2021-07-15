@@ -46,8 +46,8 @@ const SearchResult = () => {
       return (
         <div className="container navigate-home-container">
           <h2>
-            There was an error in loading your search. Please search a different
-            trip or try again later
+            Flight not available. Please search a different trip or try again
+            later
           </h2>
           <Link to="/" className="button mt-3">
             Return
@@ -59,13 +59,21 @@ const SearchResult = () => {
       tripOneFirstFlight[1].MinPrice + tripOneReturningFlight[1].MinPrice;
     const tripTwoFlights =
       tripTwoFirstFlight[1].MinPrice + tripTwoReturningFlight[1].MinPrice;
-    const tripOneHotel =
-      tripOneHotelData.price.split(" ")[0].split("$")[1] * tripOneStayDuration;
-    const tripTwoHotel =
-      tripTwoHotelData.price.split(" ")[0].split("$")[1] * tripTwoStayDuration;
+    const tripOneHotelNightlyRate = tripOneHotelData.price
+      .split(" ")[0]
+      .split("$")[1];
+    const tripTwoHotelNightlyRate = tripTwoHotelData.price
+      .split(" ")[0]
+      .split("$")[1];
+    const tripOneHotelCost =
+      tripOneStayDuration === 0
+        ? tripOneHotelNightlyRate * 1
+        : tripOneHotelNightlyRate * tripOneStayDuration;
+    const tripTwoHotelCost =
+      tripTwoStayDuration === 0
+        ? tripTwoHotelNightlyRate * 1
+        : tripTwoHotelNightlyRate * tripTwoStayDuration;
     const budget = tripData.budget;
-    const destinationOne = tripOneHotelData.location_string;
-    const destinationTwo = tripTwoHotelData.location_string;
 
     const tripOneDepartureCity = tripOneFirstFlight[2].filter((airportId) => {
       return airportId.PlaceId === tripOneFirstFlight[1].OutboundLeg.OriginId;
@@ -93,8 +101,8 @@ const SearchResult = () => {
 
     const arbitraryStackKey = "stack1";
 
-    const differenceOne = budget - tripOneFlights - tripOneHotel;
-    const differenceTwo = budget - tripTwoFlights - tripTwoHotel;
+    const differenceOne = budget - tripOneFlights - tripOneHotelCost;
+    const differenceTwo = budget - tripTwoFlights - tripTwoHotelCost;
     const budgetOneBackgroundColor =
       differenceOne > 0 ? "rgba(0, 255, 0, 0.2)" : "rgba(255, 0, 0, 0.2)";
     const budgetTwoBackgroundColor =
@@ -105,7 +113,7 @@ const SearchResult = () => {
         // These two will be in the same stack.
         {
           stack: arbitraryStackKey,
-          label: "Flight",
+          label: "Airfare $",
           backgroundColor: [
             "rgba(54, 162, 235, 0.2)",
             "rgba(54, 162, 235, 0.2)",
@@ -114,16 +122,16 @@ const SearchResult = () => {
         },
         {
           stack: arbitraryStackKey,
-          label: "Hotel",
+          label: "Accommodations $",
           backgroundColor: [
             "rgba(255, 206, 86, 0.2)",
             "rgba(255, 206, 86, 0.2)",
           ],
-          data: [tripOneHotel, tripTwoHotel],
+          data: [tripOneHotelCost, tripTwoHotelCost],
         },
         {
           stack: arbitraryStackKey,
-          label: "Budget",
+          label: "Budget $",
           backgroundColor: [budgetOneBackgroundColor, budgetTwoBackgroundColor],
           data: [Math.abs(differenceOne), Math.abs(differenceTwo)],
         },
@@ -194,6 +202,7 @@ const SearchResult = () => {
           <div className="trips-bar-chart-selector">
             <Link
               to="/confirmation-page"
+              budgetLabel
               className="button"
               onClick={() => dispatch(setTrip(1))}
             >

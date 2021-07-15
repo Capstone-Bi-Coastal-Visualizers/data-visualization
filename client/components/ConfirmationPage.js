@@ -61,10 +61,20 @@ const ConfirmationPage = () => {
       tripOneFirstFlight[1].MinPrice + tripOneReturningFlight[1].MinPrice;
     const tripTwoFlights =
       tripTwoFirstFlight[1].MinPrice + tripTwoReturningFlight[1].MinPrice;
+    const tripOneHotelNightlyRate = tripOneHotelData.price
+      .split(" ")[0]
+      .split("$")[1];
+    const tripTwoHotelNightlyRate = tripTwoHotelData.price
+      .split(" ")[0]
+      .split("$")[1];
     const tripOneHotelCost =
-      tripOneHotelData.price.split(" ")[0].split("$")[1] * tripOneStayDuration;
+      tripOneStayDuration === 0
+        ? tripOneHotelNightlyRate * 1
+        : tripOneHotelNightlyRate * tripOneStayDuration;
     const tripTwoHotelCost =
-      tripTwoHotelData.price.split(" ")[0].split("$")[1] * tripTwoStayDuration;
+      tripTwoStayDuration === 0
+        ? tripTwoHotelNightlyRate * 1
+        : tripTwoHotelNightlyRate * tripTwoStayDuration;
     const budget = tripData.budget;
     const destinationOne = tripOneReturningFlight[2].filter((airportId) => {
       return (
@@ -128,19 +138,19 @@ const ConfirmationPage = () => {
       datasets: [
         {
           stack: arbitraryStackKey,
-          label: "Flight",
+          label: "Airfare $",
           backgroundColor: ["rgba(54, 162, 235, 0.2)"],
           data: [selectedFlights],
         },
         {
           stack: arbitraryStackKey,
-          label: "Hotel",
+          label: "Accommodations $",
           backgroundColor: ["rgba(255, 206, 86, 0.2)"],
           data: [selectedHotel],
         },
         {
           stack: arbitraryStackKey,
-          label: budgetLabel,
+          label: `${budgetLabel} ($)`,
           backgroundColor: [budgetBackgroundColor],
           data: [Math.abs(difference)],
         },

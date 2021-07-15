@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { Doughnut } from "react-chartjs-2";
 import { fetchUserTripDetail } from "../store/userTripData";
 
 const TripDetail = (props) => {
@@ -15,6 +16,38 @@ const TripDetail = (props) => {
   }, []);
 
   const trip = useSelector((state) => state.userTripReducer);
+
+  const leftoverBudget = trip.budget - trip.hotelCost + trip.airfareCost;
+
+  const budgetLabel = leftoverBudget > 0 ? "Budget Deficit" : "Budget Surplus";
+
+  const budgetBackgroundColor =
+    leftoverBudget > 0 ? "rgba(255, 95, 160, 0.2)" : "rgba(5, 226, 205, 0.2)";
+
+  const budgetBorderColor =
+    leftoverBudget > 0 ? "rgba(255, 95, 160, 1)" : "rgba(5, 226, 205, 1)";
+
+  const data = {
+    labels: ["Airfare $", "Accommodations $", `${budgetLabel} $`],
+    datasets: [
+      {
+        label: "# of Votes",
+        // [hotel, airfare, savings]
+        data: [trip.airfareCost, trip.hotelCost, Math.abs(leftoverBudget)],
+        backgroundColor: [
+          "rgba(50, 155, 220, 0.2)", // Airfare
+          "rgba(255, 255, 100, 0.2)", // Hotel
+          budgetBackgroundColor, // Budget
+        ],
+        borderColor: [
+          "rgba(50, 155, 220, 1)", // Airfare border
+          "rgba(255, 255, 100, 1)", // Hotel border
+          budgetBorderColor, // Budget border
+        ],
+        borderWidth: 1,
+      },
+    ],
+  };
 
   return (
     <div className="container trip-detail-container has-text-centered pt-6">
@@ -57,6 +90,10 @@ const TripDetail = (props) => {
             </tr>
           </tbody>
         </table>
+      </div>
+      <div className="box has-text-centered">
+        <h2 className="title">Visualization</h2>
+        <Doughnut data={data} />
       </div>
       <Link to="/trips">
         <button className="button">Back to Trips</button>
