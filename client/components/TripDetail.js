@@ -96,7 +96,7 @@ const TripDetail = (props) => {
         <Doughnut data={data} />
       </div>
       <Link to="/trips">
-        <button className="button">Back to Trips</button>
+        <button className="button is-primary">Back to Trips</button>
       </Link>
     </div>
   );

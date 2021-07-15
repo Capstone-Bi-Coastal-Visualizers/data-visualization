@@ -39,7 +39,7 @@ const ConfirmationPage = () => {
             No trip to display. Please navigate to the home page to search for
             trips.
           </p>
-          <Link to="/" className="button is-danger">
+          <Link to="/" className="button is-primary">
             Home Page
           </Link>
         </div>
@@ -274,7 +274,7 @@ const ConfirmationPage = () => {
                 </h3>
               ) : (
                 <button
-                  className="button is-danger mt-4 mb-4 ml-3"
+                  className="button is-primary mt-4 mb-4 ml-3"
                   onClick={handleEmail}
                 >
                   E-mail

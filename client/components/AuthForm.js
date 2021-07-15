@@ -19,17 +19,13 @@ const AuthForm = (props) => {
 
   return (
     <div className="box field is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
-      {/* <form onSubmit={handleSubmit} name={name}> */}
-      {/* <label className="label" htmlFor="email">
-              <small>Email</small>
-          </label>
-          <input name="email" type="text" /> */}
       <div className="field">
         <label className="label has-text-centered" htmlFor="email">
           E-Mail
         </label>
         <div className="control">
           <input
+            className="input"
             name="email"
             type="email"
             value={state.email}
@@ -46,6 +42,7 @@ const AuthForm = (props) => {
         </label>
         <div className="control">
           <input
+            className="input"
             name="password"
             type="password"
             value={state.password}
@@ -56,12 +53,7 @@ const AuthForm = (props) => {
           />
         </div>
       </div>
-      {/* <div>
-          <label htmlFor="password">
-            <small>Password</small>
-          </label>
-          <input name="password" type="password" />
-        </div> */}
+
       {displayName === "Sign Up" && (
         <>
           <div className="field">
@@ -70,6 +62,7 @@ const AuthForm = (props) => {
             </label>
             <div className="control">
               <input
+                className="input"
                 name="firstName"
                 type="text"
                 onChange={(event) => {
@@ -86,6 +79,7 @@ const AuthForm = (props) => {
             </label>
             <div className="control">
               <input
+                className="input"
                 name="lastName"
                 type="text"
                 onChange={(event) => {
@@ -101,7 +95,7 @@ const AuthForm = (props) => {
       <div className="control">
         <button
           type="submit"
-          className="button"
+          className="button is-primary"
           onClick={() => {
             handleSubmit(state);
             dispatch(toggleModal());
@@ -111,7 +105,6 @@ const AuthForm = (props) => {
         </button>
       </div>
       {error && error.response && <div> {error.response.data} </div>}
-      {/* </form> */}
     </div>
   );
 };
