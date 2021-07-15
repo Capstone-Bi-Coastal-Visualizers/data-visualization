@@ -23,7 +23,6 @@ form div {
 .navBar-container {
   height: 60px;
   padding: 10px;
-  background-color: #6286a8;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -68,7 +67,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   }
 }
 
-.trip-history-pie-container {
+.chart-container {
   display: flex;
   width: 100%;
   align-items: flex-start;
@@ -84,7 +83,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .map-chart {
-  width: 80%;
+  width: 60%;
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -93,12 +92,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .table-container {
   margin-bottom: 4em;
-  justify-content: left;
 }
 
-.navigate-home-container {
-  padding-top: 8em;
-  text-align: center;
+.container {
   padding-top: 5em;
 }
 
@@ -107,30 +103,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   text-align: center;
 }
 
-/* Confirmation Page CSS */
-.confirmation-page-graph {
-  width: 70%;
-}
-
-.table-width {
-  width: 90%;
-}
-
-@media (max-width: 1000px) {
-  .confirmation-page-graph {
-    width: 90%;
-  }
-  .table-width {
-    width: 90%;
-  }
-}
-
-@media (max-width: 1000px) {
-  .confirmation-page-graph {
-    width: 90%;
-  }
-}
-/* Confirmation Page CSS */
 .result-container {
   display: flex;
   flex-direction: column;
@@ -175,3 +147,5 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   align-items: center;
   flex-direction: column;
 }
+
+

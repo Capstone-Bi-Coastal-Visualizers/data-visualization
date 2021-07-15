@@ -40,7 +40,7 @@ const SearchResult = () => {
             There was an error in loading your search. Please search a different
             trip or try again later
           </h2>
-          <Link to="/" className="button mt-3">
+          <Link to="/" className="button mt-3 is-primary">
             Return
           </Link>
         </div>
@@ -87,9 +87,9 @@ const SearchResult = () => {
     const differenceOne = budget - tripOneFlights - tripOneHotel;
     const differenceTwo = budget - tripTwoFlights - tripTwoHotel;
     const budgetOneBackgroundColor =
-      differenceOne > 0 ? "rgba(0, 255, 0, 0.2)" : "rgba(255, 0, 0, 0.2)";
+      differenceOne > 0 ? "rgba(255, 95, 160, 0.2)" : "rgba(5, 226, 205, 0.2)";
     const budgetTwoBackgroundColor =
-      differenceTwo > 0 ? "rgba(0, 255, 0, 0.2)" : "rgba(255, 0, 0, 0.2)";
+      differenceTwo > 0 ? "rgba(255, 95, 160, 0.2)" : "rgba(5, 226, 205, 0.2)";
     const data = {
       labels: [tripOneDestinationCity, tripTwoDestinationCity],
       datasets: [
@@ -98,8 +98,8 @@ const SearchResult = () => {
           stack: arbitraryStackKey,
           label: "Flight",
           backgroundColor: [
-            "rgba(54, 162, 235, 0.2)",
-            "rgba(54, 162, 235, 0.2)",
+            "rgba(50, 115, 220, 0.2)",
+            "rgba(50, 115, 220, 0.2)",
           ],
           data: [tripOneFlights, tripTwoFlights],
         },
@@ -107,8 +107,8 @@ const SearchResult = () => {
           stack: arbitraryStackKey,
           label: "Hotel",
           backgroundColor: [
-            "rgba(255, 206, 86, 0.2)",
-            "rgba(255, 206, 86, 0.2)",
+            "rgba(255, 255, 100, 0.2)",
+            "rgba(255, 255, 100, 0.2)",
           ],
           data: [tripOneHotel, tripTwoHotel],
         },
@@ -185,14 +185,14 @@ const SearchResult = () => {
           <div className="trips-bar-chart-selector">
             <Link
               to="/confirmation-page"
-              className="button"
+              className=""
               onClick={() => dispatch(setTrip(1))}
             >
               Select Trip One
             </Link>
             <Link
               to="/confirmation-page"
-              className="button"
+              className=""
               onClick={() => dispatch(setTrip(2))}
             >
               Select Trip Two
@@ -217,7 +217,7 @@ const SearchResult = () => {
             There was an error in loading your search. Please search a different
             trip or try again later
           </h2>
-          <Link to="/" className="button mt-3">
+          <Link to="/" className="button mt-3 is-primary">
             Return
           </Link>
         </div>
@@ -230,7 +230,7 @@ const SearchResult = () => {
     return (
       <div className="container navigate-home-container">
         <h2>Please navigate to home page to search for trip</h2>
-        <Link to="/" className="button mt-3">
+        <Link to="/" className="button mt-3 is-primary">
           Return
         </Link>
       </div>

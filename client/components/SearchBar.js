@@ -289,7 +289,7 @@ export default function SearchBar() {
           <Link
             to="/search-result"
             onClick={handleclick}
-            className="button is-danger"
+            className="button is-primary"
           >
             Submit
           </Link>

@@ -101,7 +101,7 @@ const AuthForm = (props) => {
       <div className="control">
         <button
           type="submit"
-          className="button"
+          className="button is-primary"
           onClick={() => {
             handleSubmit(state);
             dispatch(toggleModal());

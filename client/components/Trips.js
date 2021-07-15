@@ -53,13 +53,13 @@ const Trips = () => {
 
   const budgetBackgroundColor =
     hotelTotalCost + airfareTotalCost > totalBudget
-      ? "rgba(255, 0, 0, 0.2)"
-      : "rgba(0, 255, 0, 0.2)";
+      ? "rgba(255, 95, 160, 0.2)"
+      : "rgba(1, 209, 178, 0.2)";
 
   const budgetBorderColor =
     hotelTotalCost + airfareTotalCost > totalBudget
-      ? "rgba(255, 0, 0, 1)"
-      : "rgba(0, 255, 0, 1)";
+      ? "rgba(255, 95, 160, 1)"
+      : "rgba(1, 209, 178, 1)";
 
   const data = {
     labels: ["Hotel", "Airfare", budgetLabel],
@@ -69,13 +69,13 @@ const Trips = () => {
         // [hotel, airfare, savings]
         data: [hotelTotalCost, airfareTotalCost, totalBudget],
         backgroundColor: [
-          "rgba(255, 206, 86, 0.2)", // Hotel
-          "rgba(54, 162, 235, 0.2)", // Airfare
+          "rgba(255, 255, 100, 0.2)", // Hotel
+          "rgba(50, 115, 220, 0.2)", // Airfare
           budgetBackgroundColor, // Budget
         ],
         borderColor: [
-          "rgba(255, 206, 86, 1)", // Hotel border
-          "rgba(54, 162, 235, 1)", // Airfare border
+          "rgba(255, 255, 100, 1)", // Hotel border
+          "rgba(50, 115, 220, 1)", // Airfare border
           budgetBorderColor, // Budget border
         ],
         borderWidth: 1,
@@ -143,7 +143,7 @@ const Trips = () => {
           </Geographies>
           {markers.map(({ name, coordinates, markerOffset }, idx) => (
             <Marker key={idx} coordinates={coordinates}>
-              <g fill="#FF5533">
+              <g fill="#3273DC">
                 <circle r="3" />
               </g>
               <text

@@ -39,7 +39,7 @@ const ConfirmationPage = () => {
             No trip to display. Please navigate to the home page to search for
             trips.
           </p>
-          <Link to="/" className="button is-danger">
+          <Link to="/" className="button is-primary">
             Home Page
           </Link>
         </div>
@@ -111,7 +111,7 @@ const ConfirmationPage = () => {
     const budgetLabel = difference >= 0 ? "Remaining budget" : "Over budget";
     const destination = selectedTrip === 1 ? destinationOne : destinationTwo;
     const budgetBackgroundColor =
-      difference > 0 ? "rgba(0, 255, 0, 0.2)" : "rgba(255, 0, 0, 0.2)";
+      difference > 0 ? "rgba(1, 209, 178, 0.2)" : "rgba(255, 95, 160, 0.2)";
     const hotelCoordinates =
       selectedTrip === 1 ? tripOneHotelData : tripTwoHotelData;
     const destCoordinates = [
@@ -129,13 +129,13 @@ const ConfirmationPage = () => {
         {
           stack: arbitraryStackKey,
           label: "Flight",
-          backgroundColor: ["rgba(54, 162, 235, 0.2)"],
+          backgroundColor: ["rgba(50, 115, 220, 0.2)"],
           data: [selectedFlights],
         },
         {
           stack: arbitraryStackKey,
           label: "Hotel",
-          backgroundColor: ["rgba(255, 206, 86, 0.2)"],
+          backgroundColor: ["rgba(255, 255, 100, 0.2)"],
           data: [selectedHotel],
         },
         {
@@ -264,7 +264,7 @@ const ConfirmationPage = () => {
                 </h3>
               ) : (
                 <button
-                  className="button is-danger mt-4 mb-4 ml-3"
+                  className="button is-primary mt-4 mb-4 ml-3"
                   onClick={handleEmail}
                 >
                   E-mail
