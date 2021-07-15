@@ -21,12 +21,6 @@ async function seed() {
       email: "cody@gmail.com",
       password: "123",
     }),
-    User.create({
-      firstName: "john",
-      lastName: "last",
-      email: "john@gmail.com",
-      password: "123",
-    }),
   ]);
 
   //Create trip
