@@ -34,7 +34,7 @@ form div {
   align-items: center;
   height: 80px;
   margin-right: 5px;
-  margin-top: 5px;
+  /* margin-top: 5px; */
 }
 
 .navbar-button-container {
