@@ -17,6 +17,7 @@ class AutoComplete extends React.Component {
     this.handleSelection = this.handleSelection.bind(this);
     this.updateQuery = this.updateQuery.bind(this);
     this.fuzzyMatch = this.fuzzyMatch.bind(this);
+    this.checkValidation = this.checkValidation.bind(this);
   }
 
   fuzzyMatch(query) {
@@ -66,8 +67,14 @@ class AutoComplete extends React.Component {
     this.fuzzyMatch(query);
   }
 
+  checkValidation(location) {
+    if (this.props.valid.includes(location)) {
+      return true;
+    }
+  }
+
   render() {
-    const { name, placeholder } = this.props;
+    const { name, placeholder, location } = this.props;
     const { activeIndex, matches, query } = this.state;
 
     return (
@@ -77,7 +84,11 @@ class AutoComplete extends React.Component {
             <div className="dropdown-trigger">
               <input
                 type="text"
-                className="input is-shadowless"
+                className={`input ${
+                  this.props.valid.includes(location)
+                    ? "is-danger is-outlined"
+                    : ""
+                }`}
                 name={name}
                 value={query}
                 onChange={this.updateQuery}
