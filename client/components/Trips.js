@@ -92,18 +92,18 @@ const Trips = () => {
           <table className="table">
             <thead>
               <tr>
-                <th scope="col">Trip ID</th>
+                <th scope="col">Trip #</th>
                 <th scope="col">Destination</th>
                 <th scope="col">Departure Date</th>
                 <th scope="col">Return Date</th>
               </tr>
             </thead>
             <tbody>
-              {tripHistory.map((trip) => {
+              {tripHistory.map((trip, idx) => {
                 return (
                   <tr key={trip.id}>
                     <th scope="row">
-                      <Link to={`/trips/${trip.id}`}>{trip.id}</Link>
+                      <Link to={`/trips/${trip.id}`}>{idx + 1}</Link>
                     </th>
                     <td scope="row">{trip.cityName}</td>
                     <td scope="row">{trip.departureDate}</td>

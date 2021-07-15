@@ -259,7 +259,7 @@ const SearchResult = () => {
     return (
       <div className="container navigate-home-container">
         <h2>Please navigate to home page to search for trip</h2>
-        <Link to="/" className="button is primary mt-3">
+        <Link to="/" className="button is-primary mt-3">
           Return
         </Link>
       </div>
@@ -267,7 +267,7 @@ const SearchResult = () => {
   } else {
     return (
       <div className="container navigate-home-container">
-        <button class="button is-primary is-loading">Loading</button>
+        <button className="button is-primary is-loading">Loading</button>
       </div>
     );
   }
