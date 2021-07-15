@@ -267,7 +267,7 @@ const SearchResult = () => {
   } else {
     return (
       <div className="container navigate-home-container">
-        <button class="button is-primary is-loading">Loading</button>
+        <button className="button is-primary is-loading">Loading</button>
       </div>
     );
   }
