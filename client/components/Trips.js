@@ -46,6 +46,8 @@ const Trips = () => {
     return accumulator + current.budget;
   }, 0);
 
+  const leftOverBudget = totalBudget - airfareTotalCost - hotelTotalCost;
+
   const budgetLabel =
     hotelTotalCost + airfareTotalCost > totalBudget
       ? "Budget Deficit"
@@ -67,7 +69,7 @@ const Trips = () => {
       {
         label: "# of Votes",
         // [hotel, airfare, savings]
-        data: [airfareTotalCost, hotelTotalCost, totalBudget],
+        data: [airfareTotalCost, hotelTotalCost, Math.abs(leftOverBudget)],
         backgroundColor: [
           "rgba(54, 162, 235, 0.2)", // Airfare
           "rgba(255, 206, 86, 0.2)", // Hotel
