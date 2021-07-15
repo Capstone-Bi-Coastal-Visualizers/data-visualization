@@ -52,6 +52,17 @@ const SearchResult = () => {
           <Link to="/" className="button is-primary mt-3">
             Return
           </Link>
+          <div className={`modal ${showModal ? "is-active" : ""}`}>
+            <div className="modal-background"></div>
+            <div className="modal-content">
+              {displayName === "Login" ? <Login /> : <Signup />}
+            </div>
+            <button
+              className="modal-close is-large"
+              aria-label="close"
+              onClick={resetDisplayName}
+            ></button>
+          </div>
         </div>
       );
     }
@@ -229,6 +240,17 @@ const SearchResult = () => {
             onClick={resetDisplayName}
           ></button>
         </div>
+        <div className={`modal ${showModal ? "is-active" : ""}`}>
+          <div className="modal-background"></div>
+          <div className="modal-content">
+            {displayName === "Login" ? <Login /> : <Signup />}
+          </div>
+          <button
+            className="modal-close is-large"
+            aria-label="close"
+            onClick={resetDisplayName}
+          ></button>
+        </div>
       </div>
     );
   } else if (Object.keys(tripData).length >= 9) {
@@ -249,6 +271,17 @@ const SearchResult = () => {
           <Link to="/" className="button is-primary mt-3">
             Return
           </Link>
+          <div className={`modal ${showModal ? "is-active" : ""}`}>
+            <div className="modal-background"></div>
+            <div className="modal-content">
+              {displayName === "Login" ? <Login /> : <Signup />}
+            </div>
+            <button
+              className="modal-close is-large"
+              aria-label="close"
+              onClick={resetDisplayName}
+            ></button>
+          </div>
         </div>
       );
     }
@@ -262,6 +295,17 @@ const SearchResult = () => {
         <Link to="/" className="button is-primary mt-3">
           Return
         </Link>
+        <div className={`modal ${showModal ? "is-active" : ""}`}>
+          <div className="modal-background"></div>
+          <div className="modal-content">
+            {displayName === "Login" ? <Login /> : <Signup />}
+          </div>
+          <button
+            className="modal-close is-large"
+            aria-label="close"
+            onClick={resetDisplayName}
+          ></button>
+        </div>
       </div>
     );
   } else {

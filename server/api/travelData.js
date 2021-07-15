@@ -58,15 +58,17 @@ router.get("/hotel", async (req, res, next) => {
 
     let minPrice = 9999;
     let bestHotel = {};
-    hotelData.data.forEach((hotel) => {
-      if (hotel.price) {
-        let currPrice = Number(hotel.price.split(" ")[0].split("$")[1]);
-        if (currPrice < minPrice) {
-          minPrice = currPrice;
-          bestHotel = hotel;
+    if (hotelData) {
+      hotelData.data.forEach((hotel) => {
+        if (hotel.price) {
+          let currPrice = Number(hotel.price.split(" ")[0].split("$")[1]);
+          if (currPrice < minPrice) {
+            minPrice = currPrice;
+            bestHotel = hotel;
+          }
         }
-      }
-    });
+      });
+    }
 
     res.json(bestHotel);
   } catch (error) {
