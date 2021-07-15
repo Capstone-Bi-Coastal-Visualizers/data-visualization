@@ -62,20 +62,20 @@ const Trips = () => {
       : "rgba(0, 255, 0, 1)";
 
   const data = {
-    labels: ["Hotel ($)", "Airfare ($)", `${budgetLabel} ($)`],
+    labels: ["Airfare $", "Accommodations $", `${budgetLabel} $`],
     datasets: [
       {
         label: "# of Votes",
         // [hotel, airfare, savings]
-        data: [hotelTotalCost, airfareTotalCost, totalBudget],
+        data: [airfareTotalCost, hotelTotalCost, totalBudget],
         backgroundColor: [
-          "rgba(255, 206, 86, 0.2)", // Hotel
           "rgba(54, 162, 235, 0.2)", // Airfare
+          "rgba(255, 206, 86, 0.2)", // Hotel
           budgetBackgroundColor, // Budget
         ],
         borderColor: [
-          "rgba(255, 206, 86, 1)", // Hotel border
           "rgba(54, 162, 235, 1)", // Airfare border
+          "rgba(255, 206, 86, 1)", // Hotel border
           budgetBorderColor, // Budget border
         ],
         borderWidth: 1,
@@ -115,7 +115,7 @@ const Trips = () => {
           </table>
         </div>
         <div className="pie-chart box">
-          <h2 className="title">Cost Analysis</h2>
+          <h2 className="title">Total Cost Analysis</h2>
           <Pie data={data} />
         </div>
       </div>

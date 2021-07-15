@@ -138,13 +138,13 @@ const ConfirmationPage = () => {
       datasets: [
         {
           stack: arbitraryStackKey,
-          label: "Flight ($)",
+          label: "Airfare $",
           backgroundColor: ["rgba(54, 162, 235, 0.2)"],
           data: [selectedFlights],
         },
         {
           stack: arbitraryStackKey,
-          label: "Hotel ($)",
+          label: "Accommodations $",
           backgroundColor: ["rgba(255, 206, 86, 0.2)"],
           data: [selectedHotel],
         },

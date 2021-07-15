@@ -22,26 +22,26 @@ const TripDetail = (props) => {
   const budgetLabel = leftoverBudget > 0 ? "Budget Deficit" : "Budget Surplus";
 
   const budgetBackgroundColor =
-    leftoverBudget > 0 ? "rgba(255, 0, 0, 0.2)" : "rgba(0, 255, 0, 0.2)";
+    leftoverBudget > 0 ? "rgba(255, 95, 160, 0.2)" : "rgba(5, 226, 205, 0.2)";
 
   const budgetBorderColor =
-    leftoverBudget > 0 ? "rgba(255, 0, 0, 1)" : "rgba(0, 255, 0, 1)";
+    leftoverBudget > 0 ? "rgba(255, 95, 160, 1)" : "rgba(5, 226, 205, 1)";
 
   const data = {
-    labels: ["Hotel ($)", "Airfare ($)", `${budgetLabel} ($)`],
+    labels: ["Airfare $", "Accommodations $", `${budgetLabel} $`],
     datasets: [
       {
         label: "# of Votes",
         // [hotel, airfare, savings]
-        data: [trip.hotelCost, trip.airfareCost, Math.abs(leftoverBudget)],
+        data: [trip.airfareCost, trip.hotelCost, Math.abs(leftoverBudget)],
         backgroundColor: [
-          "rgba(255, 206, 86, 0.2)", // Hotel
-          "rgba(54, 162, 235, 0.2)", // Airfare
+          "rgba(50, 155, 220, 0.2)", // Airfare
+          "rgba(255, 255, 100, 0.2)", // Hotel
           budgetBackgroundColor, // Budget
         ],
         borderColor: [
-          "rgba(255, 206, 86, 1)", // Hotel border
-          "rgba(54, 162, 235, 1)", // Airfare border
+          "rgba(50, 155, 220, 1)", // Airfare border
+          "rgba(255, 255, 100, 1)", // Hotel border
           budgetBorderColor, // Budget border
         ],
         borderWidth: 1,

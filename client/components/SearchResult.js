@@ -104,7 +104,7 @@ const SearchResult = () => {
         // These two will be in the same stack.
         {
           stack: arbitraryStackKey,
-          label: "Flight ($)",
+          label: "Airfare $",
           backgroundColor: [
             "rgba(54, 162, 235, 0.2)",
             "rgba(54, 162, 235, 0.2)",
@@ -113,7 +113,7 @@ const SearchResult = () => {
         },
         {
           stack: arbitraryStackKey,
-          label: "Hotel ($)",
+          label: "Accommodations $",
           backgroundColor: [
             "rgba(255, 206, 86, 0.2)",
             "rgba(255, 206, 86, 0.2)",
@@ -122,7 +122,7 @@ const SearchResult = () => {
         },
         {
           stack: arbitraryStackKey,
-          label: "Budget ($)",
+          label: "Budget $",
           backgroundColor: [budgetOneBackgroundColor, budgetTwoBackgroundColor],
           data: [Math.abs(differenceOne), Math.abs(differenceTwo)],
         },
