@@ -19,19 +19,26 @@ export default function SearchBar() {
   const month = date.getMonth() + 1;
   const monthString =
     month.toString().length === 2 ? month + 1 : "0" + month.toString();
-  const today = `${date.getFullYear()}-${monthString}-${date.getDate()}`;
+  const defaultDepartureDate = `${date.getFullYear()}-${monthString}-${date.getDate()}`;
+  const ReturnDateValue = new Date(date.getTime() + 86400000 * 5);
+  const ReturnDateMonth = ReturnDateValue.getMonth() + 1;
+  const ReturnDateMonthString =
+    ReturnDateMonth.toString().length === 2
+      ? ReturnDateMonth + 1
+      : "0" + ReturnDateMonth.toString();
+  const defaultReturnDate = `${ReturnDateValue.getFullYear()}-${ReturnDateMonthString}-${ReturnDateValue.getDate()}`;
   const [firstTripState, setFirstTripState] = useState({
     origin: "",
     destination: "",
-    departureDate: today,
-    returnDate: today,
+    departureDate: defaultDepartureDate,
+    returnDate: defaultReturnDate,
   });
 
   const [secondTripState, setSecondTripState] = useState({
     origin: "",
     destination: "",
-    departureDate: today,
-    returnDate: today,
+    departureDate: defaultDepartureDate,
+    returnDate: defaultReturnDate,
   });
 
   const [airportCoordinates, setAirportCoordinates] = useState({});
