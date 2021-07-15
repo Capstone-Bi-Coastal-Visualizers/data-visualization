@@ -3,9 +3,18 @@ import { useSelector, useDispatch } from "react-redux";
 import { Bar } from "react-chartjs-2";
 import { Link } from "react-router-dom";
 import { setTrip } from "../store/tripData";
+import { Login, Signup } from "./AuthForm";
+import { toggleModal, modalContent } from "../store/auth";
 
 const SearchResult = () => {
   const tripData = useSelector((state) => state.tripDataReducer);
+  const auth = useSelector((state) => state.auth);
+  const { showModal, displayName } = auth;
+  const resetDisplayName = () => {
+    dispatch(toggleModal());
+    dispatch(modalContent(""));
+  };
+
   const dispatch = useDispatch();
   const {
     tripOneFirstFlight,
@@ -199,6 +208,17 @@ const SearchResult = () => {
             </Link>
           </div>
           <Bar data={data} options={options} />
+        </div>
+        <div className={`modal ${showModal ? "is-active" : ""}`}>
+          <div className="modal-background"></div>
+          <div className="modal-content">
+            {displayName === "Login" ? <Login /> : <Signup />}
+          </div>
+          <button
+            className="modal-close is-large"
+            aria-label="close"
+            onClick={resetDisplayName}
+          ></button>
         </div>
       </div>
     );
