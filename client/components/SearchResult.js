@@ -259,7 +259,7 @@ const SearchResult = () => {
     return (
       <div className="container navigate-home-container">
         <h2>Please navigate to home page to search for trip</h2>
-        <Link to="/" className="button is primary mt-3">
+        <Link to="/" className="button is-primary mt-3">
           Return
         </Link>
       </div>

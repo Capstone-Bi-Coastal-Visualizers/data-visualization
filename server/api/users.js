@@ -43,7 +43,8 @@ router.post("/email", async (req, res, next) => {
         pass: "group5capstone",
       },
     });
-
+    const difference = hotel + airfare - budget;
+    const budgetLabel = difference > 0 ? "Under Budget" : "Over Budget";
     // let transporter = nodemailer.createTransport({
     //   host: "smtp.ethereal.email",
     //   port: 587,
@@ -58,17 +59,22 @@ router.post("/email", async (req, res, next) => {
     const msg = {
       from: "bicoastalvisualizers@gmail.com", // sender address
       to: `${email}`, // list of receivers
-      subject: `Details on your trip to ${departureAirport}`, // Subject line
-      html: `<h1 style="color: black"> Departure Airport: ${departureAirport}</h1>
-      <h1 style="color: red"> Departure Date ${departureDate}</h1>
-      <h1 style="color: blue"> ${destinationAirport}</h1>
-      <h1 style="color: orange">${returnDate}</h1>
-      <h1 style="color: cyan">${hotel}</h1>
-      <h1 style="color: purple">${nights}</h1>
-      <h1 style="color: pink">${airfare}</h1>
-      <h1 style="color: white">${hotelPrice}</h1>
-      <h1 style="color: neon">${total}</h1>
-      <h1 style="color: teal">${budget}</h1>`, // plain text body
+      subject: `Details on your trip to ${destinationAirport}`, // Subject line
+      html: `<div style="text-align: center;">
+      <h1>Trip Details</h1>
+      <ul>
+      <li> Departure Airport: ${departureAirport}</li>
+      <li>Destination Airport: ${destinationAirport}</li>
+      <li> Departure Date: ${departureDate}</li>
+      <li> Return Date: ${returnDate}</li>
+      <li>${hotel}</li>
+      <li>Trip Duration: ${nights} nights</li>
+      <li>Airfare: $${airfare}.00</li>
+      <li>Accommodations: $${hotelPrice}.00</li>
+      <li>Total Expenses: $${total}.00</li>
+      <li>${budgetLabel}: ${Math.abs(difference)}</li>
+      </ul>
+      </div>`, // plain text body
     };
 
     const info = await transporter.sendMail(msg, function (err, data) {
