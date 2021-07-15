@@ -37,8 +37,8 @@ const SearchResult = () => {
       return (
         <div className="container navigate-home-container">
           <h2>
-            There was an error in loading your search. Please search a different
-            trip or try again later
+            Flight not available. Please search a different trip or try again
+            later
           </h2>
           <Link to="/" className="button mt-3">
             Return
@@ -65,8 +65,6 @@ const SearchResult = () => {
         ? tripTwoHotelNightlyRate * 1
         : tripTwoHotelNightlyRate * tripTwoStayDuration;
     const budget = tripData.budget;
-    const destinationOne = tripOneHotelData.location_string;
-    const destinationTwo = tripTwoHotelData.location_string;
 
     const tripOneDepartureCity = tripOneFirstFlight[2].filter((airportId) => {
       return airportId.PlaceId === tripOneFirstFlight[1].OutboundLeg.OriginId;
