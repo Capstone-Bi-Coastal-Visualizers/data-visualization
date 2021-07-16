@@ -2,7 +2,7 @@ import React from "react";
 import Routes from "./Routes";
 import NavBar from "./components/NavBar"
 
-const num = Math.floor(Math.random() * 10) + 1 
+const num = Math.floor(Math.random() * 7) + 1 
 const App = () => {
   return (
     <div style={{ 
