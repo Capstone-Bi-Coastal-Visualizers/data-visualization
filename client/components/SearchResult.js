@@ -3,17 +3,11 @@ import { useSelector, useDispatch } from "react-redux";
 import { Bar } from "react-chartjs-2";
 import { Link } from "react-router-dom";
 import { setTrip } from "../store/tripData";
-import { Login, Signup } from "./AuthForm";
-import { toggleModal, modalContent } from "../store/auth";
+import Modal from "./Modal";
+import ErrorMessage from "./ErrorMessage";
 
 const SearchResult = () => {
   const tripData = useSelector((state) => state.tripDataReducer);
-  const auth = useSelector((state) => state.auth);
-  const { showModal, displayName } = auth;
-  const resetDisplayName = () => {
-    dispatch(toggleModal());
-    dispatch(modalContent(""));
-  };
 
   const dispatch = useDispatch();
   const {
@@ -28,6 +22,7 @@ const SearchResult = () => {
     tripTwoHotelData,
     tripTwoStayDuration,
   } = tripData;
+  // Checking for successful API calls
   if (
     Object.keys(tripData).length >= 9 &&
     !tripOneFirstFlight["error"] &&
@@ -37,35 +32,25 @@ const SearchResult = () => {
     !tripTwoReturningFlight["error"] &&
     !tripTwoHotelData["error"]
   ) {
+    // Checking if any flights are unavailable
     if (
       !tripOneFirstFlight[1] ||
       !tripOneReturningFlight[1] ||
       !tripTwoFirstFlight[1] ||
       !tripTwoReturningFlight[1]
     ) {
+      // Requesting the user to return to the home page to search a new flight
       return (
-        <div className="container navigate-home-container">
-          <h2>
-            Flight not available. Please search a different trip or try again
-            later
-          </h2>
-          <Link to="/" className="button is-primary mt-3">
-            Return
-          </Link>
-          <div className={`modal ${showModal ? "is-active" : ""}`}>
-            <div className="modal-background"></div>
-            <div className="modal-content">
-              {displayName === "Login" ? <Login /> : <Signup />}
-            </div>
-            <button
-              className="modal-close is-large"
-              aria-label="close"
-              onClick={resetDisplayName}
-            ></button>
-          </div>
-        </div>
+        <>
+          <ErrorMessage
+            message={
+              "Flight not available. Please search a different trip or try again later"
+            }
+          />
+        </>
       );
     }
+    // Flights are available, so data from Redux store can be accessed without producing any errors
     const tripOneFlights =
       tripOneFirstFlight[1].MinPrice + tripOneReturningFlight[1].MinPrice;
     const tripTwoFlights =
@@ -150,7 +135,6 @@ const SearchResult = () => {
     };
 
     const options = {
-      // scaleLabel: currency(80),
       scales: {
         yAxes: [
           {
@@ -167,7 +151,7 @@ const SearchResult = () => {
         ],
       },
     };
-
+    // Returning search result
     return (
       <div className="container pt-6">
         <div className="trip-result-container">
@@ -229,31 +213,12 @@ const SearchResult = () => {
           </div>
           <Bar data={data} options={options} />
         </div>
-        <div className={`modal ${showModal ? "is-active" : ""}`}>
-          <div className="modal-background"></div>
-          <div className="modal-content">
-            {displayName === "Login" ? <Login /> : <Signup />}
-          </div>
-          <button
-            className="modal-close is-large"
-            aria-label="close"
-            onClick={resetDisplayName}
-          ></button>
-        </div>
-        <div className={`modal ${showModal ? "is-active" : ""}`}>
-          <div className="modal-background"></div>
-          <div className="modal-content">
-            {displayName === "Login" ? <Login /> : <Signup />}
-          </div>
-          <button
-            className="modal-close is-large"
-            aria-label="close"
-            onClick={resetDisplayName}
-          ></button>
-        </div>
+        <Modal />
       </div>
     );
-  } else if (Object.keys(tripData).length >= 9) {
+  }
+  // Checking if any API calls produced an error
+  else if (Object.keys(tripData).length >= 9) {
     if (
       tripOneFirstFlight["error"] ||
       tripOneReturningFlight["error"] ||
@@ -262,56 +227,35 @@ const SearchResult = () => {
       tripTwoReturningFlight["error"] ||
       tripTwoHotelData["error"]
     ) {
+      // Returning error message
       return (
-        <div className="container navigate-home-container">
-          <h2>
-            There was an error in loading your search. Please search a different
-            trip or try again later
-          </h2>
-          <Link to="/" className="button is-primary mt-3">
-            Return
-          </Link>
-          <div className={`modal ${showModal ? "is-active" : ""}`}>
-            <div className="modal-background"></div>
-            <div className="modal-content">
-              {displayName === "Login" ? <Login /> : <Signup />}
-            </div>
-            <button
-              className="modal-close is-large"
-              aria-label="close"
-              onClick={resetDisplayName}
-            ></button>
-          </div>
-        </div>
+        <>
+          <ErrorMessage
+            message={
+              "There was an error in loading your search. Please search a different trip or try again later"
+            }
+          />
+        </>
       );
     }
-  } else if (
-    tripOneStayDuration === null ||
-    tripOneStayDuration === undefined
-  ) {
+  }
+  // Checking if there is no trip data in the Redux store
+  // This will return when the user refreshes /search-result
+  else if (tripOneStayDuration === null || tripOneStayDuration === undefined) {
     return (
-      <div className="container navigate-home-container">
-        <h2>Please navigate to home page to search for trip</h2>
-        <Link to="/" className="button is-primary mt-3">
-          Return
-        </Link>
-        <div className={`modal ${showModal ? "is-active" : ""}`}>
-          <div className="modal-background"></div>
-          <div className="modal-content">
-            {displayName === "Login" ? <Login /> : <Signup />}
-          </div>
-          <button
-            className="modal-close is-large"
-            aria-label="close"
-            onClick={resetDisplayName}
-          ></button>
-        </div>
-      </div>
+      <>
+        <ErrorMessage
+          message={"Please navigate to home page to search for trip"}
+        />
+      </>
     );
-  } else {
+  }
+  // Loading screen
+  else {
     return (
       <div className="container navigate-home-container">
         <button className="button is-primary is-loading">Loading</button>
+        <Modal />
       </div>
     );
   }
