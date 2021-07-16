@@ -43,7 +43,7 @@ router.post("/email", async (req, res, next) => {
         pass: "group5capstone",
       },
     });
-    const difference = hotel + airfare - budget;
+    const difference = hotelPrice + airfare - budget;
     const budgetLabel = difference > 0 ? "Under Budget" : "Over Budget";
 
     // send mail with defined transport object
@@ -52,19 +52,15 @@ router.post("/email", async (req, res, next) => {
       to: `${email}`, // list of receivers
       subject: `Details on your trip to ${destinationAirport}`, // Subject line
       html: `<div>
-      <h1>Trip Details</h1>
-      <ul>
-      <li>Departure Airport: ${departureAirport}</li>
-      <li>Destination Airport: ${destinationAirport}</li>
-      <li>Departure Date: ${departureDate}</li>
-      <li>Return Date: ${returnDate}</li>
-      <li>${hotel}</li>
-      <li>Trip Duration: ${nights} nights</li>
-      <li>Airfare: $${airfare}.00</li>
-      <li>Accommodations: $${hotelPrice}.00</li>
-      <li>Total Expenses: $${total}.00</li>
-      <li>${budgetLabel}: ${Math.abs(difference)}</li>
-      </ul>
+        <h1><span style="color: #000000;"><strong>Trip Details</strong></span></h1>
+        <h2><span style="color: #000000;"><strong>${departureAirport} to&nbsp;${destinationAirport}</strong></span></h2>
+        <div><span style="color: #7e8c8d;">Depart: ${departureDate} |&nbsp;Return Date: ${returnDate}</span></div>
+        <div><span style="color: #7e8c8d;">Airfare: $${airfare}.00</span></div>
+        <div><span style="color: #7e8c8d;">Hotel Accommodations: $${hotelPrice}.00</span></div>
+        <div><span style="color: #7e8c8d;">Total Expenses: $${total}.00</span></div>
+        <div>&nbsp;</div>
+        <div><span style="color: #000000;"><strong>${budgetLabel}: $${Math.abs(difference)}.00</strong></span></div>
+        <div>&nbsp;</div>
       </div>`, // plain text body
     };
 

@@ -42,7 +42,7 @@ class AutoComplete extends React.Component {
 
     this.setState({
       activeIndex: 0,
-      query: selection.item.city,
+      query: selection.item.code,
       matches: [],
       airportObj: selection,
       selected: true,
