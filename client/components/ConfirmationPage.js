@@ -221,7 +221,7 @@ const ConfirmationPage = () => {
     };
 
     return (
-      <div className="container is-flex is-flex-direction-column is-justify-content-center is-align-items-center has-text-centered pt-6">
+      <div className="container is-flex is-flex-direction-column is-justify-content-center is-align-items-center has-text-centered pt-6 box">
         <h2 className="title">Confirmation</h2>
         <div className="confirmation-page-graph">
           <Bar data={data} options={options} />

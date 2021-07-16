@@ -12,7 +12,6 @@ import {
 } from "../store/tripData";
 
 export default function SearchBar() {
-  
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -21,7 +20,8 @@ export default function SearchBar() {
   const [flight1DateValid, setFlight1DateValid] = useState(true);
   const [flight2DateValid, setFlight2DateValid] = useState(true);
   const [tripBudget, setTripBudget] = useState("");
-  const date = new Date();
+  const todayDate = new Date();
+  const date = new Date(todayDate.getTime() + 86400000);
   const month = date.getMonth() + 1;
   const monthString =
     month.toString().length === 2 ? month + 1 : "0" + month.toString();
@@ -191,7 +191,6 @@ export default function SearchBar() {
   };
 
   return (
-   
     <div className="search-container">
       <div className="box-test input-container">
         <div className="field has-addons is-justify-content-center">
@@ -354,10 +353,7 @@ export default function SearchBar() {
             />
           </div>
           <div className="control">
-            <button
-              onClick={handleclick}
-              className="button is-primary"
-            >
+            <button onClick={handleclick} className="button is-primary">
               Submit
             </button>
           </div>

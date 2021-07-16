@@ -19,13 +19,13 @@ const TripDetail = (props) => {
 
   const leftoverBudget = trip.budget - trip.hotelCost - trip.airfareCost;
 
-  const budgetLabel = leftoverBudget > 0 ? "Budget Deficit" : "Budget Surplus";
+  const budgetLabel = leftoverBudget > 0 ? "Budget Surplus" : "Budget Deficit";
 
   const budgetBackgroundColor =
-    leftoverBudget > 0 ? "rgba(255, 95, 160, 0.2)" : "rgba(5, 226, 205, 0.2)";
+    leftoverBudget > 0 ? "rgba(5, 226, 205, 0.2)" : "rgba(255, 95, 160, 0.2)";
 
   const budgetBorderColor =
-    leftoverBudget > 0 ? "rgba(255, 95, 160, 1)" : "rgba(5, 226, 205, 1)";
+    leftoverBudget > 0 ? "rgba(5, 226, 205, 1)" : "rgba(255, 95, 160, 1)";
 
   const data = {
     labels: ["Airfare $", "Accommodations $", `${budgetLabel} $`],

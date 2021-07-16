@@ -45,28 +45,19 @@ router.post("/email", async (req, res, next) => {
     });
     const difference = hotel + airfare - budget;
     const budgetLabel = difference > 0 ? "Under Budget" : "Over Budget";
-    // let transporter = nodemailer.createTransport({
-    //   host: "smtp.ethereal.email",
-    //   port: 587,
-    //   secure: false, // true for 465, false for other ports
-    //   auth: {
-    //     user: "jamal.carter@ethereal.email", // generated ethereal user
-    //     pass: "AjFBqpjr7SzkzM3eVs", // generated ethereal password
-    //   },
-    // });
 
     // send mail with defined transport object
     const msg = {
       from: "bicoastalvisualizers@gmail.com", // sender address
       to: `${email}`, // list of receivers
       subject: `Details on your trip to ${destinationAirport}`, // Subject line
-      html: `<div style="text-align: center;">
+      html: `<div>
       <h1>Trip Details</h1>
       <ul>
-      <li> Departure Airport: ${departureAirport}</li>
+      <li>Departure Airport: ${departureAirport}</li>
       <li>Destination Airport: ${destinationAirport}</li>
-      <li> Departure Date: ${departureDate}</li>
-      <li> Return Date: ${returnDate}</li>
+      <li>Departure Date: ${departureDate}</li>
+      <li>Return Date: ${returnDate}</li>
       <li>${hotel}</li>
       <li>Trip Duration: ${nights} nights</li>
       <li>Airfare: $${airfare}.00</li>

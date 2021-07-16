@@ -4,10 +4,11 @@ import SearchBar from "./SearchBar";
 import { Login, Signup } from "./AuthForm";
 import { toggleModal, modalContent } from "../store/auth";
 
-
 export const Home = () => {
   const auth = useSelector((state) => state.auth);
   const { showModal, displayName } = auth;
+
+  const num = Math.floor(Math.random() * 7) + 1;
 
   const dispatch = useDispatch();
   const resetDisplayName = () => {
@@ -27,7 +28,16 @@ export const Home = () => {
           onClick={resetDisplayName}
         ></button>
       </div>
-      <SearchBar />
+      <div
+        style={{
+          backgroundSize: "cover",
+          overflow: "hidden",
+          // backgroundImage: `url("images/5.png")`,
+          backgroundImage: `url("images/${num}.png")`,
+        }}
+      >
+        <SearchBar />
+      </div>
     </div>
   );
 };
