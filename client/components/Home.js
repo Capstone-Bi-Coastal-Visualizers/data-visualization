@@ -30,13 +30,6 @@ export const Home = () => {
       </div>
       <div className="background-image"
         style={{
-          // -moz-background-size: cover
-          // -webkit-background-size: cover,
-          // -o-background-size: cover,
-          // background-size: cover,
-          // backgroundSize: "cover",
-          // overflow: "hidden",
-          // backgroundImage: `url("images/5.png")`,
           backgroundImage: `url("images/${num}.png")`,
         }}
       >
