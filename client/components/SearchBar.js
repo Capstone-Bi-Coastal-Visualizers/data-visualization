@@ -12,7 +12,6 @@ import {
 } from "../store/tripData";
 
 export default function SearchBar() {
-  
   const dispatch = useDispatch();
   const history = useHistory();
 
@@ -192,7 +191,6 @@ export default function SearchBar() {
   };
 
   return (
-   
     <div className="search-container">
       <div className="box-test input-container">
         <div className="field has-addons is-justify-content-center">

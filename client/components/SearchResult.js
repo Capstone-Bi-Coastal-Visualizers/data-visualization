@@ -153,45 +153,67 @@ const SearchResult = () => {
     };
     // Returning search result
     return (
-      <div className="container pt-6">
-        <div className="trip-result-container">
-          <div className="trip-1-result has-text-centered">
-            <h2 className="title">Trip One</h2>
-            <p>
-              <span>Leaving from:</span> {tripOneDepartureCity}
-            </p>
-            <h2>
-              <span>Going to:</span> {tripOneDestinationCity}
-            </h2>
-            <h3>
-              {differenceOne > 0
-                ? `Under budget by $${differenceOne.toFixed(2)}`
-                : `Over budget by $${Math.abs(differenceOne).toFixed(2)}`}
-            </h3>
+      <div className="container pt-6 box mb-6">
+        <div className="box">
+          <div className="trip-result-container">
+            <div className="trip-1-result has-text-centered">
+              <h2 className="title">Trip One</h2>
+              <p>
+                <span className="bold-text">Leaving from:</span>{" "}
+                {tripOneDepartureCity}
+              </p>
+              <h2>
+                <span className="bold-text">Going to:</span>{" "}
+                {tripOneDestinationCity}
+              </h2>
+              <h3>
+                {differenceOne > 0 ? (
+                  <>
+                    <span className="bold-text">Under budget:</span>{" "}
+                    {` $${differenceOne.toFixed(2)}`}
+                  </>
+                ) : (
+                  <>
+                    <span className="bold-text">Over budget:</span>
+                    {` $${Math.abs(differenceOne).toFixed(2)}`}
+                  </>
+                )}
+              </h3>
+            </div>
+            <div className="trip-2-result has-text-centered">
+              <h2 className="title">Trip Two</h2>
+              <p>
+                <span className="bold-text">Leaving from:</span>{" "}
+                {tripTwoDepartureCity}
+              </p>
+              <h2>
+                <span className="bold-text">Going to:</span>{" "}
+                {tripTwoDestinationCity}
+              </h2>
+              <h3>
+                {differenceTwo > 0 ? (
+                  <>
+                    <span className="bold-text">Under budget:</span>
+                    {` $${differenceTwo.toFixed(2)}`}
+                  </>
+                ) : (
+                  <>
+                    <span className="bold-text">Over budget:</span>
+                    {` $${Math.abs(differenceTwo).toFixed(2)}`}
+                  </>
+                )}
+              </h3>
+            </div>
           </div>
-          <div className="trip-2-result has-text-centered">
-            <h2 className="title">Trip Two</h2>
-            <p>
-              <span>Leaving from:</span> {tripTwoDepartureCity}
-            </p>
+          <div className="trip-analysis">
+            <p className="title">Analysis</p>
             <h2>
-              <span>Going to:</span> {tripTwoDestinationCity}
+              <span className="bold-text">Cheaper to travel to:</span>{" "}
+              {differenceOne > differenceTwo
+                ? tripOneDestinationCity
+                : tripTwoDestinationCity}
             </h2>
-            <h3>
-              {differenceTwo > 0
-                ? `Under budget by $${differenceTwo.toFixed(2)}`
-                : `Over budget by $${Math.abs(differenceTwo).toFixed(2)}`}
-            </h3>
           </div>
-        </div>
-        <div className="trip-analysis">
-          <p className="title">Analysis</p>
-          <h2>
-            Cheaper to travel to:{" "}
-            {differenceOne > differenceTwo
-              ? tripOneDestinationCity
-              : tripTwoDestinationCity}
-          </h2>
         </div>
         <div className="trips-bar-chart">
           <div className="trips-bar-chart-selector">

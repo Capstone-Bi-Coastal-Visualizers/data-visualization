@@ -45,7 +45,6 @@ const Trips = () => {
   const totalBudget = tripHistory.reduce((accumulator, current) => {
     return accumulator + current.budget;
   }, 0);
-
   const leftOverBudget = totalBudget - airfareTotalCost - hotelTotalCost;
 
   const budgetLabel =
