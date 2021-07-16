@@ -16,7 +16,7 @@ export const Home = () => {
     dispatch(modalContent(""));
   };
   return (
-    <div className="search-container">
+    <div className="search-modal-container">
       <div className={`modal ${showModal ? "is-active" : ""}`}>
         <div className="modal-background"></div>
         <div className="modal-content">
@@ -28,10 +28,14 @@ export const Home = () => {
           onClick={resetDisplayName}
         ></button>
       </div>
-      <div
+      <div className="background-image"
         style={{
-          backgroundSize: "cover",
-          overflow: "hidden",
+          // -moz-background-size: cover
+          // -webkit-background-size: cover,
+          // -o-background-size: cover,
+          // background-size: cover,
+          // backgroundSize: "cover",
+          // overflow: "hidden",
           // backgroundImage: `url("images/5.png")`,
           backgroundImage: `url("images/${num}.png")`,
         }}

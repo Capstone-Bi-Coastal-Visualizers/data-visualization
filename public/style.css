@@ -236,9 +236,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .search-container {
-  padding-top: 5em;
-  /* background: url("images/hero-image.jpg") no-repeat center center fixed; */
-  /* background: url(images/5.png) no-repeat center center fixed; */
+  padding-top: 10em;
   height: 100vh;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -246,6 +244,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-size: cover;
 }
 
+.background-image {
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 .input-container {
   width: 70%;
   margin: 0 auto;
