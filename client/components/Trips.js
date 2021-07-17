@@ -54,13 +54,13 @@ const Trips = () => {
 
   const budgetBackgroundColor =
     hotelTotalCost + airfareTotalCost > totalBudget
-      ? "rgba(255, 0, 0, 0.2)"
-      : "rgba(0, 255, 0, 0.2)";
+      ? "rgba(255, 95, 160, 0.2)"
+      : "rgba(5, 226, 205, 0.2)";
 
   const budgetBorderColor =
     hotelTotalCost + airfareTotalCost > totalBudget
-      ? "rgba(255, 0, 0, 1)"
-      : "rgba(0, 255, 0, 1)";
+      ? "rgba(255, 95, 160, 0.2)"
+      : "rgba(5, 226, 205, 1)";
 
   const data = {
     labels: ["Airfare $", "Accommodations $", `${budgetLabel} $`],

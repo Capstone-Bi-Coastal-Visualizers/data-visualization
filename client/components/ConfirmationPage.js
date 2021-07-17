@@ -121,7 +121,7 @@ const ConfirmationPage = () => {
     const budgetLabel = difference >= 0 ? "Remaining budget" : "Over budget";
     const destination = selectedTrip === 1 ? destinationOne : destinationTwo;
     const budgetBackgroundColor =
-      difference > 0 ? "rgba(0, 255, 0, 0.2)" : "rgba(255, 0, 0, 0.2)";
+      difference > 0 ? "rgba(5, 226, 205, 0.2)" : "rgba(255, 95, 160, 0.2)";
     const hotelCoordinates =
       selectedTrip === 1 ? tripOneHotelData : tripTwoHotelData;
     const destCoordinates = [
