@@ -8,7 +8,7 @@ export const Home = () => {
   const auth = useSelector((state) => state.auth);
   const { showModal, displayName } = auth;
 
-  const num = Math.floor(Math.random() * 7) + 1;
+  const num = Math.floor(Math.random() * 6) + 1;
 
   const dispatch = useDispatch();
   const resetDisplayName = () => {
