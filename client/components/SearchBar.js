@@ -329,7 +329,7 @@ export default function SearchBar() {
           <div className="control ">
             <input
               type="text"
-              placeholder="Budget"
+              placeholder="$ Budget"
               name="budget"
               className={`input ${
                 tripBudget === " " ? "is-danger is-outlined" : ""
