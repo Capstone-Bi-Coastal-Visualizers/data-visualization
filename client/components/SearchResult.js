@@ -219,7 +219,6 @@ const SearchResult = () => {
           <div className="trips-bar-chart-selector">
             <Link
               to="/confirmation-page"
-              budgetLabel
               className="button is-primary "
               onClick={() => dispatch(setTrip(1))}
             >

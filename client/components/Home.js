@@ -8,7 +8,7 @@ export const Home = () => {
   const auth = useSelector((state) => state.auth);
   const { showModal, displayName } = auth;
 
-  const num = Math.floor(Math.random() * 7) + 1;
+  // const num = Math.floor(Math.random() * 6) + 1;
 
   const dispatch = useDispatch();
   const resetDisplayName = () => {
@@ -16,6 +16,7 @@ export const Home = () => {
     dispatch(modalContent(""));
   };
   return (
+ 
     <div className="search-modal-container">
       <div className={`modal ${showModal ? "is-active" : ""}`}>
         <div className="modal-background"></div>
@@ -30,7 +31,7 @@ export const Home = () => {
       </div>
       <div className="background-image"
         style={{
-          backgroundImage: `url("images/${num}.png")`,
+          backgroundImage: `url("images/6.png")`,
         }}
       >
         <SearchBar />
