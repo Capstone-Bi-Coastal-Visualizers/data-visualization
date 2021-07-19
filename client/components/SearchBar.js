@@ -103,8 +103,9 @@ export default function SearchBar() {
     if (flight1Dates < 0) setFlight1DateValid(false);
     if (flight2Dates < 0) setFlight2DateValid(false);
 
-    if (tripBudget === "" || tripBudget < 0) {
+    if (Number(tripBudget) <= 0 || !Number(tripBudget)) {
       setTripBudget(" ");
+      return false;
     }
 
     if (
@@ -337,18 +338,7 @@ export default function SearchBar() {
               required
               value={tripBudget}
               onChange={(event) => {
-                if (
-                  !Number(event.target.value) ||
-                  Number(event.target.value) < 0
-                ) {
-                  window.alert(
-                    "Please enter a number greater than 0 in the budget input"
-                  );
-                  event.target.value = "";
-                  setTripBudget("");
-                } else {
-                  setTripBudget(event.target.value);
-                }
+                setTripBudget(event.target.value);
               }}
             />
           </div>
