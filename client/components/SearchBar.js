@@ -201,7 +201,7 @@ export default function SearchBar() {
 
   return (
     <div className="search-container">
-      <div className="box-test input-container">
+      <div className="box-test input-container ">
         <div className="search-row-container">
 
         <div className="input-container">
