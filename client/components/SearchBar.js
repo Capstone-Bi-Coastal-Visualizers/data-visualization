@@ -25,14 +25,22 @@ export default function SearchBar() {
   const month = date.getMonth() + 1;
   const monthString =
     month.toString().length === 2 ? month + 1 : "0" + month.toString();
-  const defaultDepartureDate = `${date.getFullYear()}-${monthString}-${date.getDate()}`;
+  const departureDateString =
+    date.getDate().toString().length === 2
+      ? date.getDate().toString()
+      : "0" + date.getDate().toString();
+  const defaultDepartureDate = `${date.getFullYear()}-${monthString}-${departureDateString}`;
   const ReturnDateValue = new Date(date.getTime() + 86400000 * 5);
   const ReturnDateMonth = ReturnDateValue.getMonth() + 1;
   const ReturnDateMonthString =
     ReturnDateMonth.toString().length === 2
       ? ReturnDateMonth + 1
       : "0" + ReturnDateMonth.toString();
-  const defaultReturnDate = `${ReturnDateValue.getFullYear()}-${ReturnDateMonthString}-${ReturnDateValue.getDate()}`;
+  const returnDateString =
+    ReturnDateValue.getDate().toString().length === 2
+      ? ReturnDateValue.getDate().toString()
+      : "0" + ReturnDateValue.getDate().toString();
+  const defaultReturnDate = `${ReturnDateValue.getFullYear()}-${ReturnDateMonthString}-${returnDateString}`;
   const [firstTripState, setFirstTripState] = useState({
     origin: null,
     destination: null,
@@ -194,8 +202,10 @@ export default function SearchBar() {
   return (
     <div className="search-container">
       <div className="box-test input-container">
-        <div className="field has-addons is-justify-content-center">
-          <div className="control has-icons-right">
+        <div className="search-row-container">
+
+        <div className="input-container">
+          <div className="control has-icons-right location-input">
             <Autocomplete
               name="trip1Origin"
               label="airports"
@@ -209,7 +219,11 @@ export default function SearchBar() {
               <i className="fas fa-plane-departure"></i>
             </span>
           </div>
-          <div className="control has-icons-right ">
+        </div>
+
+
+        <div className="input-container">
+          <div className="control has-icons-right location-input">
             <Autocomplete
               name="trip1Dest"
               label="airports"
@@ -223,7 +237,10 @@ export default function SearchBar() {
               <i className="fas fa-plane-arrival"></i>
             </span>
           </div>
-          <div className="control">
+        </div>
+
+        <div className="input-container">
+          <div className="control location-input">
             <input
               type="date"
               placeholder="departure date"
@@ -241,7 +258,10 @@ export default function SearchBar() {
               }}
             />
           </div>
-          <div className="control">
+        </div>
+
+        <div className="input-container">
+          <div className="control location-input">
             <input
               type="date"
               placeholder="return date"
@@ -260,95 +280,118 @@ export default function SearchBar() {
             />
           </div>
         </div>
-        <div className="field has-addons is-justify-content-center">
-          <div className="control has-icons-right">
-            <Autocomplete
-              name="trip2Origin"
-              label="airports"
-              setTripAirportCode={setAirportCode}
-              firstFlight={false}
-              location="origin"
-              placeholder="Leaving from"
-              valid={flight2Validation}
-            />
-            <span className="icon is-small is-right">
-              <i className="fas fa-plane-departure"></i>
-            </span>
-          </div>
-          <div className="control has-icons-right">
-            <Autocomplete
-              name="trip2Dest"
-              label="airports"
-              setTripAirportCode={setAirportCode}
-              firstFlight={false}
+
+        </div>
+
+
+
+
+        <div className="search-row-container">
+
+          <div className="input-container">
+                <div className="control has-icons-right location-input">
+                  <Autocomplete
+                    name="trip2Origin"
+                    label="airports"
+                    setTripAirportCode={setAirportCode}
+                    firstFlight={false}
+                    location="origin"
+                    placeholder="Leaving from"
+                    valid={flight2Validation}
+                  />
+                  <span className="icon is-small is-right">
+                    <i className="fas fa-plane-departure"></i>
+                  </span>
+                </div>
+              </div>
+
+<div className="input-container">
+      <div className="control has-icons-right location-input">
+          <Autocomplete
+           name="trip2Dest"
+            label="airports"
+             setTripAirportCode={setAirportCode}
+               firstFlight={false}
               location="destination"
               placeholder="Going to"
               valid={flight2Validation}
             />
             <span className="icon is-small is-right">
-              <i className="fas fa-plane-arrival"></i>
+               <i className="fas fa-plane-arrival"></i>
             </span>
-          </div>
-          <div className="control">
-            <input
+           </div>
+           </div>
+
+           <div className="input-container">
+           <div className="control location-input">
+             <input
               type="date"
-              placeholder="departure date"
-              name="departureDate"
-              className={`input ${
+               placeholder="departure date"
+               name="departureDate"
+               className={`input ${
                 !flight2DateValid ? "is-danger is-outlined" : ""
-              }`}
+               }`}
               required
-              value={secondTripState.departureDate}
-              onChange={(event) => {
-                setSecondTripState({
-                  ...secondTripState,
-                  departureDate: event.target.value,
-                });
-              }}
-            />
-          </div>
-          <div className="control">
-            <input
+             value={secondTripState.departureDate}
+               onChange={(event) => {
+                 setSecondTripState({
+                   ...secondTripState,
+                   departureDate: event.target.value,
+                 });
+               }}
+             />
+           </div>
+           </div>
+
+           <div className="input-container">
+           <div className="control location-input">
+             <input
               type="date"
-              placeholder="return date"
+               placeholder="return date"
               name="returnDate"
               className={`input ${
                 !flight2DateValid ? "is-danger is-outlined" : ""
               }`}
+               required
+               value={secondTripState.returnDate}
+               onChange={(event) => {
+                 setSecondTripState({
+                   ...secondTripState,
+                   returnDate: event.target.value,
+                 });
+               }}
+             />
+           </div>
+         </div>
+         </div>
+
+         <div className="field has-addons is-justify-content-center">
+           <div className="control ">
+             <input
+               type="text"
+               placeholder="$ Budget"
+               name="budget"
+               className={`input ${
+                 tripBudget === " " ? "is-danger is-outlined" : ""
+               }`}
               required
-              value={secondTripState.returnDate}
-              onChange={(event) => {
-                setSecondTripState({
-                  ...secondTripState,
-                  returnDate: event.target.value,
-                });
-              }}
-            />
-          </div>
-        </div>
-        <div className="field has-addons is-justify-content-center">
-          <div className="control ">
-            <input
-              type="text"
-              placeholder="$ Budget"
-              name="budget"
-              className={`input ${
-                tripBudget === " " ? "is-danger is-outlined" : ""
-              }`}
-              required
-              value={tripBudget}
-              onChange={(event) => {
-                setTripBudget(event.target.value);
-              }}
-            />
-          </div>
-          <div className="control">
-            <button onClick={handleclick} className="button is-primary">
-              Submit
+               value={tripBudget}
+               onChange={(event) => {
+                 setTripBudget(event.target.value);
+               }}
+             />
+           </div>
+           </div>
+
+
+           <div className="control">
+             <button onClick={handleclick} className="button is-primary">
+               Submit
             </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
+           </div>
+         </div>
+         </div>
+
+
+      );     
 }
