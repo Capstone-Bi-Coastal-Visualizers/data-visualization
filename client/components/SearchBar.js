@@ -20,27 +20,15 @@ export default function SearchBar() {
   const [flight1DateValid, setFlight1DateValid] = useState(true);
   const [flight2DateValid, setFlight2DateValid] = useState(true);
   const [tripBudget, setTripBudget] = useState("");
-  const todayDate = new Date();
-  const date = new Date(todayDate.getTime() + 86400000);
-  const month = date.getMonth() + 1;
-  const monthString =
-    month.toString().length === 2 ? month + 1 : "0" + month.toString();
-  const departureDateString =
-    date.getDate().toString().length === 2
-      ? date.getDate().toString()
-      : "0" + date.getDate().toString();
-  const defaultDepartureDate = `${date.getFullYear()}-${monthString}-${departureDateString}`;
-  const ReturnDateValue = new Date(date.getTime() + 86400000 * 5);
-  const ReturnDateMonth = ReturnDateValue.getMonth() + 1;
-  const ReturnDateMonthString =
-    ReturnDateMonth.toString().length === 2
-      ? ReturnDateMonth + 1
-      : "0" + ReturnDateMonth.toString();
-  const returnDateString =
-    ReturnDateValue.getDate().toString().length === 2
-      ? ReturnDateValue.getDate().toString()
-      : "0" + ReturnDateValue.getDate().toString();
-  const defaultReturnDate = `${ReturnDateValue.getFullYear()}-${ReturnDateMonthString}-${returnDateString}`;
+  const getTripDate = (date) => {
+    const month = date.getMonth() + 1;
+    const monthString = month.toString().length === 2 ? month + 1 : "0" + month.toString();
+    const dateString = date.getDate().toString().length === 2 ? date.getDate().toString() : "0" + date.getDate().toString();
+    return `${date.getFullYear()}-${monthString}-${dateString}`;
+  };
+  const defaultDepartureDate = getTripDate(new Date());
+  const defaultReturnDate = getTripDate(new Date(new Date().getTime() + 86400000 * 5));
+  
   const [firstTripState, setFirstTripState] = useState({
     origin: null,
     destination: null,
@@ -201,10 +189,12 @@ export default function SearchBar() {
 
   return (
     <div className="search-container">
-      <div className="box-test input-container ">
+      <div className="box-test input-container">
+        <h2 className="trip-header">Trip One</h2>
         <div className="search-row-container">
 
-        <div className="input-container">
+        <div className="pair-search-container">
+        <div className="input-container-search">
           <div className="control has-icons-right location-input">
             <Autocomplete
               name="trip1Origin"
@@ -222,7 +212,7 @@ export default function SearchBar() {
         </div>
 
 
-        <div className="input-container">
+        <div className="input-container-search">
           <div className="control has-icons-right location-input">
             <Autocomplete
               name="trip1Dest"
@@ -238,8 +228,9 @@ export default function SearchBar() {
             </span>
           </div>
         </div>
-
-        <div className="input-container">
+        </div>
+        <div className="pair-search-container">
+        <div className="input-container-search">
           <div className="control location-input">
             <input
               type="date"
@@ -260,7 +251,7 @@ export default function SearchBar() {
           </div>
         </div>
 
-        <div className="input-container">
+        <div className="input-container-search">
           <div className="control location-input">
             <input
               type="date"
@@ -280,15 +271,14 @@ export default function SearchBar() {
             />
           </div>
         </div>
-
+        </div>
         </div>
 
 
-
-
+        <h2 className="trip-header">Trip Two</h2>
         <div className="search-row-container">
-
-          <div className="input-container">
+        <div className="pair-search-container">
+          <div className="input-container-search">
                 <div className="control has-icons-right location-input">
                   <Autocomplete
                     name="trip2Origin"
@@ -305,7 +295,7 @@ export default function SearchBar() {
                 </div>
               </div>
 
-<div className="input-container">
+<div className="input-container-search">
       <div className="control has-icons-right location-input">
           <Autocomplete
            name="trip2Dest"
@@ -321,8 +311,10 @@ export default function SearchBar() {
             </span>
            </div>
            </div>
+           </div>
 
-           <div className="input-container">
+           <div className="pair-search-container">
+           <div className="input-container-search">
            <div className="control location-input">
              <input
               type="date"
@@ -343,7 +335,7 @@ export default function SearchBar() {
            </div>
            </div>
 
-           <div className="input-container">
+           <div className="input-container-search">
            <div className="control location-input">
              <input
               type="date"
@@ -364,9 +356,10 @@ export default function SearchBar() {
            </div>
          </div>
          </div>
+         </div>
 
          <div className="field has-addons is-justify-content-center">
-           <div className="control ">
+           <div className="control budget-input">
              <input
                type="text"
                placeholder="$ Budget"

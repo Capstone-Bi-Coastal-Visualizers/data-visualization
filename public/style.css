@@ -160,6 +160,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     width: 90%;
   }
 }
+
 /* Confirmation Page CSS */
 .result-container {
   display: flex;
@@ -232,6 +233,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
 .input-container {
   width: 70%;
   margin: 0 auto;
@@ -259,11 +261,68 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   align-items: flex-start;
 }
 
-.input-container {
+.input-container-search {
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 52px
 }
 
 .location-input {
   width: 180px;
+}
+
+.trip-header {
+  color:rgb(1, 12, 112);
+}
+
+
+.pair-search-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.budget-input {
+  width: 180px;
+}
+
+@media (max-width: 1080px) {
+  .search-row-container{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .input-container {
+    width: 500px;
+  }
+  .search-container {
+    padding-top: 2em;
+  }
+  .pair-search-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@media (max-width: 550px) {
+  .search-row-container{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .input-container {
+    width: 300px;
+  }
+  .search-container {
+    padding-top: 2em;
+  }
+  .pair-search-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+  }
 }
