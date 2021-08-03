@@ -146,21 +146,6 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 90%;
 }
 
-@media (max-width: 1000px) {
-  .confirmation-page-graph {
-    width: 90%;
-  }
-  .table-width {
-    width: 90%;
-  }
-}
-
-@media (max-width: 1000px) {
-  .confirmation-page-graph {
-    width: 90%;
-  }
-}
-
 /* Confirmation Page CSS */
 .result-container {
   display: flex;
@@ -289,6 +274,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 180px;
 }
 
+
+
 @media (max-width: 1080px) {
   .search-row-container{
     flex-direction: column;
@@ -325,4 +312,26 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     justify-content: space-between;
     width: 100%;
   }
+
+}
+
+@media (max-width: 1000px) {
+  .confirmation-page-graph {
+    width: 90%;
+  }
+  .table-width {
+    width: 90%;
+  }
+}
+
+.modal-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.box-login {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+
+  width: 250px !important;
 }
