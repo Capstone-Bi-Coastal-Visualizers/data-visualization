@@ -105,6 +105,23 @@ const AuthForm = (props) => {
         </button>
       </div>
       {error && error.response && <div> {error.response.data} </div>}
+      {displayName === "Login" ? (
+        <button
+          className="button is-primary mt-2"
+          onClick={() => {
+            setState({
+              email: "cody@gmail.com",
+              password: "123",
+              name: "login",
+            });
+            handleSubmit(state);
+          }}
+        >
+          Demo Login
+        </button>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };

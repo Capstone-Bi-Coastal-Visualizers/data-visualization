@@ -251,7 +251,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 52px
+  height: 52px;
 }
 
 .location-input {
@@ -259,9 +259,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 
 .trip-header {
-  color:rgb(1, 12, 112);
+  color: rgb(1, 12, 112);
 }
-
 
 .pair-search-container {
   display: flex;
@@ -274,10 +273,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   width: 180px;
 }
 
-
-
 @media (max-width: 1080px) {
-  .search-row-container{
+  .search-row-container {
     flex-direction: column;
     justify-content: center;
   }
@@ -299,11 +296,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .table-width {
     width: 90%;
   }
-
 }
 
 @media (max-width: 550px) {
-  .search-row-container{
+  .search-row-container {
     flex-direction: column;
     justify-content: center;
   }
@@ -319,13 +315,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     justify-content: space-between;
     width: 100%;
   }
-  th{
+  th {
     padding: 2px !important;
-    font-size: .75em;
+    font-size: 0.75em;
   }
-  td{
+  td {
     padding: 2px !important;
-    font-size: .75em;
+    font-size: 0.75em;
   }
   .trip-history-pie-container {
     display: flex;
@@ -342,10 +338,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     justify-content: center;
   }
   .th-td-trip-detail {
-    font-size: .50em;
-  } 
+    font-size: 0.5em;
+  }
 }
-
 
 .modal-content {
   display: flex;
@@ -357,4 +352,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-color: rgba(255, 255, 255, 0.7) !important;
 
   width: 250px !important;
+}
+
+.logo-image {
+  cursor: pointer;
 }
