@@ -57,36 +57,36 @@ const TripDetail = (props) => {
         <table className="table">
           <thead>
             <tr>
-              <th scope="col">Trip ID</th>
-              <th scope="col">Destination</th>
-              <th scope="col">Departure Date</th>
-              <th scope="col">Return Date</th>
-              <th scope="col">Airline(s)</th>
-              <th scope="col">Hotel</th>
-              <th scope="col">Airfare</th>
-              <th scope="col">Hotel Cost</th>
-              <th scope="col">Budget</th>
+              <th className="th-td-trip-detail" scope="col">Trip ID</th>
+              <th className="th-td-trip-detail" scope="col">Destination</th>
+              <th className="th-td-trip-detail" scope="col">Departure Date</th>
+              <th className="th-td-trip-detail" scope="col">Return Date</th>
+              <th className="th-td-trip-detail" scope="col">Airline(s)</th>
+              <th className="th-td-trip-detail" scope="col">Hotel</th>
+              <th className="th-td-trip-detail" scope="col">Airfare</th>
+              <th className="th-td-trip-detail" scope="col">Hotel Cost</th>
+              <th className="th-td-trip-detail" scope="col">Budget</th>
             </tr>
           </thead>
           <tbody>
             <tr key={trip.id}>
-              <td scope="row">{trip.id}</td>
-              <td scope="row">{trip.cityName}</td>
-              <td scope="row">{trip.departureDate}</td>
-              <td scope="row">{trip.returnDate}</td>
-              <td scope="row">
+              <td className="th-td-trip-detail" scope="row">{trip.id}</td>
+              <td className="th-td-trip-detail" scope="row">{trip.cityName}</td>
+              <td className="th-td-trip-detail" scope="row">{trip.departureDate}</td>
+              <td className="th-td-trip-detail" scope="row">{trip.returnDate}</td>
+              <td className="th-td-trip-detail" scope="row">
                 {trip.airlineNames && trip.airlineNames.length > 1
                   ? `${trip.airlineNames[0]}, ${trip.airlineNames[1]}`
                   : trip.airlineNames}
               </td>
-              <td scope="row">{trip.hotelName}</td>
-              <td scope="row">
+              <td className="th-td-trip-detail" scope="row">{trip.hotelName}</td>
+              <td className="th-td-trip-detail" scope="row">
                 ${trip.airfareCost ? trip.airfareCost.toFixed(2) : ""}
               </td>
-              <td scope="row">
+              <td className="th-td-trip-detail" scope="row">
                 ${trip.hotelCost ? trip.hotelCost.toFixed(2) : ""}
               </td>
-              <td scope="row">${trip.budget ? trip.budget.toFixed(2) : ""}</td>
+              <td className="th-td-trip-detail" scope="row">${trip.budget ? trip.budget.toFixed(2) : ""}</td>
             </tr>
           </tbody>
         </table>
