@@ -46,6 +46,7 @@ class Routes extends Component {
               path="/confirmation-page"
               component={ConfirmationPage}
             />
+            <Redirect to="/" />
           </Switch>
         )}
       </div>
