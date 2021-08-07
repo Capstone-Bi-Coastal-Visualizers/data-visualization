@@ -109,11 +109,12 @@ const AuthForm = (props) => {
         <button
           className="button is-primary mt-2"
           onClick={() => {
-            setState({
+            handleSubmit({
               email: "cody@gmail.com",
               password: "123",
               name: "login",
             });
+            dispatch(toggleModal());
           }}
         >
           Demo Login
