@@ -114,7 +114,6 @@ const AuthForm = (props) => {
               password: "123",
               name: "login",
             });
-            handleSubmit(state);
           }}
         >
           Demo Login
