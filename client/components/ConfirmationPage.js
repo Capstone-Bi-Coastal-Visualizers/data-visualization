@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Bar } from "react-chartjs-2";
 import axios from "axios";
 import { toggleModal, modalContent } from "../store/auth";
-import { Login, Signup } from "./AuthForm";
+import Modal from "./Modal";
 
 const ConfirmationPage = () => {
   const [emailConfirm, setEmailConfirm] = useState(false);
@@ -283,17 +283,7 @@ const ConfirmationPage = () => {
             </div>
           )}
         </div>
-        <div className={`modal ${auth.showModal ? "is-active" : ""}`}>
-          <div className="modal-background"></div>
-          <div className="modal-content">
-            <div>{auth.displayName === "Login" ? <Login /> : <Signup />}</div>
-          </div>
-          <button
-            className="modal-close is-large"
-            aria-label="close"
-            onClick={resetDisplayName}
-          ></button>
-        </div>
+        <Modal />
       </div>
     );
   }

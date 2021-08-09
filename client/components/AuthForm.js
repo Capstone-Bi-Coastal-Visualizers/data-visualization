@@ -18,7 +18,7 @@ const AuthForm = (props) => {
   });
 
   return (
-    <div className="box field is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
+    <div className="box box-login field is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
       <div className="field">
         <label className="label has-text-centered" htmlFor="email">
           E-Mail
@@ -105,6 +105,23 @@ const AuthForm = (props) => {
         </button>
       </div>
       {error && error.response && <div> {error.response.data} </div>}
+      {displayName === "Login" ? (
+        <button
+          className="button is-primary mt-2"
+          onClick={() => {
+            handleSubmit({
+              email: "cody@gmail.com",
+              password: "123",
+              name: "login",
+            });
+            dispatch(toggleModal());
+          }}
+        >
+          Demo Login
+        </button>
+      ) : (
+        <></>
+      )}
     </div>
   );
 };

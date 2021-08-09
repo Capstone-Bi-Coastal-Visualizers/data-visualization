@@ -1,11 +1,12 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { Login, Signup } from "./AuthForm";
 import { toggleModal, modalContent } from "../store/auth";
 
 const Modal = () => {
   const auth = useSelector((state) => state.auth);
   const { showModal, displayName } = auth;
+  const dispatch = useDispatch()
   const resetDisplayName = () => {
     dispatch(toggleModal());
     dispatch(modalContent(""));

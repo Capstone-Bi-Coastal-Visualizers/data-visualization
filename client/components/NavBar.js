@@ -20,12 +20,13 @@ export default function NavBar() {
   return (
     <nav className="navbar" role="navigation" aria-label="main navigation">
       <div className="container-logo">
-        <div
-          className="image logo-container is-clickable"
+        <img
+          className="logo-image"
+          src="images/logo1.png"
           onClick={() => {
             handleNav("/");
           }}
-        ></div>
+        />
       </div>
       <div className="navbar-end">
         <div className="navbar-button-container">
