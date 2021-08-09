@@ -16,5 +16,7 @@ Travel anywhere with your desired budget
 
 - Reflect on your memories with a map of the world and markers to show where you've been
 
+- https://bon-voyage-capstone.herokuapp.com
+
 ![alt text](public/images/logo.png)
 ![alt text](public/images/home.png)
